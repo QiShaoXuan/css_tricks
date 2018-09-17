@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>css实现的手风琴样式 | css tricks</title>
+    <meta name="description" content="some css tricks, 一些常用的css样式, 一点css技巧">
+    
+    
+    <link rel="preload" href="./assets/css/0.styles.7a232182.css" as="style"><link rel="preload" href="./assets/js/app.1ebfdb94.js" as="script"><link rel="preload" href="./assets/js/6.46d07314.js" as="script"><link rel="preload" href="./assets/js/4.729fe32b.js" as="script"><link rel="prefetch" href="./assets/js/2.90a804d4.js"><link rel="prefetch" href="./assets/js/3.1a376dc8.js"><link rel="prefetch" href="./assets/js/5.63d5fcac.js"><link rel="prefetch" href="./assets/js/7.34871c78.js">
+    <link rel="stylesheet" href="./assets/css/0.styles.7a232182.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/./" class="home-link router-link-active"><!----> <span class="site-name">css tricks</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/./" class="nav-link">github</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/./" class="nav-link">github</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/./" class="sidebar-link">Home</a></li><li><a href="/./reset/" class="sidebar-link">reset</a></li><li><a href="/./accordion/" class="active sidebar-link">手风琴</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="css实现的手风琴样式"><a href="#css实现的手风琴样式" aria-hidden="true" class="header-anchor">#</a> css实现的手风琴样式</h1> <div data-v-379d8d06><ul class="accordion-container" data-v-379d8d06><li class="accordion-item" style="background-image:url(./assets/img/bg1.29bb8eb5.jpg);width:NaN%;" data-v-379d8d06><p class="accordion-title" data-v-379d8d06>背景1</p></li><li class="accordion-item" style="background-image:url(./assets/img/bg2.ad60e196.jpg);width:NaN%;" data-v-379d8d06><p class="accordion-title" data-v-379d8d06>背景2</p></li><li class="accordion-item" style="background-image:url(./assets/img/bg3.d6c782b7.jpg);width:NaN%;" data-v-379d8d06><p class="accordion-title" data-v-379d8d06>背景3</p></li><li class="accordion-item" style="background-image:url(./assets/img/bg4.fcd5af22.jpg);width:NaN%;" data-v-379d8d06><p class="accordion-title" data-v-379d8d06>背景4</p></li><li class="accordion-item" style="background-image:url(./assets/img/bg5.4526e038.jpg);width:NaN%;" data-v-379d8d06><p class="accordion-title" data-v-379d8d06>背景5</p></li></ul></div> <div class="language-html extra-class"><pre class="language-html"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>accordion-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>accordion-item<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(bg1.jpg)</span><span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>accordion-title<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>背景1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      ···
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-scss extra-class"><pre class="language-scss"><code>  <span class="token selector">.accordion-container </span><span class="token punctuation">{</span>
+      <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+      <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+      <span class="token property">align-items</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+      <span class="token selector">.accordion-item </span><span class="token punctuation">{</span>
+        <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+        <span class="token property">transition</span><span class="token punctuation">:</span> width 0.5s<span class="token punctuation">;</span>
+        <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
+        <span class="token property">background-size</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+        <span class="token property">background-position</span><span class="token punctuation">:</span> center center<span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+        <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+        <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+        &amp;<span class="token punctuation">:</span><span class="token function">not</span><span class="token punctuation">(</span><span class="token punctuation">:</span>hover<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token property">width</span><span class="token punctuation">:</span> 20%<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector"><span class="token parent important">&amp;</span>:hover </span><span class="token punctuation">{</span>
+          <span class="token property">width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">;</span>
+          <span class="token selector"><span class="token parent important">&amp;</span>::after </span><span class="token punctuation">{</span>
+            <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector"><span class="token parent important">&amp;</span>::after</span><span class="token punctuation">{</span>
+          <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">;</span>
+          <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+          <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+          <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+          <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+          <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+          <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0, 0, 0, .4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+          <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+          <span class="token property">transition</span><span class="token punctuation">:</span> opacity 0.5s<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">.accordion-title </span><span class="token punctuation">{</span>
+          <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+          <span class="token property">font-size</span><span class="token punctuation">:</span> 18px<span class="token punctuation">;</span>
+          <span class="token property">z-index</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/./reset/" class="prev">
+          reset
+        </a></span> <!----></p></div> </div> <!----></div></div>
+    <script src="./assets/js/6.46d07314.js" defer></script><script src="./assets/js/4.729fe32b.js" defer></script><script src="./assets/js/app.1ebfdb94.js" defer></script>
+  </body>
+</html>
