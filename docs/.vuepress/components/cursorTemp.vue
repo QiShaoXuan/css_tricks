@@ -27,7 +27,7 @@
     name: 'cursor',
     data() {
       return {
-        cursor:'auto,text,default,none,help,pointer,progress,wait,wait,progress,cell,crosshair,text,vertical-text,alias,copy,move,no-drop,no-drop,not-allowed,not-allowed,grab,grabbing,all-scroll,all-scroll,move,col-resize,row-resize,n-resize,se-resize,n-resize,s-resize,ns-resize,e-resize,s-resize,w-resize,ne-resize,nw-resize,se-resize,sw-resize,ew-resize,ns-resize,nesw-resize,nwse-resize,zoom-in,zoom-out'
+        cursor:'auto,text,default,none,help,pointer,progress,wait,progress,cell,crosshair,text,vertical-text,alias,copy,move,no-drop,not-allowed,grab,grabbing,all-scroll,all-scroll,move,col-resize,row-resize,n-resize,se-resize,n-resize,s-resize,ns-resize,e-resize,s-resize,w-resize,ne-resize,nw-resize,se-resize,sw-resize,ew-resize,ns-resize,nesw-resize,nwse-resize,zoom-in,zoom-out'
       }
     },
   }

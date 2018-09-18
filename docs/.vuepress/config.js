@@ -22,9 +22,10 @@ module.exports = {
         title: '静',
         collapsable: false,
         children: [
-          ['/reset/', 'reset'],
+          ['/reset/', '清除默认样式'],
           ['/cursor/','手型'],
-          ['/triangle/','三角形边框，不规则阴影'],
+          ['/triangle/','三角形边框'],
+          ['/shadow/','不规则图形阴影'],
         ]
       },
       // ['/', 'Home'],
