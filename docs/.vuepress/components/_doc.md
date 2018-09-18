@@ -1,0 +1,5 @@
+- accordion  手风琴
+- triangle 三角边框，三角阴影
+- cursor 手型
+- hoverBg 按钮悬停背景色变化
+- hoverBorder 按钮悬停边框变化

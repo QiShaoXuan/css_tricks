@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>悬停 hover | css tricks</title>
+    <meta name="description" content="some css tricks, 一些常用的css样式, 一点css技巧">
+    
+    
+    <link rel="preload" href="/css_tricks/assets/css/0.styles.f196a603.css" as="style"><link rel="preload" href="/css_tricks/assets/js/app.b5a0d066.js" as="script"><link rel="preload" href="/css_tricks/assets/js/12.5079bff4.js" as="script"><link rel="preload" href="/css_tricks/assets/js/6.59ff1cc3.js" as="script"><link rel="preload" href="/css_tricks/assets/js/7.df81f6f8.js" as="script"><link rel="prefetch" href="/css_tricks/assets/js/4.909e1f27.js"><link rel="prefetch" href="/css_tricks/assets/js/2.1e478721.js"><link rel="prefetch" href="/css_tricks/assets/js/3.cefa9a18.js"><link rel="prefetch" href="/css_tricks/assets/js/5.a704c85e.js"><link rel="prefetch" href="/css_tricks/assets/js/8.c731ab5a.js"><link rel="prefetch" href="/css_tricks/assets/js/9.6992ca4d.js"><link rel="prefetch" href="/css_tricks/assets/js/10.83beb243.js"><link rel="prefetch" href="/css_tricks/assets/js/11.4ddd41c6.js"><link rel="prefetch" href="/css_tricks/assets/js/13.913c869c.js"><link rel="prefetch" href="/css_tricks/assets/js/14.3b361d78.js">
+    <link rel="stylesheet" href="/css_tricks/assets/css/0.styles.f196a603.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/css_tricks/" class="home-link router-link-active"><!----> <span class="site-name">css tricks</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://github.com/QiShaoXuan/css_tricks" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://github.com/QiShaoXuan/css_tricks" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>动</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/css_tricks/accordion/" class="sidebar-link">手风琴</a></li><li><a href="/css_tricks/hover/" class="active sidebar-link">悬停</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/css_tricks/hover/#背景变色" class="sidebar-link">背景变色</a></li><li class="sidebar-sub-header"><a href="/css_tricks/hover/#边框动画" class="sidebar-link">边框动画</a></li></ul></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>静</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/css_tricks/reset/" class="sidebar-link">reset</a></li><li><a href="/css_tricks/cursor/" class="sidebar-link">手型</a></li><li><a href="/css_tricks/triangle/" class="sidebar-link">三角形边框，不规则阴影</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="悬停-hover"><a href="#悬停-hover" aria-hidden="true" class="header-anchor">#</a> 悬停 hover</h1> <h2 id="背景变色"><a href="#背景变色" aria-hidden="true" class="header-anchor">#</a> 背景变色</h2> <div data-v-168c0c7d><div class="button" data-v-168c0c7d><span data-v-168c0c7d>hover me to change</span></div></div> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>button<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>hover me to change<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-scss extra-class"><pre class="language-scss"><code>  <span class="token selector">.button </span><span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span>40px auto<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span>60px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span>0 30px<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token property">appearance</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #f72359<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.2em<span class="token punctuation">;</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+    <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.button span </span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.button::before </span><span class="token punctuation">{</span>
+    <span class="token property">--size</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">radial-gradient</span><span class="token punctuation">(</span>circle closest-side, #4405f7, transparent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>-50%, -50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> width .2s ease, height .2s ease<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.button:hover::before </span><span class="token punctuation">{</span>
+    <span class="token property">--size</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.button'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onmousemove</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">const</span> x <span class="token operator">=</span> e<span class="token punctuation">.</span>pageX <span class="token operator">-</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>offsetLeft
+  <span class="token keyword">const</span> y <span class="token operator">=</span> e<span class="token punctuation">.</span>pageY <span class="token operator">-</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>offsetTop
+
+  e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>style<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">'--x'</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> x <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px`</span></span><span class="token punctuation">)</span>
+  e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>style<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">'--y'</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> y <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px`</span></span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="边框动画"><a href="#边框动画" aria-hidden="true" class="header-anchor">#</a> 边框动画</h2> <div class="btn-container" data-v-66c1d008><div class="button" data-v-66c1d008>hover me to change</div></div> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>button<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>hover me to change<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-scss extra-class"><pre class="language-scss"><code> <span class="token selector">.button</span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span>60px<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span>30px auto<span class="token punctuation">;</span>
+    <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>::before</span><span class="token punctuation">{</span>
+      <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+      <span class="token property">background</span><span class="token punctuation">:</span>  #409eff<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">top</span><span class="token punctuation">:</span>-1px<span class="token punctuation">;</span><span class="token property">right</span><span class="token punctuation">:</span>-1px<span class="token punctuation">;</span>
+      <span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+      <span class="token property">transition</span><span class="token punctuation">:</span> width .5s,height .5s<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>::after</span><span class="token punctuation">{</span>
+      <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+      <span class="token property">background</span><span class="token punctuation">:</span>  #409eff<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">bottom</span><span class="token punctuation">:</span>-1px<span class="token punctuation">;</span><span class="token property">left</span><span class="token punctuation">:</span>-1px<span class="token punctuation">;</span>
+      <span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+      <span class="token property">transition</span><span class="token punctuation">:</span> width .5s,height .5s<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>:hover::before</span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span><span class="token function">calc</span><span class="token punctuation">(</span>100% <span class="token operator">+</span> 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span><span class="token function">calc</span><span class="token punctuation">(</span>100% <span class="token operator">+</span> 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>:hover::after</span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span><span class="token function">calc</span><span class="token punctuation">(</span>100% <span class="token operator">+</span> 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span><span class="token function">calc</span><span class="token punctuation">(</span>100% <span class="token operator">+</span> 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/css_tricks/accordion/" class="prev">
+          手风琴
+        </a></span> <span class="next"><a href="/css_tricks/reset/">
+          reset
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/css_tricks/assets/js/12.5079bff4.js" defer></script><script src="/css_tricks/assets/js/6.59ff1cc3.js" defer></script><script src="/css_tricks/assets/js/7.df81f6f8.js" defer></script><script src="/css_tricks/assets/js/app.b5a0d066.js" defer></script>
+  </body>
+</html>

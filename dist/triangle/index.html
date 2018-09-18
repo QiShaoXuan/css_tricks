@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>三角形边框，不规则图形阴影 | css tricks</title>
+    <meta name="description" content="some css tricks, 一些常用的css样式, 一点css技巧">
+    
+    
+    <link rel="preload" href="/css_tricks/assets/css/0.styles.f196a603.css" as="style"><link rel="preload" href="/css_tricks/assets/js/app.b5a0d066.js" as="script"><link rel="preload" href="/css_tricks/assets/js/14.3b361d78.js" as="script"><link rel="preload" href="/css_tricks/assets/js/8.c731ab5a.js" as="script"><link rel="prefetch" href="/css_tricks/assets/js/4.909e1f27.js"><link rel="prefetch" href="/css_tricks/assets/js/2.1e478721.js"><link rel="prefetch" href="/css_tricks/assets/js/3.cefa9a18.js"><link rel="prefetch" href="/css_tricks/assets/js/5.a704c85e.js"><link rel="prefetch" href="/css_tricks/assets/js/6.59ff1cc3.js"><link rel="prefetch" href="/css_tricks/assets/js/7.df81f6f8.js"><link rel="prefetch" href="/css_tricks/assets/js/9.6992ca4d.js"><link rel="prefetch" href="/css_tricks/assets/js/10.83beb243.js"><link rel="prefetch" href="/css_tricks/assets/js/11.4ddd41c6.js"><link rel="prefetch" href="/css_tricks/assets/js/12.5079bff4.js"><link rel="prefetch" href="/css_tricks/assets/js/13.913c869c.js">
+    <link rel="stylesheet" href="/css_tricks/assets/css/0.styles.f196a603.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/css_tricks/" class="home-link router-link-active"><!----> <span class="site-name">css tricks</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://github.com/QiShaoXuan/css_tricks" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://github.com/QiShaoXuan/css_tricks" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading"><span>动</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/css_tricks/accordion/" class="sidebar-link">手风琴</a></li><li><a href="/css_tricks/hover/" class="sidebar-link">悬停</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>静</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/css_tricks/reset/" class="sidebar-link">reset</a></li><li><a href="/css_tricks/cursor/" class="sidebar-link">手型</a></li><li><a href="/css_tricks/triangle/" class="active sidebar-link">三角形边框，不规则阴影</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="三角形边框，不规则图形阴影"><a href="#三角形边框，不规则图形阴影" aria-hidden="true" class="header-anchor">#</a> 三角形边框，不规则图形阴影</h1> <div class="triangle-container" data-v-903f7ea4><div class="panel" data-v-903f7ea4><div class="border-triangle" data-v-903f7ea4></div></div> <div class="panel" data-v-903f7ea4><div class="shadow-triangle" data-v-903f7ea4></div></div> <div class="panel" data-v-903f7ea4><div class="shadow-dotted" data-v-903f7ea4></div></div> <div class="panel" data-v-903f7ea4><div class="circle-square" data-v-903f7ea4></div></div></div> <div class="language-scss extra-class"><pre class="language-scss"><code>    <span class="token comment">// 带边框的三角形</span>
+    <span class="token selector">.border-triangle</span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+      <span class="token property">border-style</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
+      <span class="token property">border-width</span><span class="token punctuation">:</span> 0 50px 50px 50px<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span>relative<span class="token punctuation">;</span>
+      <span class="token property">border-color</span><span class="token punctuation">:</span> transparent transparent #fff transparent<span class="token punctuation">;</span>
+      <span class="token selector"><span class="token parent important">&amp;</span>::before</span><span class="token punctuation">{</span>
+        <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token property">border-style</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
+        <span class="token property">border-width</span><span class="token punctuation">:</span> 0 52px 52px 52px<span class="token punctuation">;</span>
+        <span class="token property">border-color</span><span class="token punctuation">:</span> transparent transparent #409eff transparent<span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">left</span><span class="token punctuation">:</span>-52px<span class="token punctuation">;</span><span class="token property">top</span><span class="token punctuation">:</span>-1px<span class="token punctuation">;</span>
+        <span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// 三角形阴影</span>
+    <span class="token selector">.shadow-triangle</span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+      <span class="token property">border-style</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
+      <span class="token property">border-width</span><span class="token punctuation">:</span> 0 50px 50px 50px<span class="token punctuation">;</span>
+      <span class="token property">border-color</span><span class="token punctuation">:</span> transparent transparent #409eff transparent<span class="token punctuation">;</span>
+      <span class="token property">filter</span><span class="token punctuation">:</span><span class="token function">drop-shadow</span><span class="token punctuation">(</span>10px 0px 10px  <span class="token function">rgba</span><span class="token punctuation">(</span>39,92,171,0.5<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// 虚线阴影</span>
+    <span class="token selector">.shadow-dotted</span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span>120px<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span>120px<span class="token punctuation">;</span>
+      <span class="token property">border</span><span class="token punctuation">:</span> 6px dotted #409eff<span class="token punctuation">;</span>
+      <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">drop-shadow</span><span class="token punctuation">(</span>2px 2px 2px <span class="token function">rgba</span><span class="token punctuation">(</span>64,158,225,.9<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// 右缺圆角阴影</span>
+    <span class="token selector">.circle-square</span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span>120px<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span>120px<span class="token punctuation">;</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">radial-gradient</span><span class="token punctuation">(</span>circle at bottom right, transparent 49px, #409eff 34px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">drop-shadow</span><span class="token punctuation">(</span>2px 2px 2px <span class="token function">rgba</span><span class="token punctuation">(</span>64,158,225,.9<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/css_tricks/cursor/" class="prev">
+          手型
+        </a></span> <!----></p></div> </div> <!----></div></div>
+    <script src="/css_tricks/assets/js/14.3b361d78.js" defer></script><script src="/css_tricks/assets/js/8.c731ab5a.js" defer></script><script src="/css_tricks/assets/js/app.b5a0d066.js" defer></script>
+  </body>
+</html>

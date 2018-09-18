@@ -60,6 +60,7 @@
 
 <script>
   export default {
+    name:'accordion',
     data() {
       return {
         items: [
