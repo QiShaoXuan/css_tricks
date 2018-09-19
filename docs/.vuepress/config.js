@@ -26,6 +26,8 @@ module.exports = {
           ['/cursor/','手型'],
           ['/triangle/','三角形边框'],
           ['/shadow/','不规则图形阴影'],
+          ['/ellipsis/','文字超出显示省略号'],
+          ['/verticalMiddle/','垂直居中'],
         ]
       },
       // ['/', 'Home'],
