@@ -1,7 +1,5 @@
 # 垂直居中
 
-<verticalCenterA/>
-
 ## 未知父元素高度
 ```scss
 .parentElement {
@@ -81,7 +79,6 @@
 
 
 ## display:table-cell
-<verticalCenterB/>
 
 ```scss
 .parentElement {
