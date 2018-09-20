@@ -5,19 +5,12 @@
   height: 100px;
   display: table;
   .childElement {
-    // background: yellow;
     width: 20%;
     height: 30%;
     display: table-cell;
     vertical-align: middle;
-    // color: #fff;
 
   }
-  // .grandsonElement {
-  //   color: red;
-  //   width: 20%;
-  //   height: 30%;
-  // }
 }
 </style>
 

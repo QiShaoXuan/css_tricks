@@ -11,9 +11,6 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    // top: 0;
-    // bottom: 0;
-    // margin: auto;
   }
 }
 </style>
