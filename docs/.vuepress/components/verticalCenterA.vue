@@ -1,19 +1,11 @@
 <style scoped lang="scss">
 .parentElement {
   position: relative;
-<<<<<<< HEAD
-  background: blue;
+  background: #eee;
   width: 100%;
   height: 100px;
   .childElement {
-    background: yellow;
-=======
-  background: #eeeeee;
-  width: 100%;
-  height: 100px;
-  .childElement {
-    background: #bfbfbf;
->>>>>>> Soulkey-edit
+    background: #b9b9b9;
     width: 20%;
     height: 30%;
     position: absolute;

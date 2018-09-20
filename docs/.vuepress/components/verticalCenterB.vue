@@ -1,10 +1,6 @@
 <style scoped lang="scss">
 .parentElement {
-<<<<<<< HEAD
-  background: blue;
-=======
-  background: #eeeeee;
->>>>>>> Soulkey-edit
+  background: #eee;
   width: 100%;
   height: 100px;
   display: table;
@@ -14,11 +10,7 @@
     height: 30%;
     display: table-cell;
     vertical-align: middle;
-<<<<<<< HEAD
-    color: #fff;
-=======
     // color: #fff;
->>>>>>> Soulkey-edit
 
   }
   // .grandsonElement {
