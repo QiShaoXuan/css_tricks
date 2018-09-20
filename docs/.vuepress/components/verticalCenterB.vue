@@ -1,6 +1,6 @@
 <style scoped lang="scss">
 .parentElement {
-  background: #eeeeee;
+  background: #eee;
   width: 100%;
   height: 100px;
   display: table;
