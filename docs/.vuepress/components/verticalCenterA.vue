@@ -1,11 +1,11 @@
 <style scoped lang="scss">
 .parentElement {
   position: relative;
-  background: blue;
+  background: #eeeeee;
   width: 100%;
   height: 100px;
   .childElement {
-    background: yellow;
+    background: #bfbfbf;
     width: 20%;
     height: 30%;
     position: absolute;

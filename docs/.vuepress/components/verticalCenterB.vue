@@ -1,6 +1,6 @@
 <style scoped lang="scss">
 .parentElement {
-  background: blue;
+  background: #eeeeee;
   width: 100%;
   height: 100px;
   display: table;
@@ -10,7 +10,7 @@
     height: 30%;
     display: table-cell;
     vertical-align: middle;
-    color: #fff;
+    // color: #fff;
 
   }
   // .grandsonElement {
