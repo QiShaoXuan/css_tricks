@@ -1,6 +1,7 @@
 - accordion  手风琴
 - triangle 三角边框，三角阴影
 - cursor 手型
+- shadowTemp 多边形阴影
 - hoverBg 按钮悬停背景色变化
 - hoverBorder 按钮悬停边框变化
 - singleEllipsis 单行文字超出显示省略号

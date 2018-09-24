@@ -28,6 +28,7 @@ module.exports = {
           ['/shadow/','不规则图形阴影'],
           ['/ellipsis/','文字超出显示省略号'],
           ['/verticalMiddle/','垂直居中'],
+          ['/scrollTemp/','滚动条样式'],
         ]
       },
       // ['/', 'Home'],
