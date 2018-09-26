@@ -18,17 +18,22 @@
 
 <template>
     <div class="cursor-container">
-        <div class="cursor-item" v-for="(value,index) in cursor.split(',')" :key="index" :style="{cursor:value}">{{value}}</div>
+        <div class="cursor-item" v-for="(value,index) in cursorArr" :key="index" :style="{cursor:value}">{{value}}</div>
     </div>
 </template>
 
 <script>
   export default {
-    name: 'cursor',
+    name: 'cursorTemp',
     data() {
       return {
         cursor:'auto,text,default,none,help,pointer,progress,wait,progress,cell,crosshair,text,vertical-text,alias,copy,no-drop,not-allowed,grab,grabbing,all-scroll,all-scroll,move,col-resize,row-resize,n-resize,se-resize,n-resize,s-resize,ns-resize,e-resize,s-resize,w-resize,ne-resize,nw-resize,se-resize,sw-resize,ew-resize,ns-resize,nesw-resize,nwse-resize,zoom-in,zoom-out'
       }
     },
+    computed:{
+      cursorArr:function(){
+        return Array.from(new Set(this.cursor.split(',')))
+      }
+    }
   }
 </script>
