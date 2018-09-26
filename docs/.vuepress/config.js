@@ -13,8 +13,9 @@ module.exports = {
         title: '理论',
         collapsable: false,
         children: [
+          // ['/name/', '命名'],
           ['/pseudo/', '伪类和伪元素'],
-          ['/unit/','单位']
+          ['/unit/','单位'],
         ]
       },
       {
