@@ -22,7 +22,7 @@
 
  ## flex-direction
 
-  > 控制Flex项目沿着主轴（Main Axis）(X轴) 的排列方向
+  > 控制Flex项目沿着主轴（Main Axis）(父容器) 的排列方向
 
 <flexDirection/>
 
@@ -59,7 +59,7 @@
 
  ##  justify-content
 
-  > Flex项目在整个Main-Axis上的对齐方式(X轴)，默认是flex-start，起始端对齐
+  > Flex项目在整个Main-Axis上的对齐方式(父容器X轴)，默认是flex-start，起始端对齐
 
 <flexJustifyContent/>
 
@@ -72,14 +72,14 @@
 
  ##  align-items
 
-  > Flex项目在Cross-Axis对齐方式(Y轴)，默认是flex-start，起始端对齐
+  > Flex项目在Cross-Axis对齐方式(父容器Y轴)，默认是flex-start，起始端对齐
 
 <flexAlignItems/>
 
 ```scss
 .wrap {
    align-items：flex-start || flex-end || center || baseline || stretch
-                  // 起始端对齐 → || 末尾段对齐 ← || 居中对齐 || 基线对齐（默认是指首行文字） || 子容器沿Y轴方向的尺寸拉伸至与父容器一致
+                  // 起始端对齐 ↓ || 末尾段对齐 ↑ || 居中对齐 || 基线对齐（默认是指首行文字） || 子容器沿Y轴方向的尺寸拉伸至与父容器一致
 }
  ```
 
@@ -94,7 +94,7 @@
 ```scss
 .wrap {
    align-content：flex-start || flex-end || center || space-around || space-between || stretch
-                  // 起始端对齐 → || 末尾段对齐 ← || 居中对齐 || 等边距均匀分布 || 等间距均匀分布 || 拉伸对齐
+                  // 起始端对齐 ↓ || 末尾段对齐 ↑ || 居中对齐 || 等边距均匀分布 || 等间距均匀分布 || 拉伸对齐
 }
  ```
 
@@ -183,7 +183,7 @@
 
  ##  align-self
 
-  > 每个子容器可以单独定义沿交叉(Y)轴的排列的方式，此属性与父容器 align-items 属性完全一致，如果两者同时设置则以子容器的 align-self 属性为准。
+  > 每个子容器可以单独定义沿交叉(父容器Y)轴的排列的方式，此属性与父容器 align-items 属性完全一致，如果两者同时设置则以子容器的 align-self 属性为准。
 
 <flexAlignSelf/>
 
