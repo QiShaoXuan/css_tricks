@@ -14,6 +14,7 @@ module.exports = {
         collapsable: false,
         children: [
           // ['/name/', '命名'],
+          ['/selector/','选择器'],
           ['/pseudo/', '伪类和伪元素'],
           ['/unit/','单位'],
         ]
