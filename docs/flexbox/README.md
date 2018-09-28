@@ -1,10 +1,10 @@
 # Flexbox布局详解
 
 ## flexbox
- > 对Flex容器设置display:flex或者display:inline-flex
+对Flex容器设置display:flex或者display:inline-flex
 
 
- <flexbox/>
+ <flex-flexbox/>
 
 ```html
 <div class="wrap">
@@ -21,10 +21,9 @@
  ```
 
  ## flex-direction
+控制Flex项目沿着主轴（Main Axis）(父容器) 的排列方向
 
-  > 控制Flex项目沿着主轴（Main Axis）(父容器) 的排列方向
-
-<flexDirection/>
+<flex-flexDirection/>
 
 ```scss
 .wrap {
@@ -34,10 +33,9 @@
  ```
 
  ## flex-wrap
+控制Flex项目是否换行，默认值是nowrap，不换行
 
-  > 控制Flex项目是否换行，默认值是nowrap，不换行
-
-<flexWrap/>
+<flex-flexWrap/>
 
 ```scss
 .wrap {
@@ -48,8 +46,7 @@
 
 
  ## flex-flow
-
-  > flex-direction和flex-wrap两个属性的组合属性
+flex-direction和flex-wrap两个属性的组合属性
 
 ```scss
 .wrap {
@@ -58,10 +55,9 @@
  ```
 
  ##  justify-content
+Flex项目在整个Main-Axis上的对齐方式(父容器X轴)，默认是flex-start，起始端对齐
 
-  > Flex项目在整个Main-Axis上的对齐方式(父容器X轴)，默认是flex-start，起始端对齐
-
-<flexJustifyContent/>
+<flex-flexJustifyContent/>
 
 ```scss
 .wrap {
@@ -71,10 +67,9 @@
  ```
 
  ##  align-items
+Flex项目在Cross-Axis对齐方式(父容器Y轴)，默认是flex-start，起始端对齐
 
-  > Flex项目在Cross-Axis对齐方式(父容器Y轴)，默认是flex-start，起始端对齐
-
-<flexAlignItems/>
+<flex-flexAlignItems/>
 
 ```scss
 .wrap {
@@ -85,11 +80,10 @@
 
 
  ##  align-content
+该属性只针对子容器多行排列时，设置行与行之间的对齐方式，对单行无效。
 
-  > 该属性只针对子容器多行排列时，设置行与行之间的对齐方式，对单行无效。
 
-
-<flexAlignContent/>
+<flex-flexAlignContent/>
 
 ```scss
 .wrap {
@@ -99,10 +93,9 @@
  ```
 
  ##  order
+改变子容器的排列顺序，覆盖 HTML 代码中的顺序，默认值为 0，可以为负值，数值越小排列越靠前。
 
-  > 改变子容器的排列顺序，覆盖 HTML 代码中的顺序，默认值为 0，可以为负值，数值越小排列越靠前。
-
-<flexOrder/>
+<flex-flexOrder/>
 
 ```scss
 .wrap {
@@ -114,8 +107,7 @@
  ```
 
  ##  flex-basis
-
-  > 在不伸缩的情况下子容器的原始尺寸。主轴为横向时代表宽度，主轴为纵向时代表高度。
+在不伸缩的情况下子容器的原始尺寸。主轴为横向时代表宽度，主轴为纵向时代表高度。
 
 
 ```scss
@@ -139,10 +131,9 @@
  ```
 
  ##  flex-grow
+父容器剩余空间按 1:2 的比例分配给子容器
 
-  > 父容器剩余空间按 1:2 的比例分配给子容器
-
-  <flexGrow/>
+  <flex-flexGrow/>
 
 ```scss
 .wrap {
@@ -158,10 +149,9 @@
  ```
 
  ##  flex-shrink
+子容器超出的部分按 1:2 的比例从子容器中减去
 
-  > 子容器超出的部分按 1:2 的比例从子容器中减去
-
-  <flexShrink/>
+  <flex-flexShrink/>
 
 ```scss
 .wrap {
@@ -182,14 +172,13 @@
  ```
 
  ##  align-self
+每个子容器可以单独定义沿交叉(父容器Y)轴的排列的方式，此属性与父容器 align-items 属性完全一致，如果两者同时设置则以子容器的 align-self 属性为准。
 
-  > 每个子容器可以单独定义沿交叉(父容器Y)轴的排列的方式，此属性与父容器 align-items 属性完全一致，如果两者同时设置则以子容器的 align-self 属性为准。
-
-<flexAlignSelf/>
+<flex-flexAlignSelf/>
 
 ```scss
 .wrap {
    align-self：flex-start || flex-end || center || baseline || stretch
-                  // 起始端对齐 || 末尾段对齐|| 居中对齐 || 基线对齐（默认是指首行文字） || 子容器沿Y轴方向的尺寸拉伸至与父容器一致
+              // 起始端对齐 || 末尾段对齐|| 居中对齐 || 基线对齐（默认是指首行文字） || 子容器沿Y轴方向的尺寸拉伸至与父容器一致
 }
  ```
