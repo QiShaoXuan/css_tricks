@@ -14,9 +14,9 @@ module.exports = {
         collapsable: false,
         children: [
           // ['/name/', '命名'],
-          ['/selector/','选择器'],
+          ['/selector/', '选择器'],
           ['/pseudo/', '伪类和伪元素'],
-          ['/unit/','单位'],
+          ['/unit/', '单位'],
         ]
       },
       {
@@ -25,7 +25,7 @@ module.exports = {
         children: [
           ['/accordion/', '手风琴'],
           ['/hover/', '悬停'],
-
+          ['/loading/', '加载动画']
         ]
       },
       {
@@ -33,17 +33,16 @@ module.exports = {
         collapsable: false,
         children: [
           ['/reset/', '清除默认样式'],
-          ['/cursor/','手型'],
-          ['/triangle/','三角形边框'],
-          ['/shadow/','不规则图形阴影'],
-          ['/ellipsis/','文字超出显示省略号'],
-          ['/verticalMiddle/','垂直居中'],
-          ['/scrollTemp/','滚动条样式'],
+          ['/cursor/', '手型'],
+          ['/triangle/', '三角形边框'],
+          ['/shadow/', '不规则图形阴影'],
+          ['/ellipsis/', '文字超出显示省略号'],
+          ['/verticalMiddle/', '垂直居中'],
+          ['/scrollTemp/', '滚动条样式'],
           ['/flexbox/', 'Flexbox'],
         ]
       },
       // ['/', 'Home'],
-
     ]
   }
 }
