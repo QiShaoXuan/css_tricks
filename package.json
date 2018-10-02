@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "npx vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "docs:build": "node ./build/addComment.js &&  vuepress build docs  && node ./build/delComment.js",
     "deploy": "gh-pages -d dist",
     "deploy:build": "npm run docs:build && gh-pages -d dist"
   },
@@ -17,5 +17,8 @@
     "sass-loader": "^7.1.0",
     "scss-loader": "^0.0.1",
     "vuepress": "^0.14.4"
+  },
+  "dependencies": {
+    "gitalk": "^1.4.0"
   }
 }
