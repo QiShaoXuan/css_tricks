@@ -11,7 +11,7 @@ function delComment(dir){
 
         fs.writeFile(dir, content.replace(/<comment-comment\/>/g,''), (err) => {
             if (err) throw err
-            console.log(`del comment component from  ${dir}`)
+            // console.log(`del comment component from  ${dir}`)
           })
       })
 }

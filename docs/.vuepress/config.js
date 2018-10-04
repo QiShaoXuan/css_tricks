@@ -5,7 +5,11 @@ module.exports = {
   base: '/css_tricks/',
   repo: 'https://qishaoxuan.github.io/css_tricks/', // 添加 github 链接
   themeConfig: {
+    themeConfig: {
+      lastUpdated: 'Last Updated',
+    },
     nav: [
+      { text: 'js tricks', link: 'https://qishaoxuan.github.io/js_tricks/' },
       { text: 'GitHub', link: 'https://github.com/QiShaoXuan/css_tricks' },
     ],
     sidebar: [
