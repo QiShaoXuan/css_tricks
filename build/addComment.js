@@ -5,8 +5,8 @@ const rootDir = './docs'
 findMarkdown(rootDir, writeComment)
 
 function writeComment(dir) {
-  fs.appendFile(dir, '<comment-comment/>', (err) => {
+  fs.appendFile(dir, `\n \n <comment-comment/>`, (err) => {
     if (err) throw err
-    // console.log(`add comment component  to  ${dir}`)
+    console.log(`add comment component to ${dir}`)
   })
 }

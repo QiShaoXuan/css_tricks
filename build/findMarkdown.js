@@ -7,7 +7,7 @@ function findMarkdown(dir, callback) {
     files.forEach((fileName) => {
       let innerDir = `${dir}/${fileName}`
 
-      if (fileName != '.vuepress') {
+      if (fileName.indexOf('.') !== 0) {
         fs.stat(innerDir, function (err, stat) {
 
           if (stat.isDirectory()) {

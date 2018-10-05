@@ -10,6 +10,7 @@ module.exports = {
     },
     nav: [
       { text: 'js tricks', link: 'https://qishaoxuan.github.io/js_tricks/' },
+      { text: 'you need to know js', link: 'https://qishaoxuan.github.io/blog/' },
       { text: 'GitHub', link: 'https://github.com/QiShaoXuan/css_tricks' },
     ],
     sidebar: [

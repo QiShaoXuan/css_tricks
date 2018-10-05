@@ -9,9 +9,9 @@ function delComment(dir){
     fs.readFile(dir,'utf-8', (err, content) => {
         if (err) throw err
 
-        fs.writeFile(dir, content.replace(/<comment-comment\/>/g,''), (err) => {
+        fs.writeFile(dir, content.replace(/\n \n <comment-comment\/>/g,''), (err) => {
             if (err) throw err
-            // console.log(`del comment component from  ${dir}`)
+            console.log(`del comment component from ${dir}`)
           })
       })
 }
