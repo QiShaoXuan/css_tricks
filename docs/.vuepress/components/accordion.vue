@@ -10,7 +10,7 @@
     height: 500px;
     transition: width 0.5s;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 500px;
     background-position: center center;
     position: relative;
     display: flex;
@@ -66,23 +66,23 @@ export default {
       items: [
         {
           title: "背景1",
-          src: require("../public/images/bg1.jpg")
+          src: require("../public/images/bg7.jpeg")
         },
         {
           title: "背景2",
-          src: require("../public/images/bg2.jpg")
+          src: require("../public/images/bg10.jpeg")
         },
         {
           title: "背景3",
-          src: require("../public/images/bg3.jpg")
+          src: require("../public/images/bg9.jpeg")
         },
         {
           title: "背景4",
-          src: require("../public/images/bg4.jpg")
+          src: require("../public/images/bg7.jpeg")
         },
         {
           title: "背景5",
-          src: require("../public/images/bg5.jpg")
+          src: require("../public/images/bg10.jpeg")
         }
       ]
     };

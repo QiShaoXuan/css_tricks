@@ -18,7 +18,7 @@ module.exports = {
         title: '理论',
         collapsable: false,
         children: [
-          // ['/name/', '命名'],
+          ['/name/', '命名规则'],
           ['/selector/', '选择器'],
           ['/pseudo/', '伪类和伪元素'],
           ['/unit/', '单位'],
@@ -40,11 +40,13 @@ module.exports = {
           ['/reset/', '清除默认样式'],
           ['/cursor/', '手型'],
           ['/triangle/', '三角形边框'],
-          ['/shadow/', '不规则图形阴影'],
+          ['/shadow/', '投影'],
           ['/ellipsis/', '文字超出显示省略号'],
           ['/verticalMiddle/', '垂直居中'],
           ['/scrollTemp/', '滚动条样式'],
           ['/flexbox/', 'Flexbox'],
+          ['/lineBreak/','插入换行'],
+          ['/mdedia/','midea 参考'],
         ]
       },
       // ['/', 'Home'],

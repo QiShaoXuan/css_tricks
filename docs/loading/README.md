@@ -135,7 +135,7 @@
 
 > <a href="https://codepen.io/pedox/pen/PwQezw" target="_blank">https://codepen.io/pedox/pen/PwQezw</a>
 
-## load_3
+## loading_3
 
 <loading-load3/>
 ```html

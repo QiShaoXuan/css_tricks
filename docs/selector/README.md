@@ -11,6 +11,12 @@
 
 ## `X[attribute]`
 选择所有具有attribute属性的元素
+```css
+/* 设置所有带有 hidden 属性的元素为不可见 */
+[hidden]{
+  display:none
+}
+```
 
 ## `X[attribute="yyy"]`
 选择所有attribute属性值为yyy的元素

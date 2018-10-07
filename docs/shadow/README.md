@@ -1,6 +1,36 @@
-# 不规则图形阴影
+## 常见投影
+<shadow-normalShadow/>
 
-<shadowTemp/>
+```scss
+// 无偏移投影
+ .shadow1 {
+    box-shadow: 0 0 12px rgba(0, 173, 181, 0.8);
+  }
+// 下侧投影
+  .shadow2 {
+    box-shadow: 0px 6px 12px -4px rgba(0, 173, 181, 0.8);
+  }
+// 右侧投影
+  .shadow3 {
+    box-shadow: 6px 6px 12px -5px rgba(0, 173, 181, 0.8);
+  }
+// 双侧投影
+  .shadow4 {
+    box-shadow: 6px 0 12px -5px rgba(0, 173, 181, 0.8), -6px 0 12px -5px rgba(0, 173, 181, 0.8);
+  }
+// 菜单投影
+  .shadow5 {
+    box-shadow: 0 3px 12px rgba(0, 173, 181, 0.8);
+  }
+// 投影边框
+  .shadow6 {
+    box-shadow: 0 0 0 1px rgba(0, 173, 181, 0.8);
+  }
+```
+
+## 不规则图形投影
+
+<shadow-irregularShadow/>
 
 ```scss
     // 虚线阴影
