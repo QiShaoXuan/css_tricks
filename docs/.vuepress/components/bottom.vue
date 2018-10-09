@@ -1,45 +1,59 @@
 <style scoped lang="scss">
-.container{
+.container {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  margin-bottom:100px;
 
-  .poem-container{
-    width:45%;
-    height:400px;
-    border:1px solid #ddd;
+  article {
+    min-height: 100%;
+    .poem {
+      padding: 15px;
+      padding-bottom: 62px;
+      zoom: 1;
+    }
+  }
+  footer {
+    background: #00adb5;
+    color: #fff;
+    padding: 10px;
+    margin-top: -62px;
+  }
+
+  .poem-container {
+    width: 45%;
+    height: 400px;
+    border: 1px solid #ddd;
     overflow: auto;
-    .poem{
-      padding:15px;
-    }
-    p{
+    p {
       line-height: 1.5;
-      margin:0;
-    }
-
-    .footer{
-      background: #00adb5;
-      color:#fff;
-      padding:15px;
+      margin: 0;
     }
   }
 }
+
 </style>
 <template>
   <div class="container">
     <div class="poem-container">
-    <div class="poem">
-       <p v-for="(value,index) in poem.split('。')">{{value}}</p>
+      <article>
+        <div class="poem">
+          <p v-for="(value,index) in poem.split('。')" v-if="index<=5">{{value}}</p>
+        </div>
+      </article>
+      <footer>底部始终在文档末尾，当文档较长时跟随在文档末尾，当文档较短时在窗口底部。</footer>
     </div>
-    <div class="footer">底部始终在文档末尾，当文档较长时跟随在文档末尾，当文档较短时在窗口底部。</div>
-  </div>
 
-   <div class="poem-container">
-    <div class="poem">
-       <p v-for="(value,index) in poem.split('。')">{{value}}</p>
+    <div class="poem-container">
+      <article>
+        <div class="poem">
+          <p v-for="(value,index) in poem.split('。')">{{value}}</p>
+        </div>
+      </article>
+      <footer>底部始终在文档末尾，当文档较长时跟随在文档末尾，当文档较短时在窗口底部。</footer>
     </div>
-    <div class="footer">底部始终在文档末尾，当文档较长时跟随在文档末尾，当文档较短时在窗口底部。</div>
-  </div>
+
+
   </div>
 </template>
 

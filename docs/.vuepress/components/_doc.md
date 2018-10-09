@@ -7,3 +7,4 @@
 - singleEllipsis 单行文字超出显示省略号
 - multilpleEllipsis 多行文字超出显示省略号
 - bottom 底部自适应
+- glass 毛玻璃效果

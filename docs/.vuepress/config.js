@@ -48,6 +48,7 @@ module.exports = {
           ['/lineBreak/','插入换行'],
           ['/mdedia/','midea 参考'],
           ['/bottom/','底部自适应'],
+          ['/glass/','毛玻璃效果'],
         ]
       },
       // ['/', 'Home'],
