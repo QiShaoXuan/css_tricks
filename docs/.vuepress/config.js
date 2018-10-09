@@ -47,6 +47,7 @@ module.exports = {
           ['/flexbox/', 'Flexbox'],
           ['/lineBreak/','插入换行'],
           ['/mdedia/','midea 参考'],
+          ['/bottom/','底部自适应'],
         ]
       },
       // ['/', 'Home'],
