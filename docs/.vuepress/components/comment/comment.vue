@@ -294,7 +294,7 @@ $gt-size-avatar-mobi = em(32px);
     border-bottom: 1px solid $gt-color-hr;
     font-size: em(16px);
     position: relative;
-    z-index: 10;
+    z-index: 9;
     clearfix();
   }
 
