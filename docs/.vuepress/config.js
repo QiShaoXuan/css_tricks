@@ -23,7 +23,7 @@ module.exports = {
     ],
     sidebar: [{
         title: '理论',
-        collapsable:true,
+        collapsable: false,
         children: [
           ['/name/', '命名规则'],
           ['/selector/', '选择器'],
