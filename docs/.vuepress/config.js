@@ -1,22 +1,29 @@
 module.exports = {
   title: 'css tricks',
   description: 'some css tricks, 一些常用的css样式, 一点css技巧',
-  dest: './dist',    // 设置输出目录
+  dest: './dist', // 设置输出目录
   base: '/css_tricks/',
   repo: 'https://qishaoxuan.github.io/css_tricks/', // 添加 github 链接
   themeConfig: {
     themeConfig: {
       lastUpdated: 'Last Updated',
     },
-    nav: [
-      { text: 'js tricks', link: 'https://qishaoxuan.github.io/js_tricks/' },
-      { text: 'you need to know js', link: 'https://qishaoxuan.github.io/blog/' },
-      { text: 'GitHub', link: 'https://github.com/QiShaoXuan/css_tricks' },
-    ],
-    sidebar: [
+    nav: [{
+        text: 'js tricks',
+        link: 'https://qishaoxuan.github.io/js_tricks/'
+      },
       {
+        text: 'you need to know js',
+        link: 'https://qishaoxuan.github.io/blog/'
+      },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/QiShaoXuan/css_tricks'
+      },
+    ],
+    sidebar: [{
         title: '理论',
-        collapsable: false,
+        collapsable:true,
         children: [
           ['/name/', '命名规则'],
           ['/selector/', '选择器'],
@@ -38,17 +45,23 @@ module.exports = {
         collapsable: false,
         children: [
           ['/reset/', '清除默认样式'],
-          ['/cursor/', '手型'],
-          ['/triangle/', '三角形边框'],
-          ['/shadow/', '投影'],
-          ['/ellipsis/', '文字超出显示省略号'],
-          ['/verticalMiddle/', '垂直居中'],
           ['/scrollTemp/', '滚动条样式'],
+          ['/mdedia/', 'midea 参考'],
+          ['/cursor/', '手型'],
+          ['/shadow/', '投影'],
+        ]
+      },
+      {
+        title: '技巧',
+        collapsable: false,
+        children: [
           ['/flexbox/', 'Flexbox'],
-          ['/lineBreak/','插入换行'],
-          ['/mdedia/','midea 参考'],
-          ['/bottom/','底部自适应'],
-          ['/glass/','毛玻璃效果'],
+          ['/verticalMiddle/', '垂直居中'],
+          ['/bottom/', '底部自适应'],
+          ['/triangle/', '三角形边框'],
+          ['/ellipsis/', '文字超出显示省略号'],
+          ['/lineBreak/', '插入换行'],
+          ['/glass/', '毛玻璃效果'],
         ]
       },
       // ['/', 'Home'],
