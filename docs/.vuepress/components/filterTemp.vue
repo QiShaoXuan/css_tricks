@@ -3,15 +3,18 @@ section {
   width: 48%;
   display: inline-block;
   border-bottom: 1px solid #eee;
-  padding-bottom:15px;
-  figure{
-    margin:15px;
+  padding-bottom: 15px;
+  &:nth-of-type(odd) {
+    border-right: 1px solid #eee;
+  }
+  figure {
+    margin: 15px;
   }
   figcaption {
     font-size: 18px;
     line-height: 1.5;
-     min-height: 120px;
-    margin-bottom:15px;
+    min-height: 120px;
+    margin-bottom: 15px;
     p {
       margin: 0;
     }
@@ -23,22 +26,24 @@ section {
     }
   }
   footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .tip {
-      margin-left: 15px;
-    }
+    padding: 0 15px;
   }
 }
-section:nth-of-type(odd){
-   border-right:1px solid #eee;
+/* 窗口宽度<960,设计宽度=768 */
+@media screen and (max-width: 959px) {
+  section {
+    width: 100%;
+    &:nth-of-type(odd) {
+      border-right: none;
+    }
+  }
 }
 </style>
 
 <template>
 <main>
 <div class="container">
+
   <section>
     <figure>
       <figcaption>
@@ -48,7 +53,7 @@ section:nth-of-type(odd){
       <img src="../public/images/bg1.jpg" :style="{filter:`blur(${blur}px)`}">
     </figure>
     <footer>
-    <input type="range" min="0" max="40" v-model="blur"><span class="tip">{{blur}}</span>
+      <el-slider  :min="0" :max="40"  v-model="blur" input-size="mini" show-input></el-slider>
     </footer>
   </section>
 
@@ -61,7 +66,7 @@ section:nth-of-type(odd){
       <img src="../public/images/bg1.jpg"  :style="{filter:`contrast(${contrast}%)`}">
     </figure>
     <footer>
-     <input type="range" min="0" max="500" v-model="contrast"><span class="tip">{{contrast}}%</span>
+       <el-slider  :min="0" :max="500" v-model="contrast" input-size="mini" show-input></el-slider>
     </footer>
   </section>
 
@@ -74,7 +79,7 @@ section:nth-of-type(odd){
       <img src="../public/images/bg1.jpg"  :style="{filter:`grayscale(${grayscale}%)`}">
     </figure>
     <footer>
-     <input type="range" min="0" max="100" v-model="grayscale"><span class="tip">{{grayscale}}%</span>
+      <el-slider  :min="0" :max="100"  v-model="grayscale" input-size="mini" show-input></el-slider>
     </footer>
   </section>
   <section>
@@ -86,7 +91,7 @@ section:nth-of-type(odd){
       <img src="../public/images/bg1.jpg"  :style="{filter:`hue-rotate(${hue_rotate}deg)`}">
     </figure>
     <footer>
-     <input type="range" min="0" max="100" v-model="hue_rotate"><span class="tip">{{hue_rotate}}deg</span>
+      <el-slider  :min="0" :max="100"  v-model="hue_rotate" input-size="mini" show-input></el-slider>
     </footer>
   </section>
 
@@ -99,7 +104,7 @@ section:nth-of-type(odd){
       <img src="../public/images/bg1.jpg"  :style="{filter:`sepia(${sepia}%)`}">
     </figure>
     <footer>
-     <input type="range" min="0" max="100" v-model="sepia"><span class="tip">{{sepia}}%</span>
+      <el-slider  :min="0" :max="100"  v-model="sepia" input-size="mini" show-input></el-slider>
     </footer>
   </section>
 
@@ -112,7 +117,7 @@ section:nth-of-type(odd){
       <img src="../public/images/bg1.jpg"  :style="{filter:`saturate(${saturate}%)`}">
     </figure>
     <footer>
-     <input type="range" min="0" max="200" v-model="saturate"><span class="tip">{{saturate}}%</span>
+      <el-slider  :min="0" :max="200"  v-model="saturate" input-size="mini" show-input></el-slider>
     </footer>
   </section>
 
@@ -125,7 +130,7 @@ section:nth-of-type(odd){
       <img src="../public/images/bg1.jpg"  :style="{filter:`brightness(${brightness}%)`}">
     </figure>
     <footer>
-     <input type="range" min="0" max="400" v-model="brightness"><span class="tip">{{brightness}}%</span>
+      <el-slider  :min="0" :max="400"  v-model="brightness" input-size="mini" show-input></el-slider>
     </footer>
   </section>
 
@@ -138,7 +143,7 @@ section:nth-of-type(odd){
       <img src="../public/images/bg1.jpg"  :style="{filter:`invert(${invert}%)`}">
     </figure>
     <footer>
-     <input type="range" min="0" max="100" v-model="invert"><span class="tip">{{invert}}%</span>
+      <el-slider  :min="0" :max="100"  v-model="invert" input-size="mini" show-input></el-slider>
     </footer>
   </section>
 
@@ -151,7 +156,7 @@ section:nth-of-type(odd){
       <img src="../public/images/bg1.jpg"  :style="{filter:`opacity(${opacity}%)`}">
     </figure>
     <footer>
-     <input type="range" min="0" max="100" v-model="opacity"><span class="tip">{{opacity}}%</span>
+      <el-slider  :min="0" :max="100"  v-model="opacity" input-size="mini" show-input></el-slider>
     </footer>
   </section>
 
@@ -166,9 +171,7 @@ section:nth-of-type(odd){
       </figcaption>
       <img src="../public/images/bg1.jpg" style="visibility: hidden;">
     </figure>
-    <footer style="visibility: hidden;">
-     <input type="range" min="0" max="100" v-model="opacity"><span class="tip">{{opacity}}%</span>
-    </footer>
+    <footer></footer>
   </section>
 </div>
 </main>
