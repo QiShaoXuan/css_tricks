@@ -154,6 +154,10 @@ export default {
           this.sizeArr= ["0", "100px", "100px", "100px"],
           this.colorArr= ["transparent", "transparent", "#007bff", "transparent"]
           break
+        case "s":
+          this.sizeArr= [],
+          this.colorArr= ["transparent", "transparent", "#007bff", "transparent"]
+          break
       }
     }
   }
