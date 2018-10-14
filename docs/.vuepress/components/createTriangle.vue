@@ -43,6 +43,9 @@
         &:hover {
           background: #53cde2;
         }
+        &.active {
+          background: #53cde2;
+        }
       }
       &.rotate {
         width: 85px;
@@ -55,6 +58,9 @@
         .direction-label {
           background: #8e98f5;
           &:hover {
+            background: #7874f2;
+          }
+          &.active {
             background: #7874f2;
           }
         }
@@ -79,7 +85,16 @@
 
   .size-section {
     width: 400px;
-    .title {
+    p {
+      margin: 0;
+    }
+  }
+  .tool-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    div {
+      margin-right: 15px;
     }
   }
 }
@@ -94,31 +109,50 @@
       <section><h4>方向</h4>
         <div class="direction-contianer">
           <div class="placeholder"></div>
-          <div class="square">
-            <label for="n" class="direction-label"><input type="radio" v-model="direction" name="direction" id="n" value="n"></label>
-            <label for="s" class="direction-label"><input type="radio" v-model="direction" name="direction" id="s" value="s"></label>
-            <label for="w" class="direction-label"><input type="radio" v-model="direction" name="direction" id="w" value="w"></label>
-            <label for="e" class="direction-label"><input type="radio" v-model="direction" name="direction" id="e" value="e"></label>
+          <div class="square rotate">
+            <label for="top" class="direction-label" :class="setActive('top')"><input type="radio" v-model="direction" name="direction" id="top" value="top"></label>
+            <label for="bottom" class="direction-label" :class="setActive('bottom')"><input type="radio" v-model="direction" name="direction" id="bottom" value="bottom"></label>
+            <label for="left" class="direction-label" :class="setActive('left')"><input type="radio" v-model="direction" name="direction" id="left" value="left"></label>
+            <label for="right" class="direction-label" :class="setActive('right')"><input type="radio" v-model="direction" name="direction" id="right" value="right"></label>
           </div>
 
-          <div class="square rotate">
-            <label for="nw" class="direction-label"><input type="radio" v-model="direction" name="direction" id="nw" value="n,w"></label>
-            <label for="sw" class="direction-label"><input type="radio" v-model="direction" name="direction" id="sw" value="s,w"></label>
-            <label for="ne" class="direction-label"><input type="radio" v-model="direction" name="direction" id="ne" value="n,e"></label>
-            <label for="se" class="direction-label"><input type="radio" v-model="direction" name="direction" id="se" value="s,e"></label>
+          <div class="square">
+            <label for="leftTop" class="direction-label" :class="setActive('leftTop')"><input type="radio" v-model="direction" name="direction" id="leftTop" value="leftTop"></label>
+            <label for="leftBottom" class="direction-label" :class="setActive('leftBottom')"><input type="radio" v-model="direction" name="direction" id="leftBottom" value="leftBottom"></label>
+            <label for="rightTop" class="direction-label" :class="setActive('rightTop')"><input type="radio" v-model="direction" name="direction" id="rightTop" value="rightTop"></label>
+            <label for="rightBottom" class="direction-label" :class="setActive('rightBottom')"><input type="radio" v-model="direction" name="direction" id="rightBottom" value="rightBottom"></label>
           </div>
+          {{direction}}
         </div>
       </section>
       <section class="size-section">
         <h4>大小</h4>
-        <span>宽度</span>
-        <el-slider v-model="width" :min="0" :max="300"
-          show-input input-size='mini'></el-slider>
-        <span>高度</span>
-        <el-slider v-model="height" :min="0" :max="300"
-          show-input input-size='mini'></el-slider>
+        <p>宽度</p>
+        <el-input-number v-model="width" :min="0" :max="300" size='mini'></el-input-number>
+        <div class="tool-flex">
+          <div>
+             <p>左</p>
+            <el-input-number v-model="left" :min="0" :max="150" size='mini'></el-input-number>
+          </div>
+          <div>
+             <p>右</p>
+            <el-input-number v-model="right" :min="0" :max="150" size='mini'></el-input-number>
+          </div>
+        </div>
+          <p>高度</p>
+          <el-input-number v-model="height" :min="0" :max="300" size='mini'></el-input-number>
+        <div class="tool-flex">
+          <div>
+            <p>上</p>
+            <el-input-number v-model="top" :min="0" :max="150" size='mini'></el-input-number>
+          </div>
+          <div>
+            <p>下</p>
+            <el-input-number v-model="bottom" :min="0" :max="150" size='mini'></el-input-number>
+          </div>
+        </div>
         <!-- <span>高度</span>
-        <el-slider v-model="height"   disabled :min="0" :max="300" show-input input-size='mini'></el-slider> -->
+        <el-input-number v-model="height"   disabled :min="0" :max="300" show-input input-size='mini'></el-input-number> -->
       </section>
     </div>
   </div>
@@ -126,39 +160,111 @@
 </template>
 
 <script>
-// 上 n
-// 下 s
-// 左上 nw
-// 左下 sw
-// 左 w
-// 右 e
-// 右上 ne
-// 右下 se
+const colorDirection = {
+  top: "bottom",
+  right: "left",
+  bottom: "top",
+  left: "right",
+  topRight: "right",
+  bottomRight: "bottom",
+  bottomLeft: "left",
+  topLeft: "top"
+};
+const standard = {
+  top: {
+    top: false,
+    right: "width-right",
+    bottom: "height",
+    left: "width-left"
+  },
+  right: {
+    top: "height-top",
+    right: false,
+    bottom: "height-bottom",
+    left: "width"
+  },
+  bottom: {
+    top: "height",
+    right: "width-right",
+    bottom: false,
+    left: "width-left"
+  },
+  left: {
+    top: "height-top",
+    right: "width",
+    bottom: "height-bottom",
+    left: false
+  },
+  topRight: {
+    top: false,
+    right: "width",
+    bottom: "height",
+    left: false
+  },
+  bottomRight: {
+    top: false,
+    right: false,
+    bottom: "height",
+    left: "width"
+  },
+  bottomLeft: {
+    top: "height",
+    right: false,
+    bottom: false,
+    left: "width"
+  },
+  topLeft: {
+    top: "height",
+    right: "width",
+    bottom: false,
+    left: false
+  }
+};
 export default {
   name: "createTriangle",
   data() {
     return {
       color: "#00adb5",
-      width: 100,
-      height: 100,
-      direction: "n",
+      direction: "top",
       sizeArr: ["0", "100px", "100px", "100px"],
       colorArr: ["transparent", "transparent", "#007bff", "transparent"]
     };
   },
+  computed: {
+    width: {
+      get: function() {
+        return this.left + this.right;
+      },
+      set: function(val) {
+        return val;
+      }
+    },
+    height: {
+      get: function() {
+        return this.top + this.bottom;
+      },
+      set: function(val) {
+        return val;
+      }
+    }
+  },
   watch: {},
   methods: {
+    setActive(dir) {
+      return dir == this.direction ? "active" : "";
+    },
+    setColor(){},
+    setSize(){
+      
+    },
     setStyle(dir) {
-      switch (dir) {
-        case "n":
-          this.sizeArr= ["0", "100px", "100px", "100px"],
-          this.colorArr= ["transparent", "transparent", "#007bff", "transparent"]
-          break
-        case "s":
-          this.sizeArr= [],
-          this.colorArr= ["transparent", "transparent", "#007bff", "transparent"]
-          break
-      }
+      let colors = {
+        top: "transparent",
+        right: "transparent",
+        bottom: "transparent",
+        left: "transparent"
+      };
+      
     }
   }
 };
