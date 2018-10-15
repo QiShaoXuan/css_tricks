@@ -29,7 +29,6 @@ section {
     padding: 0 15px;
   }
 }
-/* 窗口宽度<960,设计宽度=768 */
 @media screen and (max-width: 959px) {
   section {
     width: 100%;
