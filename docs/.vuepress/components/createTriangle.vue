@@ -9,6 +9,15 @@
     margin: 0 auto;
     background-image: url(../public/images/transparent.png);
   }
+  h4 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    span {
+      font-weight: normal;
+      font-size: 12px;
+      color: #aaa;
+    }
+  }
 
   .tool-box {
   }
@@ -87,7 +96,7 @@
   .size-section {
     width: 400px;
     p {
-      margin: 0;
+      margin: 10px 0 6px 0;
     }
   }
   .tool-flex {
@@ -99,71 +108,99 @@
     }
   }
 }
+@media screen and (max-width: 959px) {
+  .createTriangle-container {
+    position: relative;
+    padding-top:310px;
+    .triangle-container{
+      position: absolute;
+      left:0;right:0;
+      top:0;
+      margin:auto;
+    }
+  }
+
+  .tool-box {
+  }
+}
 </style>
 
 <template>
-  <div class="createTriangle-container">
-    <div class="tool-box">
-      <section><h4>方向</h4>
-        <div class="direction-contianer">
-          <div class="placeholder"></div>
-          <div class="square rotate">
-            <label for="top" class="direction-label" :class="setActive('top')"><input type="radio" v-model="direction" name="direction" id="top" value="top"></label>
-            <label for="right" class="direction-label" :class="setActive('right')"><input type="radio" v-model="direction" name="direction" id="right" value="right"></label>
-            <label for="left" class="direction-label" :class="setActive('left')"><input type="radio" v-model="direction" name="direction" id="left" value="left"></label>
-            <label for="bottom" class="direction-label" :class="setActive('bottom')"><input type="radio" v-model="direction" name="direction" id="bottom" value="bottom"></label>
+  <div>
+    <div class="createTriangle-container">
+      <div class="tool-box">
+        <section class="tool-flex">
+        <div>
+            <h4>方向</h4>
+            <div class="direction-contianer">
+              <div class="placeholder"></div>
+              <div class="square rotate">
+                <label for="top" class="direction-label" :class="setActive('top')"><input type="radio" v-model="direction" name="direction" id="top" value="top"></label>
+                <label for="right" class="direction-label" :class="setActive('right')"><input type="radio" v-model="direction" name="direction" id="right" value="right"></label>
+                <label for="left" class="direction-label" :class="setActive('left')"><input type="radio" v-model="direction" name="direction" id="left" value="left"></label>
+                <label for="bottom" class="direction-label" :class="setActive('bottom')"><input type="radio" v-model="direction" name="direction" id="bottom" value="bottom"></label>
 
-          </div>
+              </div>
 
-          <div class="square">
-            <label for="leftTop" class="direction-label" :class="setActive('leftTop')"><input type="radio" v-model="direction" name="direction" id="leftTop" value="leftTop"></label>
-            <label for="rightTop" class="direction-label" :class="setActive('rightTop')"><input type="radio" v-model="direction" name="direction" id="rightTop" value="rightTop"></label>
+              <div class="square">
+                <label for="topLeft" class="direction-label" :class="setActive('topLeft')"><input type="radio" v-model="direction" name="direction" id="topLeft" value="topLeft"></label>
+                <label for="topRight" class="direction-label" :class="setActive('topRight')"><input type="radio" v-model="direction" name="direction" id="topRight" value="topRight"></label>
 
-            <label for="leftBottom" class="direction-label" :class="setActive('leftBottom')"><input type="radio" v-model="direction" name="direction" id="leftBottom" value="leftBottom"></label>
-            <label for="rightBottom" class="direction-label" :class="setActive('rightBottom')"><input type="radio" v-model="direction" name="direction" id="rightBottom" value="rightBottom"></label>
+                <label for="bottomLeft" class="direction-label" :class="setActive('bottomLeft')"><input type="radio" v-model="direction" name="direction" id="bottomLeft" value="bottomLeft"></label>
+                <label for="bottomRight" class="direction-label" :class="setActive('bottomRight')"><input type="radio" v-model="direction" name="direction" id="bottomRight" value="bottomRight"></label>
+              </div>
+              <!-- {{direction}} -->
+            </div>
           </div>
-          {{direction}}
-        </div>
-      </section>
-      <section>
-        <h4>类型</h4>
-          <el-radio v-model="type" v-if="showEqu" label="equ">等边</el-radio>
-          <el-radio v-model="type" label="iso">等腰</el-radio>
-          <el-radio v-model="type" label="sca">不等边</el-radio>
-      </section>
-      <section class="size-section">
-        <h4>大小</h4>
-        <p>宽度</p>
-        <el-input-number v-model="width" :disabled="widthDisable" :min="0" :max="300" size='mini'></el-input-number>
-        <div class="tool-flex">
-          <div>
-             <p>左</p>
-            <el-input-number v-model="left" :disabled="leftDisable" :min="0" :max="150" size='mini'></el-input-number>
+            <div>
+                <h4>颜色</h4>
+                <el-color-picker  @change="update" v-model="choosenColor" show-alpha></el-color-picker>
+            </div>
+        </section>
+        <section>
+          <h4>类型</h4>
+            <el-radio v-model="type" v-if="showEqu" label="equ">等边</el-radio>
+            <el-radio v-model="type" label="iso">等腰</el-radio>
+            <el-radio v-model="type" label="sca">不等边</el-radio>
+        </section>
+        <section class="size-section">
+          <h4>大小 <span>（更改值后请敲回车）</span></h4>
+          <p>宽度</p>
+          <el-input-number @change="update" v-model="width" :disabled="widthDisable" :min="0" :max="300" size='mini'></el-input-number>
+          <div class="tool-flex">
+            <div>
+              <p>左</p>
+              <el-input-number @change="update" v-model="left" :disabled="leftDisable" :min="0" :max="150" size='mini'></el-input-number>
+            </div>
+            <div>
+              <p>右</p>
+              <el-input-number @change="update" v-model="right" :disabled="rightDisable" :min="0" :max="150" size='mini'></el-input-number>
+            </div>
           </div>
-          <div>
-             <p>右</p>
-            <el-input-number v-model="right" :disabled="rightDisable" :min="0" :max="150" size='mini'></el-input-number>
+            <p>高度</p>
+            <el-input-number @change="update" v-model="height" :disabled="heightDisable" :min="0" :max="300" size='mini'></el-input-number>
+          <div class="tool-flex">
+            <div>
+              <p>上</p>
+              <el-input-number @change="update" v-model="top" :disabled="topDisable" :min="0" :max="150" size='mini'></el-input-number>
+            </div>
+            <div>
+              <p>下</p>
+              <el-input-number @change="update" v-model="bottom" :disabled="bottomDisable" :min="0" :max="150" size='mini'></el-input-number>
+            </div>
           </div>
-        </div>
-          <p>高度</p>
-          <el-input-number v-model="height" :disabled="heightDisable" :min="0" :max="300" size='mini'></el-input-number>
-        <div class="tool-flex">
-          <div>
-            <p>上</p>
-            <el-input-number v-model="top" :disabled="topDisable" :min="0" :max="150" size='mini'></el-input-number>
-          </div>
-          <div>
-            <p>下</p>
-            <el-input-number v-model="bottom" :disabled="bottomDisable" :min="0" :max="150" size='mini'></el-input-number>
-          </div>
-        </div>
-        <!-- <span>高度</span>
-        <el-input-number v-model="height"   disabled :min="0" :max="300" show-input input-size='mini'></el-input-number> -->
-      </section>
+          <!-- <span>高度</span>
+          <el-input-number v-model="height"   disabled :min="0" :max="300" show-input input-size='mini'></el-input-number> -->
+        </section>
+      </div>
+      <div class="triangle-container">
+          <div class="triangle-demo" :style="{borderWidth:lengths,borderColor:colors}"></div>
+      </div>
     </div>
-       <div class="triangle-container">
-      <div class="triangle-demo" :style="{borderWidth:lengths,borderColor:colors}"></div>
-    </div>
+    <div style="width:100%;">
+        <h3>CSS</h3>
+        <pre class="language-css"><code ref="code-container"></code></pre>
+      </div>
   </div>
 
 </template>
@@ -177,7 +214,8 @@ const colorDirection = {
   topRight: "right",
   bottomRight: "bottom",
   bottomLeft: "left",
-  topLeft: "top"
+  topLeft: "top",
+  code: ""
 };
 const lengthDirection = {
   top: {
@@ -229,6 +267,9 @@ const lengthDirection = {
     left: false
   }
 };
+import Prism from "prismjs";
+// import 'prismjs/themes/prism.css'
+
 export default {
   name: "createTriangle",
   data() {
@@ -266,6 +307,10 @@ export default {
     }
   },
   methods: {
+    update() {
+      this.changeSize();
+      this.updateCSS();
+    },
     setActive(dir) {
       return dir == this.direction ? "active" : "";
     },
@@ -289,13 +334,6 @@ export default {
           this.bottom = (this.height * 1) / 2;
         }
       } else if (this.type == "iso") {
-        // if (self.attr("id") == "width") {
-        //   this.height = this.width;
-        // } else if (self.attr("id") == "height") {
-        //   this.width = this.height;
-        // } else if (this.height != this.width) {
-        //   this.height = this.width;
-        // }
         this.left = (this.width * 1) / 2;
         this.right = (this.width * 1) / 2;
         this.top = (this.height * 1) / 2;
@@ -323,7 +361,7 @@ export default {
         } else {
           switch (this.type) {
             case "equ":
-              if (direction == "top" || direction == "bottom") {
+              if (this.direction == "top" || this.direction == "bottom") {
                 var equHeight = ((Math.sqrt(3) / 2) * this.width).toFixed(1);
                 switch (lengthDirections[key]) {
                   case "width":
@@ -339,7 +377,10 @@ export default {
                     lengths[key] = this.width / 2 + "px";
                     break;
                 }
-              } else if (direction == "left" || direction == "right") {
+              } else if (
+                this.direction == "left" ||
+                this.direction == "right"
+              ) {
                 var equHeight = ((Math.sqrt(3) / 2) * this.height).toFixed(1);
                 switch (lengthDirections[key]) {
                   case "width":
@@ -407,7 +448,16 @@ export default {
 
       this.lengths = this.toArray(lengths).join(" ");
       this.colors = this.toArray(colors).join(" ");
-      console.log("lengths", lengths);
+
+      let outputCssStr = `.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: ${this.lengths};
+  border-color: ${this.colors};
+}`;
+      let cssCode = Prism.highlight(outputCssStr, Prism.languages.css);
+      this.$refs["code-container"].innerHTML = cssCode;
     },
 
     changeSetup() {
@@ -427,14 +477,14 @@ export default {
 
       switch (this.type) {
         case "equ":
-          if (direction == "top" || direction == "bottom") {
+          if (this.direction == "top" || this.direction == "bottom") {
             this.widthDisable = false;
             this.heightDisable = true;
             this.leftDisable = true;
             this.rightDisable = true;
             this.topDisable = true;
             this.bottomDisable = true;
-          } else if (direction == "left" || direction == "right") {
+          } else if (this.direction == "left" || this.direction == "right") {
             this.widthDisable = true;
             this.heightDisable = false;
             this.leftDisable = true;
@@ -459,14 +509,14 @@ export default {
           this.bottomDisable = true;
           break;
         case "sca":
-          if (direction == "top" || direction == "bottom") {
+          if (this.direction == "top" || this.direction == "bottom") {
             this.widthDisable = true;
             this.heightDisable = false;
             this.leftDisable = false;
             this.rightDisable = false;
             this.topDisable = true;
             this.bottomDisable = true;
-          } else if (direction == "left" || direction == "right") {
+          } else if (this.direction == "left" || this.direction == "right") {
             this.widthDisable = false;
             this.heightDisable = true;
             this.leftDisable = true;

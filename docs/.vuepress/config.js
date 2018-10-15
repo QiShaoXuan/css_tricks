@@ -22,13 +22,13 @@ module.exports = {
       },
     ],
     sidebar: [
-      // {
-      //   title: '工具',
-      //   collapsable: false,
-      //   children: [
-      //     ['/createTriangle/', '三角形生成器'],
-      //   ],
-      // },
+      {
+        title: '工具',
+        collapsable: false,
+        children: [
+          ['/createTriangle/', '三角形生成器'],
+        ],
+      },
       {
         title: '理论',
         collapsable: false,

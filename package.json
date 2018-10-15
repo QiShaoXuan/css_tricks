@@ -12,9 +12,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "Prism": "^2.0.0",
     "gh-pages": "^2.0.0",
     "mathsass": "^0.10.1",
     "node-sass": "^4.9.3",
+    "prismjs": "^1.15.0",
     "sass-loader": "^7.1.0",
     "scss-loader": "^0.0.1",
     "vuepress": "^0.14.4"
