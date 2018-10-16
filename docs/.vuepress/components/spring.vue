@@ -1,45 +1,66 @@
 <style scoped lang="stylus">
-// @import url(https://fonts.googleapis.com/css?family=Lobster)
-// @import "../../../node_modules/mathsass/dist/math";
-body
-  display flex
-  align-items center
-  justify-content center
-  position: fixed
-  top 0
-  right 0
-  bottom 0
-  left 0
-  background white
-  color #b61a44
-
-// 定义弹跳函数
-spring-wobbly(t) {
-  // '**'为次方计算： 2.71828 的 (-6 * t)次方
-  return -0.5 * (2.71828 ** (-6 * t)) * (-2 * (2.71828 ** (6 * t)) + sin(12 * t) + 2 * cos(12 * t));
+.spring-container {
+  section {
+    margin-bottom: 30px;
+    height: 50px;
+    position: relative;
+  }
 }
 
-@keyframes move {
+// 弹跳函数
+spring-wobbly(t)
+  return -0.5 * (2.71828 ** (-6 * t)) * (-2 * (2.71828 ** (6 * t)) + sin(12 * t) + 2 * cos(12 * t))
+
+// 线性函数
+lerp($a, $b, $p)
+  return $a + $p * ($b - $a)
+
+@keyframes moveLeft {
   for i in (0 .. 100) {
     {i + '%'} {
-      transform: scale(spring-wobbly((i / 30)), spring-wobbly((i / 20)));
+      left: lerp(0, 200px, spring-wobbly(i / 100))
     }
   }
 }
 
-h1
-  text-align center
-  font-size 40px
-  animation 4s move linear infinite
-  margin-bottom 40px
+@keyframes scale {
+  for i in (0 .. 100) {
+    {i + '%'} {
+      transform: scale(lerp(.3, 1, spring-wobbly(i / 100)),lerp(.3, 1, spring-wobbly(i / 100)));
+    }
+  }
+}
 
+h1 {
+  text-align: center;
+  font-size: 40px;
+  animation: 1.5s scale linear infinite;
+  margin: 0;
+  line-height: 50px;
+}
+
+
+.moveBox {
+  width: 30px;
+  height: 30px;
+  background-color: #00adb5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  animation: 2s moveLeft linear infinite;
+  margin: auto;
+}
 </style>
 
 <template>
-<div>
-  <h1>
-   弹簧动效
-  </h1>
+<div class="spring-container">
+  <section>
+    <h1>弹簧动画</h1>
+  </section>
+  <section>
+    <div class="moveBox"></div>
+  </section>
 </div>
 
 

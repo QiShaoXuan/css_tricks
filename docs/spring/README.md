@@ -1,26 +1,35 @@
-<!-- # 弹簧动效 -->
-
 <spring/>
 
 ```stylus
-// 定义弹跳函数
-spring-wobbly(t) {
-  // '**'为次方计算： 2.71828 的 (-6 * t)次方
-  return -0.5 * (2.71828 ** (-6 * t)) * (-2 * (2.71828 ** (6 * t)) + sin(12 * t) + 2 * cos(12 * t));
-}
+// 弹跳函数
+spring-wobbly(t)
+  return -0.5 * (2.71828 ** (-6 * t)) * (-2 * (2.71828 ** (6 * t)) + sin(12 * t) + 2 * cos(12 * t))
 
-@keyframes move {
+// 线性函数
+lerp($a, $b, $p)
+  return $a + $p * ($b - $a)
+
+@keyframes moveLeft {
   for i in (0 .. 100) {
     {i + '%'} {
-      transform: scale(spring-wobbly((i / 30)), spring-wobbly((i / 20)));
+      left: lerp(0, 200px, spring-wobbly(i / 100))
+    }
+  }
+}
+
+@keyframes scale {
+  for i in (0 .. 100) {
+    {i + '%'} {
+      transform: scale(lerp(.3, 1, spring-wobbly(i / 100)),lerp(.3, 1, spring-wobbly(i / 100)));
     }
   }
 }
 
 h1
-  animation 4s move linear infinite
+  animation 4s scale linear infinite
 
+.moveBox
+  animation: 2s moveLeft linear infinite;
 ```
 
- > <a href="https://codepen.io/dtinth/pen/jbXKRv" target="_blank">https://codepen.io/dtinth/pen/jbXKRv</a>
 
