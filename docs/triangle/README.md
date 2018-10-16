@@ -15,7 +15,7 @@
         content:'';
         border-style: solid;
         border-width: 0 52px 52px 52px;
-        border-color: transparent transparent #409eff transparent;
+        border-color: transparent transparent #00adb5 transparent;
         position: absolute;
         left:-52px;top:-1px;
         z-index: -1;

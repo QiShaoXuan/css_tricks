@@ -37,7 +37,7 @@
     .shadow-dotted{
       width:120px;
       height:120px;
-      border: 6px dotted #409eff;
+      border: 6px dotted #00adb5;
       filter: drop-shadow(2px 2px 2px rgba(64,158,225,.9));
     }
 
@@ -47,7 +47,7 @@
       height: 0;
       border-style: solid;
       border-width: 0 50px 50px 50px;
-      border-color: transparent transparent #409eff transparent;
+      border-color: transparent transparent #00adb5 transparent;
       filter:drop-shadow(10px 0px 10px  rgba(39,92,171,0.5));
     }
 
@@ -55,7 +55,7 @@
     .circle-square{
       width:120px;
       height:120px;
-      background: radial-gradient(circle at bottom right, transparent 49px, #409eff 34px);
+      background: radial-gradient(circle at bottom right, transparent 49px, #00adb5 34px);
       filter: drop-shadow(2px 2px 2px rgba(64,158,225,.9));
     }
 
@@ -63,7 +63,7 @@
     .tip {
       width: 140px;
       height: 80px;
-      border: 1px solid #409eff;
+      border: 1px solid #00adb5;
       border-radius: 4px;
       position: relative;
       background-color: #fff;
@@ -88,7 +88,7 @@
         height: 0;
         border-style: solid;
         border-width: 0 10px 10px 10px;
-        border-color: transparent transparent #409eff transparent;
+        border-color: transparent transparent #00adb5 transparent;
         position: absolute;
         top: -11px;
         left: 0;

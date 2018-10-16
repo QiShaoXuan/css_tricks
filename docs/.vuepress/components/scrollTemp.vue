@@ -26,7 +26,7 @@
   }
   &::-webkit-scrollbar-thumb {
     /* 滚动条手柄 */
-    background-color: #409eff;
+    background-color: #00adb5;
   }
 }
 </style>

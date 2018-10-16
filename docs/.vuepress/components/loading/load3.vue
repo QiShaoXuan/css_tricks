@@ -13,12 +13,12 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  background-color:rgba(64, 158, 225, 0.2);
+  background-color:rgba(0, 169, 178,.2);
   &::before {
     content: "";
     width: 150px; // 50 * √2
     height: 150px; // 50 * √2
-    background-color: #409eff;
+    background-color: rgb(0, 169, 178);
     position: absolute;
     left: 50%;
     bottom: 50%;

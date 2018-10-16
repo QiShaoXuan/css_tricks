@@ -6,7 +6,7 @@
     .load {
         width: 20px;
         height: 20px;
-        background-color: #409EFF;
+        background-color: #00adb5;
         
         border-radius: 100%;
         display: inline-block;

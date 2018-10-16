@@ -84,7 +84,7 @@ document.querySelector('.button').onmousemove = (e) => {
       content:'';
       width:0;
       height:0;
-      background:  #409eff;
+      background:  #00adb5;
       position: absolute;
       top:-1px;right:-1px;
       z-index: -1;
@@ -94,7 +94,7 @@ document.querySelector('.button').onmousemove = (e) => {
       content:'';
       width:0;
       height:0;
-      background:  #409eff;
+      background:  #00adb5;
       position: absolute;
       bottom:-1px;left:-1px;
       z-index: -1;

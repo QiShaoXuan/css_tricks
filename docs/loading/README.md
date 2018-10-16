@@ -37,7 +37,7 @@
       content: "";
       width: 50px;
       height: 50px;
-      background: #409EFF;
+      background: #00adb5;
       animation: animate 0.5s linear infinite;
       position: absolute;
       top: 0;
@@ -110,7 +110,7 @@
       linecap: round;
     }
     animation: loading-circle 2s linear infinite;
-    stroke: #409EFF;
+    stroke: #00adb5;
     fill: transparent;
   }
 }
@@ -149,12 +149,12 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  background-color:rgba(64, 158, 225, 0.2);
+  background-color: rgba(0, 169, 178,.2);;
   &::before {
     content: "";
     width: 70px; // 50 * √2
     height: 70px; // 50 * √2
-    background-color: #409eff;
+    background-color: #00adb5;
     position: absolute;
     left: 50%;
     bottom: 50%;
@@ -218,7 +218,7 @@
         text-align: center;
         font-size: 10px;
         .boxLoading {
-            background-color: #409EFF;
+            background-color: #00adb5;
             height: 100%;
             width: 6px;
             display: inline-block;
@@ -246,7 +246,7 @@
 }
 
 @-webkit-keyframes stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
   20% { -webkit-transform: scaleY(1.0) }
 }
 @keyframes stretchdelay {
@@ -271,8 +271,8 @@
 .load-container {
     width: 60px;
     height: 60px;
-    background-color: #409EFF;
-    
+    background-color: #00adb5;
+
     margin: 50px auto;
     -webkit-animation: rotateplane 1.2s infinite ease-in-out;
     animation: rotateplane 1.2s infinite ease-in-out;
@@ -283,7 +283,7 @@
   50% { -webkit-transform: perspective(120px) rotateY(180deg) }
   100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
 }
- 
+
 @keyframes rotateplane {
   0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
@@ -316,8 +316,8 @@
     .load {
         width: 20px;
         height: 20px;
-        background-color: #409EFF;
-        
+        background-color: #00adb5;
+
         border-radius: 100%;
         display: inline-block;
         -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
@@ -340,7 +340,7 @@
   0%, 80%, 100% { -webkit-transform: scale(0.0) }
   40% { -webkit-transform: scale(1.0) }
 }
- 
+
 @keyframes bouncedelay {
   0%, 80%, 100% {
     transform: scale(0.0);
@@ -390,8 +390,8 @@
         .circle{
             width: 12px;
             height: 12px;
-            background-color: #409EFF;
-            
+            background-color: #00adb5;
+
             border-radius: 100%;
             position: absolute;
             -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
@@ -464,7 +464,7 @@
   0%, 80%, 100% { -webkit-transform: scale(0.0) }
   40% { -webkit-transform: scale(1.0) }
 }
- 
+
 @keyframes bouncedelay {
   0%, 80%, 100% {
     transform: scale(0.0);

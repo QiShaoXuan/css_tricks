@@ -19,7 +19,7 @@
       linecap: round;
     }
     animation: loading-circle 2s linear infinite;
-    stroke: #409EFF;
+    stroke: #00adb5;
     fill: transparent;
   }
 }

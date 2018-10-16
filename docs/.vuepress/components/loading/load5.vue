@@ -2,7 +2,7 @@
 .load-container {
     width: 60px;
     height: 60px;
-    background-color: #409EFF;
+    background-color: #00adb5;
     
     margin: 50px auto;
     -webkit-animation: rotateplane 1.2s infinite ease-in-out;

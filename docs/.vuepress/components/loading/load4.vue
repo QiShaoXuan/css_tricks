@@ -10,7 +10,7 @@
         text-align: center;
         font-size: 10px;
         .boxLoading {
-            background-color: #409EFF;
+            background-color: #00adb5;
             height: 100%;
             width: 6px;
             display: inline-block;
