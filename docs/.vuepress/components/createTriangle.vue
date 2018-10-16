@@ -154,7 +154,7 @@
           </div>
             <div>
                 <h4>颜色</h4>
-                <el-color-picker  @change="update" v-model="choosenColor" show-alpha></el-color-picker>
+                <el-color-picker @change="update" v-model="choosenColor"></el-color-picker>
             </div>
         </section>
         <section>
@@ -190,7 +190,7 @@
             </div>
           </div>
           <!-- <span>高度</span>
-          <el-input-number v-model="height"   disabled :min="0" :max="300" show-input input-size='mini'></el-input-number> -->
+          <el-input-number v-model="height"  disabled :min="0" :max="300" show-input input-size='mini'></el-input-number> -->
         </section>
       </div>
       <div class="triangle-container">
