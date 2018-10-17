@@ -28,7 +28,7 @@
 ```scss
 .wrap {
   flex-direction：row || column || row-reverse || column-reverse
-                // 水平（顺）|| 垂直（顺）|| 水平（逆）|| 水平（逆）
+                // 水平（顺）|| 垂直（顺）|| 水平（逆）|| 垂直（逆）
 }
  ```
 
