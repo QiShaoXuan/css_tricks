@@ -38,7 +38,8 @@ module.exports = {
           ['/pseudo/', '伪类和伪元素'],
           ['/unit/', '单位'],
           ['/filter/', '滤镜 filter'],
-          // ['/grid/','grid']
+          ['/flexbox/', 'flexbox'],
+          ['/grid/','grid']
         ]
       },
       {
@@ -66,7 +67,6 @@ module.exports = {
         title: '技巧',
         collapsable: false,
         children: [
-          ['/flexbox/', 'Flexbox'],
           ['/verticalMiddle/', '垂直居中'],
           ['/bottom/', '底部自适应'],
           ['/triangle/', '三角形边框'],
