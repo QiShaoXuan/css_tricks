@@ -107,7 +107,6 @@
           <el-radio v-model="item.unit" label="px"></el-radio>
           <el-button class="btn" v-if="gridTemplateColumns.length!=1" @click="delColum(index)" plain size="mini" icon="el-icon-minus" circle></el-button>
         </div>
-
         <el-button class="btn add-btn" type="primary" plain size="mini" icon="el-icon-plus" circle @click="addColum"></el-button>
       </div>
     </section>
@@ -140,25 +139,6 @@
         </div>
       </div>
     </section>
-    <!-- <section class="property-value">
-      <pre class="language-css"><code ref="justifyContent"></code></pre>
-      <div class="value-set">
-        <div class="key-value">
-          <span class="key">justify-items:&nbsp;&nbsp;</span>
-          <el-radio v-model="justifyItem" label="start"></el-radio>
-          <el-radio v-model="justifyItem" label="end"></el-radio>
-          <el-radio v-model="justifyItem" label="center"></el-radio>
-          <el-radio v-model="justifyItem" label="stretch"></el-radio>
-        </div>
-        <div class="key-value">
-          <span class="key">align-items:&nbsp;&nbsp;</span>
-          <el-radio v-model="alignItems" label="start"></el-radio>
-          <el-radio v-model="alignItems" label="end"></el-radio>
-          <el-radio v-model="alignItems" label="center"></el-radio>
-          <el-radio v-model="alignItems" label="stretch"></el-radio>
-        </div>
-      </div>
-    </section> -->
     <div class="btn-container">
       <span class="tip">点击 grid-item 以改变其属性</span>
       <el-button type="primary" plain size="mini" @click="addGridItem">增加 grid-item</el-button>
@@ -172,22 +152,25 @@
     </div>
     <section class="property-value" v-if="choosenGridItem">
       <h4>grid-item-{{choosenGridItem.index}}</h4>
-      <pre class="language-css"><code ref="gridItem"></code></pre>
+      <pre class="language-css"><code ref="itemColumn"></code></pre>
       <div class="value-set">
-        <div class="key-value w-100">
-          <span class="key need-min-width">grid-column-start:&nbsp;&nbsp;</span>
+        <div class="key-value w-50">
+          <span class="key">grid-column-start:&nbsp;&nbsp;</span>
           <el-input-number :min="1" :max="choosenGridItem.gridColumnEnd - 1" size="mini" v-model="choosenGridItem.gridColumnStart"></el-input-number>
         </div>
-        <div class="key-value w-100">
-          <span class="key need-min-width">grid-column-end:&nbsp;&nbsp;</span>
+        <div class="key-value w-50">
+          <span class="key">grid-column-end:&nbsp;&nbsp;</span>
           <el-input-number :min="choosenGridItem.gridColumnStart + 1" :max="gridTemplateColumns.length + 1" size="mini" v-model="choosenGridItem.gridColumnEnd"></el-input-number>
         </div>
-        <div class="key-value w-100 ">
-          <span class="key need-min-width">grid-row-start:&nbsp;&nbsp;</span>
+      </div>
+      <pre class="language-css"><code ref="itemRow"></code></pre>
+      <div class="value-set">
+        <div class="key-value w-50 ">
+          <span class="key">grid-row-start:&nbsp;&nbsp;</span>
           <el-input-number :min="1" :max="choosenGridItem.gridRowEnd - 1" size="mini" v-model="choosenGridItem.gridRowStart"></el-input-number>
         </div>
-        <div class="key-value w-100">
-          <span class="key need-min-width">grid-row-end:&nbsp;&nbsp;</span>
+        <div class="key-value w-50">
+          <span class="key">grid-row-end:&nbsp;&nbsp;</span>
           <el-input-number :min="choosenGridItem.gridRowStart + 1" :max="gridTemplateRows.length + 1" size="mini" v-model="choosenGridItem.gridRowEnd"></el-input-number>
         </div>
       </div>
@@ -244,9 +227,12 @@ export default {
         ? `${this.gridcolumnGaps}px`
         : `${this.gridcolumnGaps}px ${this.gridrowGaps}px`;
     },
-    gridItemCss(){
-      return this.choosenGridItem?`${this.choosenGridItem.gridRowStart} / ${this.choosenGridItem.gridColumnStart} / ${this.choosenGridItem.gridRowEnd} / ${this.choosenGridItem.gridColumnEnd}`:''
-    }
+    itemColumn(){
+      return this.choosenGridItem?`${this.choosenGridItem.gridColumnStart} / ${this.choosenGridItem.gridColumnEnd}`:''
+    },
+    itemRow(){
+      return this.choosenGridItem?`${this.choosenGridItem.gridRowStart} / ${this.choosenGridItem.gridRowEnd}`:''
+    },
   },
   watch: {
     gridTemplateColumnsCss(val) {
@@ -258,10 +244,11 @@ export default {
     gridGapCss() {
       this.updateGaps();
     },
-    gridItemCss(){
-      setTimeout(()=>{
-        this.updateGridItemCss()
-      })
+    itemColumn(){
+      this.updateItemColumn()
+    },
+    itemRow(){
+      this.updateItemRow()
     }
   },
   methods: {
@@ -272,7 +259,6 @@ export default {
     },
     addGridItem(){
       let color = this.gridItem.length>=this.colors.length?this.colors[(this.gridItem.length%this.colors.length)]:this.colors[this.gridItem.length]
-      console.log(this.gridItem.length+1)
       this.gridItem.push({
         index:this.gridItem.length+1,
         gridColumnStart:1,
@@ -336,11 +322,21 @@ export default {
         Prism.languages.css
       );
     },
-    updateGridItemCss(){
-      this.$refs["gridItem"].innerHTML = Prism.highlight(
-        `grid-area: ${this.gridItemCss};`,
-        Prism.languages.css
-      );
+    updateItemColumn(){
+      setTimeout(()=>{
+        this.$refs["itemColumn"].innerHTML = Prism.highlight(
+          `grid-column: ${this.itemColumn};`,
+          Prism.languages.css
+        );
+      })
+    },
+    updateItemRow(){
+      setTimeout(()=>{
+        this.$refs["itemRow"].innerHTML = Prism.highlight(
+          `grid-row: ${this.itemRow};`,
+          Prism.languages.css
+        );
+      })
     },
     updateCss() {
       this.updateColumnsCss();
