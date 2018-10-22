@@ -49,7 +49,8 @@ module.exports = {
           ['/accordion/', '手风琴'],
           ['/hover/', '悬停'],
           ['/loading/', '加载动画'],
-          ['/spring/', '弹簧动画']
+          ['/spring/', '弹簧动画'],
+          ['/parabola/','抛物线']
         ]
       },
       {
