@@ -6,10 +6,10 @@
 
 <grid-grid/>
 
-## 网格容器的 `justify` 和 `align`
+## 网格容器的 justify 和 align
 
 <grid-grid2/>
 
-## `justify-self` 和 `align-self`
+## justify-self && align-self
 
 <grid-grid3/>

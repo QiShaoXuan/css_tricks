@@ -6,6 +6,7 @@
     grid-template-rows: repeat(2, 100px);
     border: 1px solid #eeeeee;
     height: 250px;
+    margin-top:30px;
   }
   .grid-item {
     background: #00adb5;
@@ -68,7 +69,7 @@
         <el-radio v-for="(value, index) in value2" :key="index" v-model="alignContent" :label="value"></el-radio>
       </div>
     </div>
-    
+
   </div>
 </template>
 
