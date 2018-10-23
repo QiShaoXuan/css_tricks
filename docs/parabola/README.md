@@ -1,10 +1,12 @@
+<parabola-parabolaJs/>
+
 :::tip
 利用 `ease-in` 和 `ease-out` 的速度差达到抛物线效果
 
 常用于添加收藏的动画
 :::
 
-<parabola/>
+<parabola-parabolaCss/>
 
 ```vue
 <style scoped lang="scss">
@@ -61,3 +63,11 @@ export default {
 </script>
 
 ```
+
+
+ <comment-comment/>
+
+ <comment-comment/>
+
+
+ <comment-comment/>
