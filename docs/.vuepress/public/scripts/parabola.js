@@ -1,19 +1,9 @@
-/*!
- * by zhangxinxu(.com) 2012-12-27
- * you can visit http://www.zhangxinxu.com/wordpress/?p=3855 to get more infomation
- * under MIT license
- */
 var funParabola = function (element, target, options) {
-  /*
-   * 网页模拟现实需要一个比例尺
-   * 如果按照1像素就是1米来算，显然不合适，因为页面动不动就几百像素
-   * 页面上，我们放两个物体，200~800像素之间，我们可以映射为现实世界的2米到8米，也就是100:1
-   * 不过，本方法没有对此有所体现，因此不必在意
-   */
 
   var defaults = {
     speed: 166.67, // 每帧移动的像素大小，每帧（对于大部分显示屏）大约16~17毫秒
     curvature: 0.001, // 实际指焦点到准线的距离，你可以抽象成曲率，这里模拟扔物体的抛物线，因此是开口向下的
+    endScale: 0.5,
     progress: function () {},
     complete: function () {}
   };
@@ -39,21 +29,6 @@ var funParabola = function (element, target, options) {
       return this;
     }
   };
-
-  /* 确定移动的方式
-   * IE6-IE8 是margin位移
-   * IE9+使用transform
-   */
-  var moveStyle = "margin",
-    testDiv = document.createElement("div");
-  if ("oninput" in testDiv) {
-    ["", "ms", "webkit"].forEach(function (prefix) {
-      var transform = prefix + (prefix ? "T" : "t") + "ransform";
-      if (transform in testDiv.style) {
-        moveStyle = transform;
-      }
-    });
-  }
 
   // 根据两点坐标以及曲率确定运动曲线函数（也就是确定a, b的值）
   /* 公式： y = a*x*x + b*x + c;
@@ -83,6 +58,7 @@ var funParabola = function (element, target, options) {
       if (typeof coordElement.x == "undefined") this.position();
       element.setAttribute("data-center", [coordElement.x, coordElement.y].join());
       target.setAttribute("data-center", [coordTarget.x, coordTarget.y].join());
+
       return this;
     }
 
@@ -92,12 +68,7 @@ var funParabola = function (element, target, options) {
       var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft,
         scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-      // 初始位置
-      if (moveStyle == "margin") {
-        element.style.marginLeft = element.style.marginTop = "0px";
-      } else {
-        element.style[moveStyle] = "translate(0, 0)";
-      }
+      element.style['transform'] = "translate(0, 0)";
 
       // 四边缘的坐标
       rectElement = element.getBoundingClientRect();
@@ -148,6 +119,8 @@ var funParabola = function (element, target, options) {
       var startx = 0,
         rate = coordTarget.x > 0 ? 1 : -1;
 
+      var scale = 1;
+
       var step = function () {
         // 切线 y'=2ax+b
         var tangent = 2 * a * startx + b;
@@ -162,7 +135,12 @@ var funParabola = function (element, target, options) {
         // y*y + x*x = speed
         // (tangent * x)^2 + x*x = speed
         // x = Math.sqr(speed / (tangent * tangent + 1));
-        startx = startx + rate * Math.sqrt(params.speed / (tangent * tangent + 1));
+        var xx = Math.sqrt(params.speed / (tangent * tangent + 1))
+        startx = startx + rate * xx;
+
+        // 设置缩放
+        var r = (1 - params.endScale) * xx / Math.abs(coordElement.x - coordTarget.x)
+        scale = scale - r
 
         // 防止过界
         if ((rate == 1 && startx > coordTarget.x) || (rate == -1 && startx < coordTarget.x)) {
@@ -174,20 +152,17 @@ var funParabola = function (element, target, options) {
         // 标记当前位置，这里有测试使用的嫌疑，实际使用可以将这一行注释
         element.setAttribute("data-center", [Math.round(x), Math.round(y)].join());
 
-        // x, y目前是坐标，需要转换成定位的像素值
-        if (moveStyle == "margin") {
-          element.style.marginLeft = x + "px";
-          element.style.marginTop = y + "px";
-        } else {
-          element.style[moveStyle] = "translate(" + [x + "px", y + "px"].join() + ")";
-        }
+        element.style['transform'] = "translate(" + [x + "px", y + "px"].join() + ") scale(" + scale + ")";
 
         if (startx !== coordTarget.x) {
           params.progress(x, y);
           window.requestAnimationFrame(step);
         } else {
           // 运动结束，回调执行
-          params.complete();
+          params.complete({
+            x: x,
+            y: y
+          });
           flagMove = true;
         }
       };
@@ -199,40 +174,12 @@ var funParabola = function (element, target, options) {
 
     // 初始化方法
     exports.init = function () {
+      console.log('init')
       this.position().mark().move();
     };
   }
 
   return exports;
 };
-
-/*! requestAnimationFrame.js
- * by zhangxinxu 2013-09-30
- */
-(function () {
-  var lastTime = 0;
-  var vendors = ['webkit', 'moz'];
-  for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-    window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
-  }
-
-  if (!window.requestAnimationFrame) {
-    window.requestAnimationFrame = function (callback, element) {
-      var currTime = new Date().getTime();
-      var timeToCall = Math.max(0, 16.7 - (currTime - lastTime));
-      var id = window.setTimeout(function () {
-        callback(currTime + timeToCall);
-      }, timeToCall);
-      lastTime = currTime + timeToCall;
-      return id;
-    };
-  }
-  if (!window.cancelAnimationFrame) {
-    window.cancelAnimationFrame = function (id) {
-      clearTimeout(id);
-    };
-  }
-}());
 
 export default funParabola
