@@ -3,6 +3,9 @@ module.exports = {
   description: 'some css tricks, 一些常用的css样式, 一点css技巧',
   dest: './dist', // 设置输出目录
   base: '/css_tricks/',
+  head: [
+    ['link', { rel: 'icon', href: `/images/logo.png` }],
+  ],
   repo: 'https://qishaoxuan.github.io/css_tricks/', // 添加 github 链接
   themeConfig: {
     themeConfig: {
