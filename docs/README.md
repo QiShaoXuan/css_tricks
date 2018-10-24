@@ -1,8 +1,6 @@
-<div align="center"><img src="../../logo.png"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/QiShaoXuan/css_tricks/master/logo.png"></div>
 
-<p align="center">一些常用的css样式, 一点css技巧</p>
-
-## About
+## 关于 About
 
 - 总结一些常用的 css 样式
 - 记录一些 css 的新属性和一点奇技淫巧
@@ -11,11 +9,11 @@
 
 > talk is cheap show me the code
 
-## View online
+## 在线查看 View online
 
 <a href="https://qishaoxuan.github.io/css_tricks/" target="_blank">css tricks</a>
 
-## Quick start
+## 快速开始 Quick start
 
 - Clone the `https://github.com/QiShaoXuan/css_tricks.git`
 - Install package `npm install`
