@@ -47,3 +47,22 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 ```
+
+## 清除移动端 a 标签等点击区域变色
+```css
+*{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+```
+
+## 清除移动端 input 样式
+```css
+input{
+    border: none;
+    -moz-appearance:none;
+    -webkit-appearance : none ; /*解决ios上按钮的圆角问题*/
+    border-radius: 0; /*解决ios上输入框圆角问题*/
+    outline:medium; /*去掉鼠标点击的默认黄色边框*/
+    background-color: transparent;
+}
+```
