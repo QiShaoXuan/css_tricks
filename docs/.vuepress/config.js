@@ -4,7 +4,7 @@ module.exports = {
   dest: './dist', // 设置输出目录
   base: '/css_tricks/',
   head: [
-    ['link', { rel: 'icon', href: `/images/logo.png` }],
+    ['link', { rel: 'icon', href: `/images/favicon.png` }],
   ],
   repo: 'https://qishaoxuan.github.io/css_tricks/', // 添加 github 链接
   themeConfig: {
