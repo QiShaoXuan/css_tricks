@@ -66,3 +66,10 @@ input{
     background-color: transparent;
 }
 ```
+
+## 避免ios滑动滚动条卡顿
+```css
+*{
+  -webkit-overflow-scrolling : touch
+}
+```
