@@ -1,4 +1,4 @@
-<div align="center"><img src="./logo.png"></div>
+<div align="center"><img src="../../logo.png"></div>
 
 <p align="center">一些常用的css样式, 一点css技巧</p>
 
