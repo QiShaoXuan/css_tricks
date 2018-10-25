@@ -9,10 +9,6 @@
 
 > talk is cheap show me the code
 
-## 在线查看 View online
-
-<a href="https://qishaoxuan.github.io/css_tricks/" target="_blank">css tricks</a>
-
 ## 快速开始 Quick start
 
 - Clone the `https://github.com/QiShaoXuan/css_tricks.git`
@@ -33,3 +29,4 @@ or submit an issue, any helpful suggestions are welcomed
 
 ## js tricks
 <a href="https://qishaoxuan.github.io/js_tricks/" target="_blank">view online</a>
+
