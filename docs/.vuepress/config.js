@@ -9,6 +9,7 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['meta', { name: 'msapplication-TileColor', content: '#00adb5' }],
+    ['meta', {name:'description', itemprop: 'description', content: 'some css tricks, 一些常用的css样式, 一点css技巧' }],
     ['meta', { itemprop: 'name', content: 'css_trick' }],
     ['meta', { itemprop: 'image', content: '/css_tricks/images/favicon.png' }],
   ],
