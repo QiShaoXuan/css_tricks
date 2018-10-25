@@ -4,7 +4,13 @@ module.exports = {
   dest: './dist', // 设置输出目录
   base: '/css_tricks/',
   head: [
-    ['link', { rel: 'icon', href: `/images/favicon.png` }],
+    ['link', { rel: 'icon', href: '/images/favicon.png' }],
+    ['meta', { name: 'theme-color', content: '#00adb5' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#00adb5' }],
+    ['meta', { itemprop: 'name', content: 'css_trick' }],
+    ['meta', { itemprop: 'image', content: '/css_tricks/images/favicon.png' }],
   ],
   repo: 'https://qishaoxuan.github.io/css_tricks/', // 添加 github 链接
   themeConfig: {
