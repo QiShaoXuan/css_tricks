@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'css tricks',
+  title: 'CSS tricks',
   description: 'some CSS tricks, 一些常用的 CSS 样式, 一点 CSS 技巧',
   dest: './dist', // 设置输出目录
   base: '/css_tricks/',
