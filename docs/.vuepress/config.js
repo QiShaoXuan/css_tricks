@@ -15,9 +15,13 @@ module.exports = {
   ],
   repo: 'https://qishaoxuan.github.io/css_tricks/', // 添加 github 链接
   themeConfig: {
-    themeConfig: {
-      lastUpdated: 'Last Updated',
+    serviceWorker: {
+      updatePopup: {
+         message: "点击刷新以查看新的内容",
+         buttonText: "刷新"
+      }
     },
+    lastUpdated: 'Last Updated',
     nav: [{
         text: 'js tricks',
         link: 'https://qishaoxuan.github.io/js_tricks/'

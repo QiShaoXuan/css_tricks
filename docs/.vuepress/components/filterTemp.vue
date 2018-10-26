@@ -170,7 +170,9 @@ section {
       </figcaption>
       <img src="../public/images/bg1.jpg" style="visibility: hidden;">
     </figure>
-    <footer></footer>
+    <footer style="visibility: hidden">
+      <el-slider :min="0" :max="100" input-size="mini" show-input></el-slider>
+    </footer>
   </section>
 </div>
 </main>
