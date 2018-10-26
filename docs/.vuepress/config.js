@@ -26,10 +26,10 @@ module.exports = {
         text: 'js tricks',
         link: 'https://qishaoxuan.github.io/js_tricks/'
       },
-      {
-        text: 'you need to know js',
-        link: 'https://qishaoxuan.github.io/blog/'
-      },
+      // {
+      //   text: 'blog',
+      //   link: 'https://qishaoxuan.github.io/blog/'
+      // },
       {
         text: 'GitHub',
         link: 'https://github.com/QiShaoXuan/css_tricks'
@@ -53,7 +53,8 @@ module.exports = {
           ['/unit/', '单位'],
           ['/filter/', '滤镜 filter'],
           ['/flexbox/', 'flexbox'],
-          ['/grid/','grid']
+          ['/grid/','grid'],
+          ['/object/','object-fit, object-position']
         ]
       },
       {
