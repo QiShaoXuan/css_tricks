@@ -26,10 +26,10 @@ module.exports = {
         text: 'js tricks',
         link: 'https://qishaoxuan.github.io/js_tricks/'
       },
-      // {
-      //   text: 'blog',
-      //   link: 'https://qishaoxuan.github.io/blog/'
-      // },
+      {
+        text: 'blog',
+        link: 'https://qishaoxuan.github.io/blog/'
+      },
       {
         text: 'GitHub',
         link: 'https://github.com/QiShaoXuan/css_tricks'
