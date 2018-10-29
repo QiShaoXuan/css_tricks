@@ -15,10 +15,12 @@
 
 ## 快速开始 Quick start
 
-- Clone the `https://github.com/QiShaoXuan/css_tricks.git`
-- Install package `npm install`
-- Development run `npm run docs:dev`
-- Open `http://localhost:8080` in your browser.
+```bash
+  git clone https://github.com/QiShaoXuan/css_tricks.git
+  cd css_tricks
+  npm install
+  npm run docs:dev
+```
 
 ## 内容 inclued
 
@@ -35,6 +37,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/filter">滤镜 filter</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/flexbox">flexbox</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/grid">grid</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/object">object-fit, object-position</a>
 
 ### 动
 

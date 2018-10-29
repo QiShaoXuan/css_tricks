@@ -15,10 +15,12 @@
 
 ## 快速开始 Quick start
 
-- Clone the `https://github.com/QiShaoXuan/css_tricks.git`
-- Install package `npm install`
-- Development run `npm run docs:dev`
-- Open `http://localhost:8080` in your browser.
+```bash
+  git clone https://github.com/QiShaoXuan/css_tricks.git
+  cd css_tricks
+  npm install
+  npm run docs:dev
+```
 
 ## Contributing
 
@@ -33,3 +35,6 @@ or submit an issue, any helpful suggestions are welcomed
 
 ## js tricks
 <a href="https://qishaoxuan.github.io/js_tricks/" target="_blank">view online</a>
+
+
+
