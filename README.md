@@ -2,8 +2,8 @@
 
 ## 关于 About
 
-- 总结一些常用的 css 样式
-- 记录一些 css 的新属性和一点奇技淫巧
+- 总结一些常用的 CSS 样式
+- 记录一些 CSS 的新属性和一点奇技淫巧
 
 尽量少说废话，代码简单易用，方便复制
 
@@ -15,10 +15,12 @@
 
 ## 快速开始 Quick start
 
-- Clone the `https://github.com/QiShaoXuan/css_tricks.git`
-- Install package `npm install`
-- Development run `npm run docs:dev`
-- Open `http://localhost:8080` in your browser.
+```bash
+  git clone https://github.com/QiShaoXuan/css_tricks.git
+  cd css_tricks
+  npm install
+  npm run docs:dev
+```
 
 ## 内容 inclued
 
@@ -35,6 +37,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/filter">滤镜 filter</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/flexbox">flexbox</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/grid">grid</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/object">object-fit, object-position</a>
 
 ### 动
 
