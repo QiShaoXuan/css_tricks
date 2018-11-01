@@ -72,6 +72,8 @@ module.exports = {
           ['/mdedia/', 'midea 参考'],
           ['/cursor/', '手型'],
           ['/shadow/', '投影'],
+          ['/paper/','纸页效果'],
+          ['/textBlurry/','文字模糊'],
         ]
       },
       {
@@ -84,7 +86,8 @@ module.exports = {
           ['/ellipsis/', '文字超出显示省略号'],
           ['/lineBreak/', '插入换行'],
           ['/glass/', '毛玻璃效果'],
-          ['/positionWidth/','绝对定位宽度自动撑开']
+          ['/positionWidth/','绝对定位宽度自动撑开'],
+          ['/longText/','长文本折行'],
         ]
       },
       // ['/', 'Home'],

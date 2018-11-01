@@ -54,6 +54,8 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/mdedia">midea 参考</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/cursor">手型</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/shadow">投影</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/paper">纸页效果</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/textBlurry">文字模糊</a>
 
 ### 技巧
 
@@ -64,6 +66,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/lineBreak">插入换行</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/glass">毛玻璃效果</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/positionWidth">绝对定位宽度自动撑开</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/longText">长文本折行</a>
 
 ## Contributing
 
