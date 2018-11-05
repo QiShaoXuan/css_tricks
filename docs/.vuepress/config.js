@@ -72,6 +72,7 @@ module.exports = {
           ['/mdedia/', 'midea 参考'],
           ['/cursor/', '手型'],
           ['/shadow/', '投影'],
+          ['/remDpi/', 'rem, dpi 设置'],
           ['/paper/','纸页效果'],
           ['/textBlurry/','文字模糊'],
         ]

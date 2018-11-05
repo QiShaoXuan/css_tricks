@@ -54,6 +54,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/mdedia">midea 参考</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/cursor">手型</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/shadow">投影</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/remDpi">rem, dpi 设置</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/paper">纸页效果</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/textBlurry">文字模糊</a>
 
