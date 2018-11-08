@@ -74,7 +74,6 @@ module.exports = {
           ['/shadow/', '投影'],
           ['/remDpi/', 'rem, dpi 设置'],
           ['/paper/','纸页效果'],
-          ['/textBlurry/','文字模糊'],
         ]
       },
       {
@@ -82,13 +81,14 @@ module.exports = {
         collapsable: false,
         children: [
           ['/verticalMiddle/', '垂直居中'],
-          ['/bottom/', '底部自适应'],
+          ['/bottom/', '底部自适应 Sticky Footer'],
           ['/triangle/', '三角形边框'],
           ['/ellipsis/', '文字超出显示省略号'],
           ['/lineBreak/', '插入换行'],
           ['/glass/', '毛玻璃效果'],
           ['/positionWidth/','绝对定位宽度自动撑开'],
           ['/longText/','长文本折行'],
+          ['/textShadow/','文字特效'],
         ]
       },
       // ['/', 'Home'],

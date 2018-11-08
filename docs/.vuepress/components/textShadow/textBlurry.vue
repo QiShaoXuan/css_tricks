@@ -2,14 +2,13 @@
 .text-blurry{
   text-align: center;
   line-height: 60px;
-  margin-bottom:50px;
   color: transparent;
   text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 </style>
 
 <template>
-  <div class="text-blurry">浮生若梦，为欢几何？</div>
+  <div class="text-blurry">夫天地者万物之逆旅也；光阴者百代之过客也。</div>
 </template>
 
 <script>
