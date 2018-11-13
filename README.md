@@ -28,12 +28,8 @@
 
 - <a href="https://qishaoxuan.github.io/css_tricks/createTriangle">三角形生成器</a>
 
-### 理论
+### 属性
 
-- <a href="https://qishaoxuan.github.io/css_tricks/name">命名规则</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/selector">选择器</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/pseudo">伪类和伪元素</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/unit">单位</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/filter">滤镜 filter</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/flexbox">flexbox</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/grid">grid</a>

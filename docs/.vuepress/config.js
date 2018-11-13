@@ -40,13 +40,9 @@ module.exports = {
         ],
       },
       {
-        title: '理论',
+        title: '属性',
         collapsable: false,
         children: [
-          ['/name/', '命名规则'],
-          ['/selector/', '选择器'],
-          ['/pseudo/', '伪类和伪元素'],
-          ['/unit/', '单位'],
           ['/filter/', '滤镜 filter'],
           ['/flexbox/', 'flexbox'],
           ['/grid/','grid']
