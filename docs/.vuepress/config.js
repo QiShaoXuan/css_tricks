@@ -45,7 +45,9 @@ module.exports = {
         children: [
           ['/filter/', '滤镜 filter'],
           ['/flexbox/', 'flexbox'],
-          ['/grid/','grid']
+          ['/grid/','grid'],
+          ['/object/','object-fit, object-position'],
+          ['/mixBlendMode/','mix-blend-mode'],
         ]
       },
       {

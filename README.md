@@ -34,6 +34,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/flexbox">flexbox</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/grid">grid</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/object">object-fit, object-position</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/mixBlendMode">mix-blend-mode</a>
 
 ### 动
 
