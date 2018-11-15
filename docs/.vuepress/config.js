@@ -87,6 +87,7 @@ module.exports = {
           ['/positionWidth/','绝对定位宽度自动撑开'],
           ['/longText/','长文本折行'],
           ['/textShadow/','文字特效'],
+          ['/tab/','tab 栏底部动画'],
         ]
       },
       // ['/', 'Home'],

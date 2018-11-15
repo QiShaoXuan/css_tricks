@@ -65,6 +65,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/positionWidth">绝对定位宽度自动撑开</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/longText">长文本折行</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/textShadow">文字特效</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/tab">tab 底部跟随动画</a>
 
 ## Contributing
 
