@@ -11,7 +11,7 @@
     padding: 20px 0;
     .title{
       padding-left:30px;
-      font-size: 18px;
+      font-size: 12px;
       color:#ddd;
     }
     .tabs {
