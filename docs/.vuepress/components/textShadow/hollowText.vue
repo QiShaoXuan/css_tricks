@@ -17,7 +17,7 @@
 </style>
 
 <template>
-  <div class="hollow-text">而浮生若梦，为欢几何？</div>
+  <div class="hollow-text">古人秉烛夜游，良有以也</div>
 </template>
 
 <script>

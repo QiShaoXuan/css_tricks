@@ -8,7 +8,7 @@
 </style>
 
 <template>
-  <div class="text-blurry">夫天地者万物之逆旅也；光阴者百代之过客也。</div>
+  <div class="text-blurry">而浮生若梦，为欢几何？</div>
 </template>
 
 <script>

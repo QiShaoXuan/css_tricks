@@ -1,3 +1,21 @@
+## 文字颜色渐变
+
+<textColor/>
+
+```scss
+.text-clip{
+  color:transparent;
+  font-size: 40px;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgba(0,173,181,1) 0%, rgba(0,173,181,.4)  100%);
+  -webkit-background-clip: text;
+}
+```
+
+:::tip
+利用的是 `-webkit-background-clip: text` 属性，也可以将背景颜色设置为背景图
+:::
+
 ## 文字模糊
 
 <textShadow-textBlurry/>

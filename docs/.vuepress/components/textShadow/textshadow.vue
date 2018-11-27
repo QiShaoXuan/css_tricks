@@ -11,7 +11,7 @@
 </style>
 
 <template>
-<div class="text-shadow">况阳春召我以烟景，大块假我以文章</div>
+<div class="text-shadow">会桃花之芳园，序天伦之乐事</div>
 </template>
 
 <script>

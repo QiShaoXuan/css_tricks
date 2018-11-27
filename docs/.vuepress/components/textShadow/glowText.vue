@@ -9,7 +9,7 @@
 </style>
 
 <template>
-<div class="glow-text">古人秉烛夜游，良有以也</div>
+<div class="glow-text">况阳春召我以烟景，大块假我以文章</div>
 </template>
 
 <script>
