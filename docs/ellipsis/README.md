@@ -1,5 +1,3 @@
-# 文字超出长度显示省略号
-
 ## 单行文字
 
 <singleEllipsis/>
@@ -28,6 +26,7 @@
   text-overflow: ellipsis;
 }
 ```
+
 
 
 
