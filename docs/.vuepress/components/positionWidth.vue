@@ -28,9 +28,6 @@
     background-color: #fff;
     font-size: 16px;
     color: #00adb5;
-    *{
-      display: inline-block;
-    }
     &::before {
       content: "";
       width: 0;
@@ -66,7 +63,7 @@
   <div class="position-container">
     <div class="hover-item">
       <div class="tip">
-        <span>列缺霹靂，丘巒崩摧。洞天石扉，訇然中開</span>
+        <div>列缺霹靂，丘巒崩摧。洞天石扉，訇然中開</div>
       </div>
     </div>
   </div>
