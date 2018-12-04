@@ -84,6 +84,7 @@ module.exports = {
           ['/ellipsis/', '文字超出显示省略号'],
           ['/lineBreak/', '插入换行'],
           ['/glass/', '毛玻璃效果'],
+          ['/align/','参数列表自适应对齐'],
           ['/positionWidth/','绝对定位宽度自动撑开'],
           ['/longText/','长文本折行'],
           ['/textShadow/','文字特效'],
