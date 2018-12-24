@@ -89,6 +89,7 @@ module.exports = {
           ['/longText/','长文本折行'],
           ['/textShadow/','文字特效'],
           ['/tab/','tab 栏底部动画'],
+          ['/hollowOut/','镂空效果'],
         ]
       },
       // ['/', 'Home'],
