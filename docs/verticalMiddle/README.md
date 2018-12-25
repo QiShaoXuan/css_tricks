@@ -90,6 +90,3 @@
   .grandsonElement {}
 }
 ```
-
-
-<model-cat/>
