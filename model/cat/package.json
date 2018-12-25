@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "live2d-widget-model-hijiki",
+        "scope": null,
+        "escapedName": "live2d-widget-model-hijiki",
+        "name": "live2d-widget-model-hijiki",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "D:\\demo\\live2d"
+    ]
+  ],
+  "_from": "live2d-widget-model-hijiki@latest",
+  "_id": "live2d-widget-model-hijiki@1.0.5",
+  "_inCache": true,
+  "_location": "/live2d-widget-model-hijiki",
+  "_nodeVersion": "8.4.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/live2d-widget-model-hijiki_1.0.5_1518094173940_0.5056554741560075"
+  },
+  "_npmUser": {
+    "name": "xiazeyu",
+    "email": "xiazeyu_2011@126.com"
+  },
+  "_npmVersion": "5.5.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "live2d-widget-model-hijiki",
+    "scope": null,
+    "escapedName": "live2d-widget-model-hijiki",
+    "name": "live2d-widget-model-hijiki",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/live2d-widget-model-hijiki/-/live2d-widget-model-hijiki-1.0.5.tgz",
+  "_shasum": "c2ddc6b2380be11b8b8bc2df0d82fd6dfa007f11",
+  "_shrinkwrap": null,
+  "_spec": "live2d-widget-model-hijiki",
+  "_where": "D:\\demo\\live2d",
+  "bugs": {
+    "url": "https://github.com/xiazeyu/live2d-widget-models/issues"
+  },
+  "dependencies": {},
+  "description": "hijiki live2d model for live2d-widget.js",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-1htA3VPgqw5mvs94qHVqy56MjmF1huBXst1SsgphNyeWuZT3aH87I0sF1Ene7WDkyEPnMeR+pX1bJxWa524snA==",
+    "shasum": "c2ddc6b2380be11b8b8bc2df0d82fd6dfa007f11",
+    "tarball": "https://registry.npmjs.org/live2d-widget-model-hijiki/-/live2d-widget-model-hijiki-1.0.5.tgz",
+    "fileCount": 14,
+    "unpackedSize": 520170
+  },
+  "homepage": "https://github.com/xiazeyu/live2d-widget-models#readme",
+  "license": "GPL-2.0",
+  "maintainers": [
+    {
+      "name": "cn_eyhn",
+      "email": "cneyhn@gmail.com"
+    },
+    {
+      "name": "xiazeyu",
+      "email": "xiazeyu_2011@126.com"
+    }
+  ],
+  "name": "live2d-widget-model-hijiki",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiazeyu/live2d-widget-models.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.5"
+}

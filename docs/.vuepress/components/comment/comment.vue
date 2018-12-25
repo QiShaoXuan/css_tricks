@@ -42,7 +42,7 @@ em($px, $base-size = $gt-size-base) {
 
 mobile() {
   @media (max-width: $gt-breakpoint-mobile) {
-    {block};
+    {block}
   }
 }
 
@@ -624,7 +624,7 @@ export default {
       };
       const gitalk = new Gitalk(commentConfig);
       gitalk.render("gitalk-container");
-    };
+    }
   }
 };
 </script>

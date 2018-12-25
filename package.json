@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "element-ui": "^2.4.8",
-    "gitalk": "^1.4.0"
+    "gitalk": "^1.4.0",
+    "live2d-widget": "^3.0.5"
   }
 }
