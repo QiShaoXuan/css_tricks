@@ -31,8 +31,8 @@
 
       script.onload = () => {
         this.isLoaded = false
-        console.clear()
-        console.log('找猫？在这里 https://github.com/xiazeyu/live2d-widget.js，感谢作者~')
+        console.log('找猫? 在这里 https://github.com/xiazeyu/live2d-widget.js')
+        console.log('感谢作者 ~')
         L2Dwidget.init({
           model: {
             jsonPath: this.model.cat,
