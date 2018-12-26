@@ -18,7 +18,8 @@
       return {
         isLoaded:true,
         model:{
-          cat:'https://qishaoxuan.github.io/liveModel/live2d-widget-model-hijiki/assets/hijiki.model.json',
+          blackCat:'https://qishaoxuan.github.io/liveModel/live2d-widget-model-hijiki/assets/hijiki.model.json',
+          whiteCat:'https://qishaoxuan.github.io/liveModel/live2d-widget-model-hijiki/assets/tororo.model.json',
         }
       }
     },
@@ -31,11 +32,10 @@
 
       script.onload = () => {
         this.isLoaded = false
-        console.log('找猫? 在这里 https://github.com/xiazeyu/live2d-widget.js')
-        console.log('感谢作者 ~')
+
         L2Dwidget.init({
           model: {
-            jsonPath: this.model.cat,
+            jsonPath: Math.random()>.5?this.model.blackCat:this.model.whiteCat,
           },
           display: {
             superSample: 2,
@@ -54,7 +54,10 @@
             opacityDefault: 0.9,
             opacityOnHover: 0.2,
           },
-        });
+        })
+
+        console.log('找猫? 在这里 https://github.com/xiazeyu/live2d-widget.js')
+        console.log('感谢作者 ~')
       }
     }
   }
