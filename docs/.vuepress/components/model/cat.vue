@@ -19,7 +19,7 @@
         isLoaded:true,
         model:{
           blackCat:'https://qishaoxuan.github.io/liveModel/live2d-widget-model-hijiki/assets/hijiki.model.json',
-          whiteCat:'https://qishaoxuan.github.io/liveModel/live2d-widget-model-hijiki/assets/tororo.model.json',
+          whiteCat:'https://qishaoxuan.github.io/liveModel/live2d-widget-model-tororo/assets/tororo.model.json',
         }
       }
     },
@@ -56,6 +56,7 @@
           },
         })
 
+        console.clear()
         console.log('找猫? 在这里 https://github.com/xiazeyu/live2d-widget.js')
         console.log('感谢作者 ~')
       }
