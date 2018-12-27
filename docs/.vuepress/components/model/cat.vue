@@ -18,8 +18,8 @@
       return {
         isLoaded:true,
         model:{
-          blackCat:'https://qishaoxuan.github.io/liveModel/live2d-widget-model-hijiki/assets/hijiki.model.json',
-          whiteCat:'https://qishaoxuan.github.io/liveModel/live2d-widget-model-tororo/assets/tororo.model.json',
+          blackCat:'https://qishaoxuan.github.io/live2DModel/live2d-widget-model-hijiki/assets/hijiki.model.json',
+          whiteCat:'https://qishaoxuan.github.io/live2DModel/live2d-widget-model-tororo/assets/tororo.model.json',
         }
       }
     },
