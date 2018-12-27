@@ -27,7 +27,7 @@
       const body = document.querySelector("body");
 
       const script = document.createElement("script");
-      script.src = "https://qishaoxuan.github.io/liveModel/L2Dwidget.min.js";
+      script.src = "https://qishaoxuan.github.io/live2DModel/L2Dwidget.min.js";
       body.appendChild(script);
 
       script.onload = () => {
