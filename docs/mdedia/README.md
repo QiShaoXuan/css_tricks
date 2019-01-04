@@ -1,4 +1,5 @@
 ## 常用 midea
+
 ```css
 /* 横屏 */
 @media screen and (orientation:landscape){
@@ -46,3 +47,4 @@ resolution 分辨率
 
 dpr === dppx
 :::
+
