@@ -67,7 +67,7 @@ module.exports = {
         children: [
           ['/reset/', '清除默认样式'],
           ['/scrollTemp/', '滚动条样式'],
-          ['/mdedia/', 'midea 参考'],
+          ['/media/', 'media 参考'],
           ['/landscapeScreen/', '强制横屏'],
           ['/cursor/', '手型'],
           ['/shadow/', '投影'],
