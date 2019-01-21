@@ -39,15 +39,15 @@
           },
           display: {
             superSample: 2,
-            width: 120,
-            height: 150,
+            width: 80 / 1424 * document.body.clientWidth,
+            height: 80 / 1424 * document.body.clientWidth / .8,
             position: 'right',
             hOffset: 0,
             vOffset: -20,
           },
           mobile: {
             show: true,
-            scale: 0.5,
+            scale: 1,
             motion: true,
           },
           react: {
