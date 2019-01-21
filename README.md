@@ -43,6 +43,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/loading">加载动画</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/spring">弹簧动画</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/parabola">抛物线</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/ripple">涟漪</a>
 
 ### 静
 

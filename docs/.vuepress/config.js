@@ -58,7 +58,8 @@ module.exports = {
           ['/hover/', '悬停'],
           ['/loading/', '加载动画'],
           ['/spring/', '弹簧动画'],
-          ['/parabola/','抛物线']
+          ['/parabola/','抛物线'],
+          ['/ripple/','涟漪'],
         ]
       },
       {
