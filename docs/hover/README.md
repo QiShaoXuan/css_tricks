@@ -50,15 +50,13 @@
 ```
 
 ```javascript
-document.querySelector('.button').onmousemove = (e) => {
+document.querySelector('.button').addEventListener('mousemove', function (e) {
+  const x = e.pageX - this.offsetLeft
+  const y = e.pageY - this.offsetTop
 
-  const x = e.pageX - e.target.offsetLeft
-  const y = e.pageY - e.target.offsetTop
-
-  e.target.style.setProperty('--x', `${ x }px`)
-  e.target.style.setProperty('--y', `${ y }px`)
-
-}
+  this.style.setProperty('--x', `${ x }px`)
+  this.style.setProperty('--y', `${ y }px`)
+})
 ```
 
 ## 边框动画
@@ -110,3 +108,5 @@ document.querySelector('.button').onmousemove = (e) => {
     }
   }
 ```
+
+

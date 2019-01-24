@@ -1,9 +1,9 @@
 <style scoped lang="scss">
   .button {
-    margin:40px auto;
-    width:200px;
-    height:60px;
-    padding:0 30px;
+    margin: 40px auto;
+    width: 200px;
+    height: 60px;
+    padding: 0 30px;
     line-height: 60px;
     text-align: center;
     position: relative;
@@ -42,7 +42,8 @@
 
 <template>
   <div>
-    <div class="button"><span>hover me to change</span></div>
+    <div class="button"><span>hover me to change</span>
+    </div>
   </div>
 </template>
 
@@ -52,16 +53,14 @@
     data() {
       return {}
     },
-    mounted(){
-      document.querySelector('.button').onmousemove = (e) => {
+    mounted() {
+      document.querySelector('.button').addEventListener('mousemove', function (e) {
+        const x = e.pageX - this.offsetLeft
+        const y = e.pageY - this.offsetTop
 
-        const x = e.pageX - e.target.offsetLeft
-        const y = e.pageY - e.target.offsetTop
-
-        e.target.style.setProperty('--x', `${ x }px`)
-        e.target.style.setProperty('--y', `${ y }px`)
-
-      }
+        this.style.setProperty('--x', `${ x }px`)
+        this.style.setProperty('--y', `${ y }px`)
+      })
     }
   }
 </script>
