@@ -24,6 +24,12 @@
       }
     },
     mounted() {
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false
+      if(isMobile) {
+        this.isLoaded = false
+        return console.log('mobile do not load model')
+      }
+
       const body = document.querySelector("body");
 
       const script = document.createElement("script");

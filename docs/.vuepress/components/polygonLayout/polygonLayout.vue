@@ -1,4 +1,14 @@
 <style scoped lang="scss">
+  .circle{
+    width:320px;
+    height:320px;
+    border-radius: 50%;
+    border:1px solid #ddd;
+    position: absolute;
+    left:0;right:0;
+    top:0;bottom:0;
+    margin:auto;
+  }
   .polygonLayout-container {
     width: 320px;
     height: 450px;
@@ -40,7 +50,9 @@
 
 <template>
   <div class="container">
+
     <div class="polygonLayout-container">
+      <div class="circle"></div>
       <div class="polygonLayout">
         <div class="polygonLayout-item"
           v-for="(item,index) in position" :key="index"
@@ -101,6 +113,6 @@
 
         return position
       }
-    }
+    },
   }
 </script>
