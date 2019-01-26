@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'css tricks',
-  description: 'some css tricks, 一些常用的css样式, 一点css技巧',
+  title: 'CSS Tricks',
+  description: 'some CSS tricks, 一些常用的 CSS 样式, 一点 CSS 技巧',
   dest: './dist', // 设置输出目录
   base: '/css_tricks/',
   head: [
@@ -9,8 +9,8 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['meta', { name: 'msapplication-TileColor', content: '#00adb5' }],
-    ['meta', {name:'description', itemprop: 'description', content: 'some css tricks, 一些常用的css样式, 一点css技巧' }],
-    ['meta', { itemprop: 'name', content: 'css_trick' }],
+    ['meta', {name:'description', itemprop: 'description', content: 'some CSS tricks, 一些常用的 CSS 样式, 一点 CSS 技巧' }],
+    ['meta', { itemprop: 'name', content: 'CSSTricks' }],
     ['meta', { itemprop: 'image', content: '/css_tricks/images/favicon.png' }],
   ],
   repo: 'https://qishaoxuan.github.io/css_tricks/', // 添加 github 链接
@@ -95,7 +95,6 @@ module.exports = {
           ['/polygonLayout/','多边形布局'],
         ]
       },
-      // ['/', 'Home'],
     ]
   }
 }
