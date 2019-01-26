@@ -68,6 +68,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/textShadow">文字特效</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/tab">tab 底部跟随动画</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/hollowOut">镂空效果</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/polygonLayout">多边形布局</a>
 
 ## Contributing
 
