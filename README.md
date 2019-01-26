@@ -11,7 +11,7 @@
 
 ## 在线查看 View online
 
-<a href="https://qishaoxuan.github.io/css_tricks/" target="_blank">css tricks</a>
+<a href="https://qishaoxuan.github.io/css_tricks/" target="_blank">CSS tricks</a>
 
 ## 快速开始 Quick start
 
@@ -81,6 +81,6 @@
 
 or submit an issue, any helpful suggestions are welcomed
 
-## js tricks
+## JS Tricks
 <a href="https://qishaoxuan.github.io/js_tricks/" target="_blank">view online</a>
 

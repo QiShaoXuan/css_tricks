@@ -27,10 +27,11 @@
 
 or submit an issue, any helpful suggestions are welcomed
 
-## js tricks
+## JS Tricks
 <a href="https://qishaoxuan.github.io/js_tricks/" target="_blank">view online</a>
 
-## 关于猫 (问的人太多了...)
+## 关于猫 About cat (问的人太多了...)
 
 <a href="https://github.com/QiShaoXuan/live2DModel" target="_blank">本来是写在 console 里的</a>
+
 
