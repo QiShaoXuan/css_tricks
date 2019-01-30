@@ -1,3 +1,9 @@
+## 波浪
+
+<wave-wave/>
+
+
+## 涟漪
 <ripple-ripple/>
 
 :::tip

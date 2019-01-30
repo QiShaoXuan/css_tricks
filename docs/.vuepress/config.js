@@ -13,7 +13,7 @@ module.exports = {
     ['meta', { itemprop: 'name', content: 'CSSTricks' }],
     ['meta', { itemprop: 'image', content: '/css_tricks/images/favicon.png' }],
   ],
-  repo: 'https://qishaoxuan.github.io/css_tricks/', // 添加 github 链接
+  repo: 'https://github.com/QiShaoXuan/css_tricks', // 添加 github 链接
   themeConfig: {
     themeConfig: {
       lastUpdated: 'Last Updated',
@@ -59,7 +59,7 @@ module.exports = {
           ['/loading/', '加载动画'],
           ['/spring/', '弹簧动画'],
           ['/parabola/','抛物线'],
-          ['/ripple/','涟漪'],
+          ['/canvas/','canvas 动画']
         ]
       },
       {
