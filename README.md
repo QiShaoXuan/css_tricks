@@ -4,6 +4,7 @@
 
 - 总结一些常用的 CSS 样式
 - 记录一些 CSS 的新属性和一点奇技淫巧
+- 在“动”部分下有些动画并不是 CSS 效果，因为没有地方放置，所以暂时寄存在这里
 
 尽量少说废话，代码简单易用，方便复制
 
@@ -44,6 +45,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/spring">弹簧动画</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/parabola">抛物线</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/ripple">涟漪</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/wave">波浪</a>
 
 ### 静
 

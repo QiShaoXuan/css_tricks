@@ -1,14 +1,8 @@
-## 波浪
-
-<wave-wave/>
-
-
-## 涟漪
-<ripple-ripple/>
-
 :::tip
 具体使用请查看 <a href="https://github.com/QiShaoXuan/rhythm-ripple">https://github.com/QiShaoXuan/rhythm-ripple</a>
 :::
+
+<ripple-ripple/>
 
 ```vue
 <style scoped lang="scss">

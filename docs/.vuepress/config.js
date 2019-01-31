@@ -59,7 +59,8 @@ module.exports = {
           ['/loading/', '加载动画'],
           ['/spring/', '弹簧动画'],
           ['/parabola/','抛物线'],
-          ['/canvas/','canvas 动画']
+          ['/notCSS/ripple','涟漪'],
+          ['/notCSS/wave','波浪'],
         ]
       },
       {
