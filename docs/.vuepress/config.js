@@ -82,6 +82,7 @@ module.exports = {
         collapsable: false,
         children: [
           ['/verticalMiddle/', '垂直居中'],
+          ['/vertical/', '消除图片间隙 & 图文居中'],
           ['/bottom/', '底部自适应 Sticky Footer'],
           ['/triangle/', '三角形边框'],
           ['/ellipsis/', '文字超出显示省略号'],

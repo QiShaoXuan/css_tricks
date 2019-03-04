@@ -36,3 +36,4 @@ or submit an issue, any helpful suggestions are welcomed
 <a href="https://github.com/QiShaoXuan/live2DModel" target="_blank">本来是写在 console 里的</a>
 
 
+
