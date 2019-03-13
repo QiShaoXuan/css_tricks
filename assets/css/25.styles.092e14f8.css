@@ -1,0 +1,1 @@
+.box{width:100px;height:100px}:root{--color:brown;--width:400px}.box{background-color:var(--color);width:var(--width)}
