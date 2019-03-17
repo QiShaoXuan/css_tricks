@@ -28,6 +28,7 @@
 ### 工具
 
 - <a href="https://qishaoxuan.github.io/css_tricks/createTriangle">三角形生成器</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/sector">扇形生成器</a>
 
 ### 属性
 

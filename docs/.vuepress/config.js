@@ -37,6 +37,7 @@ module.exports = {
         collapsable: false,
         children: [
           ['/createTriangle/', '三角形生成器'],
+          ['/sector/','扇形生成器'],
         ],
       },
       {
@@ -94,7 +95,7 @@ module.exports = {
           ['/textShadow/','文字特效'],
           ['/tab/','tab 栏底部动画'],
           ['/hollowOut/','镂空效果'],
-          ['/polygonLayout/','多边形布局'],
+          ['/polygonLayout/','多边形布局']
         ]
       },
     ]
