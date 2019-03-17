@@ -55,19 +55,17 @@
 </template>
 
 <script>
-  import Prism from "prismjs";
+  import Prism from "prismjs"
   export default {
     name: 'sector-svg',
     data() {
       return {
-        size: 300,
         radius: 100,
         deg: 30,
         startAngle: 0,
         color:'#00adb5',
       }
     },
-    methods: {},
     computed: {
       path: function () {
         const cx = this.radius
@@ -85,7 +83,7 @@
           "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y,
           "L", cx, cy,
           "Z"
-        ].join(" ");
+        ].join(" ")
       }
     },
     watch:{
@@ -95,7 +93,7 @@
     },
     methods: {
       polarToCartesian(centerX, centerY, radius, angleInDegrees) {
-        var angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;
+        var angleInRadians = (angleInDegrees - 90) * Math.PI / 180
 
         return {
           x: (centerX + (radius * Math.cos(angleInRadians))).toFixed(2),
@@ -108,8 +106,6 @@
   <path d="${this.path}" fill="${this.color}"></path>
 </svg>`
         this.$refs['code'].innerHTML = Prism.highlight(html, Prism.languages.html)
-        console.log(Prism.highlight(this.path, Prism.languages.html))
-
       }
     },
     mounted(){
