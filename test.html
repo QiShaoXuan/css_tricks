@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Title</title>
+</head>
+<style>
+  .trangle-container {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  .trangle-container span {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform-origin: bottom center;
+  }
+  .trangle-container span:nth-child(1) {
+    transform: translate(-50%, 0) rotate(112.5deg);
+    border-width: 50px 45.8166px 0 45.8166px;
+    border-color: #00adb5 transparent transparent transparent;
+  }
+  .trangle-container span:nth-child(2) {
+    transform: translate(-50%, 0) rotate(197.5deg);
+    border-width: 50px 45.8166px 0 45.8166px;
+    border-color: #00adb5 transparent transparent transparent;
+  }
+</style>
+<body>
+<div class="trangle-container">
+  <span></span>
+  <span></span>
+</div>
+</body>
+</html>

@@ -6,13 +6,9 @@
 
 ## 三角模拟
 
-will code soon...
+<sector-trangle/>
 
-## clip-path
-
-will code soon...
-
-
-
-> https://codepen.io/massimo-cassandro/pen/rWpEEV
+:::tip
+可以使用 sass 编写静态扇形，使用参考 <a href=""></a>
+:::
 

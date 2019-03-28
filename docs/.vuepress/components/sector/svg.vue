@@ -16,7 +16,7 @@
     .w-50{
       width:48%;
       float:left;
-      &:nth-of-type(odd){
+      &:nth-of-type(even){
         float:right
       }
     }
