@@ -7,38 +7,47 @@
     <title>Title</title>
 </head>
 <style>
-  .trangle-container {
-    width: 100px;
-    height: 100px;
-    background: transparent;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-  }
-  .trangle-container span {
+  .mask::before{
+    content: '';
     position: absolute;
-    left: 50%;
     top: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    transform-origin: bottom center;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    background: linear-gradient(to right, #ff6f72 0%, rgba(125, 185, 232, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6f72', endColorstr='#007db9e8',GradientType=1 );
+    z-index: 1;
   }
-  .trangle-container span:nth-child(1) {
-    transform: translate(-50%, 0) rotate(112.5deg);
-    border-width: 50px 45.8166px 0 45.8166px;
-    border-color: #00adb5 transparent transparent transparent;
+  .mask::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    background: linear-gradient(to right, #ff6f72 0%, rgba(125, 185, 232, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6f72', endColorstr='#007db9e8',GradientType=1 );
+    z-index: 1;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
-  .trangle-container span:nth-child(2) {
-    transform: translate(-50%, 0) rotate(197.5deg);
-    border-width: 50px 45.8166px 0 45.8166px;
-    border-color: #00adb5 transparent transparent transparent;
+  .mask{
+    /*width:200px;*/
+    font-size: 48px;
+    line-height: 1;
+    color:#fff;
+    position: absolute;
+    left:0;right:0;
+    top:0;bottom:0;
+    margin:auto;
+  }
+  body{
+    background:  #ff6f72;
   }
 </style>
 <body>
-<div class="trangle-container">
-  <span></span>
-  <span></span>
+<div class="mask">
+  123
 </div>
 </body>
 </html>

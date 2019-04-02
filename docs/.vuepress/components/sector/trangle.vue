@@ -79,7 +79,7 @@
     }
   }
 
-  .trangle-container {
+  .sector-container {
     width: 100px;
     height: 100px;
     /*background: rgba(0, 173, 181, 0.4);*/
@@ -125,7 +125,7 @@
 <template>
   <div class="ourter-container">
     <div class="trangle-outer-container">
-      <div class="trangle-container"
+      <div class="sector-container"
         :style='{width:`${width}px`,height:`${width}px`}'>
         <span v-for="(item ,index) in spanStyles"
           :key="index" :style="item"></span>
@@ -206,7 +206,7 @@
         let spanStyles = [];
         for (let i = 0; i < count; i++) {
           styles.push(`
-  .trangle-container span:nth-child(${i + 1}) {
+  .sector-container span:nth-child(${i + 1}) {
     transform: translate(-50%, 0) rotate(${startAngle +
           angle / count / 2 +
           (i * angle) / count}deg);
@@ -238,7 +238,7 @@
     methods: {
       setSpans() {
         return `
-  .trangle-container span {
+  .sector-container span {
     position: absolute;
     left: 50%;
     top: 0;
@@ -250,14 +250,14 @@
       },
       getStyle(values) {
         return `
-  .trangle-container span:nth-child(2) {
+  .sector-container span:nth-child(2) {
     transform: translate(-50%, 0) rotate(82.5deg);
     border-width: 50px 26.02835px 0 26.02835px;
     border-color: #00adb5 transparent transparent transparent;
   }`;
       },
       getContainer(radius) {
-        return `.trangle-container {
+        return `.sector-container {
     width: ${radius * 2}px;
     height: ${radius * 2}px;
     background: transparent;
@@ -273,7 +273,7 @@
         );
       },
       setHtmlCode(){
-        const html = `<div class="trangle-container">
+        const html = `<div class="sector-container">
   <span></span>
   <span></span>
 </div>`
