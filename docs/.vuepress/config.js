@@ -55,13 +55,14 @@ module.exports = {
         title: '动',
         collapsable: false,
         children: [
+          ['/poptip/','提示气泡'],
           ['/accordion/', '手风琴'],
           ['/hover/', '悬停'],
           ['/loading/', '加载动画'],
           ['/spring/', '弹簧动画'],
           ['/parabola/','抛物线'],
           ['/notCSS/ripple','涟漪'],
-          ['/notCSS/wave','波浪'],
+          ['/notCSS/wave','波浪']
         ]
       },
       {

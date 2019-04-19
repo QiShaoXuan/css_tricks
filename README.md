@@ -40,6 +40,7 @@
 
 ### 动
 
+- <a href="https://qishaoxuan.github.io/css_tricks/poptip">提示气泡</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/accordion">手风琴</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/hover">悬停</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/loading">加载动画</a>
@@ -47,6 +48,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/parabola">抛物线</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/ripple">涟漪</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/wave">波浪</a>
+
 
 ### 静
 
