@@ -49,6 +49,7 @@ module.exports = {
           ['/grid/','grid'],
           ['/object/','object-fit, object-position'],
           ['/mixBlendMode/','mix-blend-mode'],
+          ['/list/','list-style']
         ]
       },
       {
