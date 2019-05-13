@@ -6,4 +6,12 @@ list-style 属性是设置 <a href="#list-style-type">list-style-type</a>, <a hr
 
 ## list-style-type
 
-<list-type/>
+<listStyle-listType />
+
+## list-style-position
+
+<listStyle-listPosition />
+
+## list-style-image
+
+<listStyle-listImage />
