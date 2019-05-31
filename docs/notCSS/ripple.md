@@ -1,3 +1,8 @@
+## SCSS
+<ripple-scssRipple/>
+
+
+## JS 
 :::tip
 具体使用请查看 <a href="https://github.com/QiShaoXuan/rhythm-ripple">https://github.com/QiShaoXuan/rhythm-ripple</a>
 :::
