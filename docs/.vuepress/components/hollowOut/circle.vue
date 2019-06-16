@@ -1,68 +1,150 @@
 <style scoped lang="scss">
-
-  .hollow-circle-container {
+  .key-value {
+    .key {
+      width: 80px;
+    }
+    .key-value--item:not(:last-of-type) {
+      border-right: 2px solid #ccc;
+      padding-right: 10px;
+      margin-right: 10px;
+    }
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    margin-bottom: 15px;
   }
 
-  @mixin hollow-circle-vertical($color,$r,$height,$top) {
-    height: $height;
-    position: relative;
-    background: radial-gradient(circle at right bottom, transparent $r, $color 0) top right / 51% $top no-repeat,
-    radial-gradient(circle at left bottom, transparent $r, $color 0) top left / 51% $top no-repeat,
-    radial-gradient(circle at right top, transparent $r, $color 0) bottom right / 51% ($height - $top) no-repeat,
-    radial-gradient(circle at left top, transparent $r, $color 0) bottom left / 51% ($height - $top) no-repeat;
-    &::after {
-      content: '';
-      width: 100%;
-      border: 1px dashed #fff;
-      position: absolute;
-      left: 0;
-      top: $top;
-    }
+  .warpper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
   }
 
-  @mixin hollow-circle-horizontal($color,$r,$width,$left) {
-    width: $width;
-    position: relative;
-    background: radial-gradient(circle at right top, transparent $r, $color 0) top left / $left 51% no-repeat,
-    radial-gradient(circle at right bottom, transparent $r, $color 0) bottom left /$left 51% no-repeat,
-    radial-gradient(circle at left top, transparent $r, $color 0) top right /($width - $left) 51% no-repeat,
-    radial-gradient(circle at left bottom, transparent $r, $color 0) bottom right /($width - $left) 51% no-repeat;
-    &::after{
-      content:'';
-      height:100%;
-      border: 1px dashed #fff;
-      position: absolute;
-      left:$left;
-      top:0;
-    }
-  }
 
-  .hollow-circle-horizontal {
-    height: 100px;
-    @include hollow-circle-horizontal(#00adb5,10px,300px,60px)
-  }
 
-  .hollow-circle-vertical {
-    width: 100px;
-    @include hollow-circle-vertical(#00adb5,10px, 200px, 50px)
-  }
 </style>
 
 <template>
-  <div class="hollow-circle-container">
-    <div class="hollow-circle-horizontal"></div>
-    <div class="hollow-circle-vertical"></div>
+  <div>
+    <div class="warpper">
+      <div class="hollow-one-circle"></div>
+    </div>
+
+    <div class="key-value">
+      <span class="key">位置：</span>
+      <el-radio v-model="position"
+        v-for="(value ,index) in positions" :key="index"
+        :label="value"></el-radio>
+    </div>
+    <div class="key-value">
+      <span class="key">宽度：</span>
+      <el-input-number v-model="width" size="mini"
+        :min="100"
+        :max="500" label="宽度"></el-input-number>
+    </div>
+    <div class="key-value">
+      <span class="key">长度：</span>
+      <el-input-number v-model="height" size="mini"
+        :min="50"
+        :max="500" label="长度"></el-input-number>
+    </div>
+    <div class="key-value">
+      <span class="key">半径：</span>
+      <el-input-number v-model="radio" size="mini" :min="1"
+        :max="20" label="半径"></el-input-number>
+    </div>
+    <div class="key-value">
+      <span class="key">距离：</span>
+      <el-input-number v-model="distance" size="mini" :min="50"
+        :max="300" label="分割位置"></el-input-number>
+    </div>
+    <div class="key-value">
+      <span class="key">阴影：</span>
+      <el-switch
+        v-model="shadow"
+        active-color="#00adb5">
+      </el-switch>
+    </div>
+    <pre class="language-css"><code
+      ref="css"></code></pre>
+
   </div>
+
 </template>
 
 <script>
   export default {
-    name: 'hollow-circle',
+    name: '',
     data() {
-      return {}
+      return {
+        positions: ['top', 'bottom', 'left', 'right'],
+        position: 'left',
+        width: 100,
+        height: 100,
+        radio: 10,
+        color: '#00adb5',
+        shadow: false,
+        distance:40,
+      }
+    },
+    computed: {
+      style() {
+        let circlePosition = ''
+        switch (this.position){
+          case 'top':
+            circlePosition = `${this.distance}px 0`
+            break;
+          case 'bottom':
+            circlePosition = `${this.distance}px ${this.height}px`
+            break;
+          case 'left':
+            circlePosition = `0 ${this.distance}px`
+            break;
+          case 'right':
+            circlePosition = `${this.width}px ${this.distance}px`
+            break;
+        }
+        return `.hollow-one-circle{
+  width: ${this.width}px;
+  height: ${this.height}px;
+  position: relative;
+  background: radial-gradient(circle at ${circlePosition}, transparent ${this.radio}px, ${this.color} 0) top left/${this.width}px 100% no-repeat;
+  ${this.shadow ? 'filter: drop-shadow(2px 2px 2px rgba(0,0,0,.2));' : ''}
+}`
+      }
+    },
+    watch: {
+      style() {
+        this.setStyle()
+        this.setStyleToBody()
+      }
+    },
+    methods: {
+      setStyle() {
+        this.$refs['css'].innerHTML = Prism.highlight(this.style, Prism.languages.css)
+      },
+      setStyleToBody() {
+        let style = document.querySelector('#hollow-ine-circle-style')
+        style.innerHTML = this.style
+      }
+    },
+    mounted() {
+      const style = document.createElement('style')
+      style.setAttribute('id', 'hollow-ine-circle-style')
+      document.head.appendChild(style)
+
+      setTimeout(() => {
+        this.setStyle()
+        this.setStyleToBody()
+      })
     }
   }
+
+  //   .hollow-one-circle{
+  //   width: 300px;
+  //   height: 100px;
+  //   position: relative;
+  //   background: radial-gradient(circle at 0px 31px, transparent 14px, #00adb5 0) top left/69px 100% no-repeat
+  // }
 </script>
