@@ -74,6 +74,8 @@
 </template>
 
 <script>
+  import Prism from "prismjs";
+
   export default {
     name: '',
     data() {
@@ -141,10 +143,4 @@
     }
   }
 
-  //   .hollow-one-circle{
-  //   width: 300px;
-  //   height: 100px;
-  //   position: relative;
-  //   background: radial-gradient(circle at 0px 31px, transparent 14px, #00adb5 0) top left/69px 100% no-repeat
-  // }
 </script>
