@@ -28,7 +28,6 @@
     <div class="warpper">
       <div class="hollow-compose-three-circles"></div>
     </div>
-
     <div class="key-value">
       <span class="key">位置：</span>
       <el-radio v-model="position"
@@ -94,7 +93,7 @@
   import Prism from "prismjs";
 
   export default {
-    name: 'hollow-two-circle',
+    name: 'hollow-compose-three-circles',
     data() {
       return {
         width: 300,
@@ -165,9 +164,9 @@ ${this.dashed ? `.hollow-compose-three-circles::after {
     radial-gradient(circle at ${this.width / 2}px 0, transparent ${this.radio}px, ${this.color1} 0) top left/${this.width}px ${this.radio}px no-repeat;`
                 break
               case 'bottom':
-                background = `background: radial-gradient(circle at right bottom, transparent ${this.radio}px, ${this.color1} 0) top right / ${this.width/2}px ${this.distance}px no-repeat,
+                background = `background: radial-gradient(circle at right bottom, transparent ${this.radio}px, ${this.color1} 0) ${this.width/2 - 2}px 0 / ${this.width/2 + 2}px ${this.distance}px no-repeat,
     radial-gradient(circle at left bottom, transparent ${this.radio}px, ${this.color1} 0) top left / ${this.width/2}px ${this.distance}px no-repeat,
-    radial-gradient(circle at right top, transparent ${this.radio}px, ${this.color2} 0) ${this.width / 2}px ${this.distance}px / ${this.width/2}px ${this.height - this.distance - this.radio}px no-repeat,
+    radial-gradient(circle at right top, transparent ${this.radio}px, ${this.color2} 0) ${this.width/2 - 2}px ${this.distance}px / ${this.width/2 + 2}px ${this.height - this.distance - this.radio}px no-repeat,
     radial-gradient(circle at left top, transparent ${this.radio}px, ${this.color2} 0) 0 ${this.distance}px / ${this.width/2}px ${this.height - this.distance - this.radio}px no-repeat,
     radial-gradient(circle at ${this.width / 2}px ${this.radio}px, transparent ${this.radio}px, ${this.color2} 0) bottom left/${this.width}px ${this.radio}px no-repeat;`
                 break
