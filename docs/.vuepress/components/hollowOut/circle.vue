@@ -22,7 +22,6 @@
   }
 
 
-
 </style>
 
 <template>
@@ -56,7 +55,8 @@
     </div>
     <div class="key-value">
       <span class="key">距离：</span>
-      <el-input-number v-model="distance" size="mini" :min="50"
+      <el-input-number v-model="distance" size="mini"
+        :min="50"
         :max="300" label="分割位置"></el-input-number>
     </div>
     <div class="key-value">
@@ -87,13 +87,13 @@
         radio: 10,
         color: '#00adb5',
         shadow: false,
-        distance:40,
+        distance: 40,
       }
     },
     computed: {
       style() {
         let circlePosition = ''
-        switch (this.position){
+        switch (this.position) {
           case 'top':
             circlePosition = `${this.distance}px 0`
             break;

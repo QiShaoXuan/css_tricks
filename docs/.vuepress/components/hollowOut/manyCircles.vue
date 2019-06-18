@@ -155,7 +155,8 @@
   ${afterStlye}
   background-image: linear-gradient(${to}, ${this.color} ${this.radio}px, transparent ${this.radio}px, transparent),
   radial-gradient(${this.radio * 2}px circle at ${circlePosition}, transparent ${this.radio}px, ${this.color} ${this.radio }px);
-  background-size: ${backgroundSize}`
+  background-size: ${backgroundSize}
+}`
       }
     },
     watch: {
