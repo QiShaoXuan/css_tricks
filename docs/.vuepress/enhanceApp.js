@@ -11,3 +11,4 @@ export default ({
 }
 
 
+// p override.styl has been deprecated from v1.0.0, using .vuepress/styles/palette.styl instead.

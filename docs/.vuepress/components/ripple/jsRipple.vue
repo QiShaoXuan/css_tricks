@@ -21,7 +21,7 @@
   import cover from './Qi.png'
 
   export default {
-    name: 'ripple',
+    name: 'js-ripple',
     data() {
       return {}
     },

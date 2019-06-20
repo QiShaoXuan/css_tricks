@@ -3,7 +3,7 @@
 具体使用请查看 <a href="https://github.com/QiShaoXuan/rhythm-ripple">https://github.com/QiShaoXuan/rhythm-ripple</a>
 :::
 
-<ripple-ripple/>
+<ripple-jsRipple/>
 
 ```vue
 <style scoped lang="scss">
