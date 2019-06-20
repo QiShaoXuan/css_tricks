@@ -1,0 +1,34 @@
+{
+  "name": "css_tricks",
+  "version": "1.0.0",
+  "description": "<div align=\"center\"><img src=\"https://raw.githubusercontent.com/QiShaoXuan/css_tricks/master/logo.png\"></div>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "npx vuepress dev docs",
+    "docs:build": "npm run build:readme && npm run build:readme && node ./build/addComponents.js && vuepress build docs && node ./build/delComponents.js",
+    "deploy": "gh-pages -d dist",
+    "deploy:build": "npm run docs:build && gh-pages -d dist",
+    "build:readme": "node ./build/buildReadme.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QiShaoXuan/css_tricks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QiShaoXuan/css_tricks/issues"
+  },
+  "homepage": "https://github.com/QiShaoXuan/css_tricks#readme",
+  "devDependencies": {
+    "element-ui": "^2.9.1",
+    "gh-pages": "^2.0.1",
+    "gitalk": "^1.5.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "vuepress": "^1.0.1"
+  }
+}
