@@ -8,7 +8,7 @@
   },
   "scripts": {
     "docs:dev": "npx vuepress dev docs",
-    "docs:build": "npm run build:readme && npm run build:readme && node ./build/addComponents.js && vuepress build docs && node ./build/delComponents.js",
+    "docs:build": "npm run build:readme && vuepress build docs",
     "deploy": "gh-pages -d dist",
     "deploy:build": "npm run docs:build && gh-pages -d dist",
     "build:readme": "node ./build/buildReadme.js"
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/QiShaoXuan/css_tricks#readme",
   "devDependencies": {
+    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
     "element-ui": "^2.9.1",
     "gh-pages": "^2.0.1",
     "gitalk": "^1.5.0",

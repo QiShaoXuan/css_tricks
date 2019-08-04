@@ -20,12 +20,12 @@ $gt-mask-z-index = 9999;
 
 /* functions & mixins */
 clearfix() {
-  &:before, &:after {
+&:before, &:after {
     content: ' ';
     display: table;
   }
 
-  &:after {
+&:after {
     clear: both;
   }
 }
@@ -41,7 +41,7 @@ em($px, $base-size = $gt-size-base) {
 }
 
 mobile() {
-  @media (max-width: $gt-breakpoint-mobile) {
+@media (max-width: $gt-breakpoint-mobile) {
     {block}
   }
 }
@@ -57,7 +57,7 @@ $gt-size-avatar-mobi = em(32px);
 .gt-container {
   box-sizing: border-box;
 
-  * {
+* {
     box-sizing: border-box;
   }
 
@@ -67,27 +67,27 @@ $gt-size-avatar-mobi = em(32px);
   a {
     color: $gt-color-main;
 
-    &:hover {
+  &:hover {
       color: lighten($gt-color-main, 20%);
       border-color: lighten($gt-color-main, 20%);
     }
 
-    &.is--active {
+  &.is--active {
       color: $gt-color-link-active;
       cursor: default !important;
 
-      &:hover {
+    &:hover {
         color: $gt-color-link-active;
       }
     }
   }
 
-  .hide {
+.hide {
     display: none !important;
   }
 
   // icons
-  .gt-svg {
+.gt-svg {
     display: inline-block;
     width: em(16px);
     height: em(16px);
@@ -100,15 +100,15 @@ $gt-size-avatar-mobi = em(32px);
     }
   }
 
-  .gt-ico {
+.gt-ico {
     display: inline-block;
 
-    &-text {
+  &-text {
       margin-left: em(5px);
     }
 
-    &-github {
-      .gt-svg {
+  &-github {
+    .gt-svg {
         width: 100%;
         height: 100%;
       }
@@ -120,10 +120,10 @@ $gt-size-avatar-mobi = em(32px);
   }
 
   /* loader */
-  .gt-spinner {
+.gt-spinner {
     position: relative;
 
-    &::before {
+  &::before {
       content: '';
       box-sizing: border-box;
       position: absolute;
@@ -139,7 +139,7 @@ $gt-size-avatar-mobi = em(32px);
     }
   }
 
-  .gt-loader {
+.gt-loader {
     position: relative;
     border: 1px solid $gt-color-loader;
     animation: ease gt-kf-rotate 1.5s infinite;
@@ -151,7 +151,7 @@ $gt-size-avatar-mobi = em(32px);
     line-height: $gt-size-loader;
     border-radius: 50%;
 
-    &:before {
+  &:before {
       content: '';
       position: absolute;
       display: block;
@@ -167,7 +167,7 @@ $gt-size-avatar-mobi = em(32px);
   }
 
   // avatar
-  .gt-avatar {
+.gt-avatar {
     display: inline-block;
     width: $gt-size-avatar;
     height: $gt-size-avatar;
@@ -183,7 +183,7 @@ $gt-size-avatar-mobi = em(32px);
       border-radius: 3px;
     }
 
-    &-github {
+  &-github {
       width: $gt-size-avatar - em(2px);
       height: $gt-size-avatar - em(2px);
 
@@ -195,7 +195,7 @@ $gt-size-avatar-mobi = em(32px);
   }
 
   // button
-  .gt-btn {
+.gt-btn {
     padding: em(12px) em(20px);
     display: inline-block;
     line-height: 1;
@@ -209,11 +209,11 @@ $gt-size-avatar-mobi = em(32px);
     outline: none;
     font-size: em(12px);
 
-    &-text {
+  &-text {
       font-weight: 400;
     }
 
-    &-loading {
+  &-loading {
       position: relative;
       margin-left: em(8px);
       display: inline-block;
@@ -222,72 +222,72 @@ $gt-size-avatar-mobi = em(32px);
       vertical-align: top;
     }
 
-    &.is--disable {
+  &.is--disable {
       cursor: not-allowed;
       opacity: 0.5;
     }
 
-    &-login {
+  &-login {
       margin-right: 0;
     }
 
-    &-preview {
+  &-preview {
       background-color: $gt-color-btn;
       color: $gt-color-main;
 
-      &:hover {
+    &:hover {
         background-color: darken($gt-color-btn, 5%);
         border-color: lighten($gt-color-main, 20%);
       }
     }
 
-    &-public {
-      &:hover {
+  &-public {
+    &:hover {
         background-color: lighten($gt-color-main, 20%);
         border-color: lighten($gt-color-main, 20%);
       }
     }
 
-    &-loadmore {
+  &-loadmore {
       // loadmore
     }
   }
 
   /* error */
-  .gt-error {
+.gt-error {
     text-align: center;
     margin: em(10px);
     color: $gt-color-error;
   }
 
   /* initing */
-  .gt-initing {
+.gt-initing {
     padding: em(20px) 0;
     text-align: center;
 
-    &-text {
+  &-text {
       margin: em(10px) auto;
       font-size: 92%;
     }
   }
 
   /* no int */
-  .gt-no-init {
+.gt-no-init {
     padding: em(20px) 0;
     text-align: center;
   }
 
   /* link */
-  .gt-link {
+.gt-link {
     border-bottom: 1px dotted $gt-color-main;
 
-    &-counts, &-project {
+  &-counts, &-project {
       text-decoration: none;
     }
   }
 
   /* meta */
-  .gt-meta {
+.gt-meta {
     margin: em(20px) 0;
     padding: em(16px) 0;
     position: relative;
@@ -298,28 +298,28 @@ $gt-size-avatar-mobi = em(32px);
     clearfix();
   }
 
-  .gt-counts {
+.gt-counts {
     margin: 0 em(10px) 0 0;
   }
 
-  .gt-user {
+.gt-user {
     float: right;
     margin: 0;
     font-size: 92%;
 
-    &-pic {
+  &-pic {
       width: 16px;
       height: 16px;
       vertical-align: top;
       margin-right: em(8px);
     }
 
-    &-inner {
+  &-inner {
       display: inline-block;
       cursor: pointer;
     }
 
-    .gt-ico {
+  .gt-ico {
       margin: 0 0 0 em(5px);
 
       svg {
@@ -327,8 +327,8 @@ $gt-size-avatar-mobi = em(32px);
       }
     }
 
-    .is--poping {
-      .gt-ico {
+  .is--poping {
+    .gt-ico {
         svg {
           fill: $gt-color-main;
         }
@@ -336,19 +336,19 @@ $gt-size-avatar-mobi = em(32px);
     }
   }
 
-  .gt-version {
+.gt-version {
     color: $gt-color-sub;
     margin-left: em(6px);
   }
 
-  .gt-copyright {
+.gt-copyright {
     margin: 0 em(15px) em(8px);
     border-top: 1px solid $gt-color-hr;
     padding-top: em(8px);
   }
 
   /* popup */
-  .gt-popup {
+.gt-popup {
     position: absolute;
     right: 0;
     top: em(38px);
@@ -359,7 +359,7 @@ $gt-size-avatar-mobi = em(32px);
     font-size: em(14px);
     letter-spacing: 0.5px;
 
-    .gt-action {
+  .gt-action {
       cursor: pointer;
       display: block;
       margin: em(8px) 0;
@@ -367,8 +367,8 @@ $gt-size-avatar-mobi = em(32px);
       position: relative;
       text-decoration: none;
 
-      &.is--active {
-        &:before {
+    &.is--active {
+      &:before {
           content: '';
           width: em(4px);
           height: em(4px);
@@ -382,11 +382,11 @@ $gt-size-avatar-mobi = em(32px);
   }
 
   /* header */
-  .gt-header {
+.gt-header {
     position: relative;
     display: flex;
 
-    &-comment {
+  &-comment {
       flex: 1;
       margin-left: em(20px);
 
@@ -395,7 +395,7 @@ $gt-size-avatar-mobi = em(32px);
       }
     }
 
-    &-textarea {
+  &-textarea {
       padding: em(12px);
       display: block;
       box-sizing: border-box;
@@ -411,20 +411,20 @@ $gt-size-avatar-mobi = em(32px);
       outline: none;
       transition: all 0.25s ease;
 
-      &:hover {
+    &:hover {
         background-color: lighten($gt-color-input-bg, 50%);
         // box-shadow: 0 em(10px) em(60px) 0 $gt-color-input-bg
       }
     }
 
-    &-preview {
+  &-preview {
       padding: em(12px);
       border-radius: $gt-size-border-radius;
       border: 1px solid $gt-color-input-border;
       background-color: $gt-color-input-bg;
     }
 
-    &-controls {
+  &-controls {
       position: relative;
       margin: em(12px) 0 0;
       clearfix();
@@ -433,7 +433,7 @@ $gt-size-avatar-mobi = em(32px);
         margin: 0;
       }
 
-      &-tip {
+    &-tip {
         font-size: em(14px);
         color: $gt-color-main;
         text-decoration: none;
@@ -444,7 +444,7 @@ $gt-size-avatar-mobi = em(32px);
         }
       }
 
-      .gt-btn {
+    .gt-btn {
         float: right;
         margin-left: em(20px);
 
@@ -457,7 +457,7 @@ $gt-size-avatar-mobi = em(32px);
     }
   }
 
-  &:after {
+&:after {
     content: '';
     position: fixed;
     bottom: 100%;
@@ -467,10 +467,10 @@ $gt-size-avatar-mobi = em(32px);
     opacity: 0;
   }
 
-  &.gt-input-focused {
+&.gt-input-focused {
     position: relative;
 
-    &:after {
+  &:after {
       content: '';
       position: fixed;
       bottom: 0%;
@@ -483,32 +483,32 @@ $gt-size-avatar-mobi = em(32px);
       z-index: $gt-mask-z-index;
     }
 
-    .gt-header-comment {
+  .gt-header-comment {
       z-index: $gt-mask-z-index + 1;
     }
   }
 
   /* comments */
-  .gt-comments {
+.gt-comments {
     padding-top: em(20px);
 
-    &-null {
+  &-null {
       text-align: center;
     }
 
-    &-controls {
+  &-controls {
       margin: em(20px) 0;
       text-align: center;
     }
   }
 
   /* comment */
-  .gt-comment {
+.gt-comment {
     position: relative;
     padding: em(10px) 0;
     display: flex;
 
-    &-content {
+  &-content {
       flex: 1;
       margin-left: em(20px);
       padding: em(12px) em(16px);
@@ -516,7 +516,7 @@ $gt-size-avatar-mobi = em(32px);
       overflow: auto;
       transition: all ease 0.25s;
 
-      &:hover {
+    &:hover {
         box-shadow: 0 em(10px) em(60px) 0 darken($gt-color-comment-bg, 2%);
       }
 
@@ -526,57 +526,57 @@ $gt-size-avatar-mobi = em(32px);
       }
     }
 
-    &-header {
+  &-header {
       margin-bottom: em(8px);
       font-size: em(14px);
       position: relative;
     }
 
-    &-username {
+  &-username {
       font-weight: 500;
       color: $gt-color-main;
       text-decoration: none;
 
-      &:hover {
+    &:hover {
         text-decoration: underline;
       }
     }
 
-    &-text {
+  &-text {
       margin-left: em(8px);
       color: $gt-color-sub;
     }
 
-    &-date {
+  &-date {
       margin-left: em(8px);
       color: $gt-color-sub;
     }
 
-    &-like, &-edit, &-reply {
+  &-like, &-edit, &-reply {
       position: absolute;
       height: em(22px);
 
-      &:hover {
+    &:hover {
         cursor: pointer;
       }
     }
 
-    &-like {
+  &-like {
       top: 0;
       right: em(32px);
     }
 
-    &-edit, &-reply {
+  &-edit, &-reply {
       top: 0;
       right: 0;
     }
 
-    &-body {
+  &-body {
       color: $gt-color-comment-txt !important;
     }
 
-    &-admin {
-      .gt-comment-content {
+  &-admin {
+    .gt-comment-content {
         background-color: $gt-color-comment-adminbg;
       }
     }
@@ -586,18 +586,18 @@ $gt-size-avatar-mobi = em(32px);
 @keyframes gt-kf-rotate {
   0% {
     transform: rotate(0);
-  }
+}
 
   100% {
     transform: rotate(360deg);
-  }
+}
 }
 </style>
 
 <template>
-   <div class="gitalk-container">
-      <div id="gitalk-container"></div>
-   </div>
+  <div class="gitalk-container">
+    <div id="gitalk-container"></div>
+  </div>
 </template>
 <script>
 export default {
@@ -606,6 +606,10 @@ export default {
     return {};
   },
   mounted() {
+    if (window.location.host.indexOf("localhost") !== -1) {
+      return;
+    }
+
     let body = document.querySelector(".gitalk-container");
 
     let script = document.createElement("script");
@@ -624,7 +628,7 @@ export default {
       };
       const gitalk = new Gitalk(commentConfig);
       gitalk.render("gitalk-container");
-    }
+    };
   }
 };
 </script>

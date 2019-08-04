@@ -1,14 +1,14 @@
 <style scoped lang="scss">
-.cat-container{
-  position: fixed;
-  right:50px;
-  bottom:100px;
-  color:#00adb5;
-}
+  .cat-container{
+    position: fixed;
+    right:50px;
+    bottom:100px;
+    color:#00adb5;
+  }
 </style>
 
 <template>
-<div class="cat-container" v-show="isLoaded">一只猫正在赶来 ~</div>
+  <div class="cat-container" v-show="isLoaded">一只猫正在赶来 ~</div>
 </template>
 
 <script>
@@ -62,9 +62,9 @@
           },
         })
 
-        console.clear()
-        console.log('找猫? 在这里 https://github.com/xiazeyu/live2d-widget.js')
-        console.log('感谢作者 ~')
+        // console.clear()
+        // console.log('找猫? 在这里 https://github.com/xiazeyu/live2d-widget.js')
+        // console.log('感谢作者 ~')
       }
     }
   }

@@ -24,6 +24,11 @@ module.exports = {
     ["meta", { itemprop: "image", content: "/css_tricks/images/favicon.png" }]
   ],
   repo: "https://github.com/QiShaoXuan/css_tricks", // 添加 github 链接
+  plugins: [
+    require("./plugins/cat/index"),
+    require("./plugins/comment/index"),
+    "@vuepress/nprogress",
+  ],
   themeConfig: {
     themeConfig: {
       lastUpdated: "Last Updated"
