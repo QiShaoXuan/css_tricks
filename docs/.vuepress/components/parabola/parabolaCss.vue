@@ -12,18 +12,29 @@
     top: calc(100% - 30px);
     --left: 0;
     --top: calc(100% - 30px);
-
     transition: left 0.5s ease-in, top 0.5s ease-out;
     &.active {
       left: var(--left);
       top: var(--top);
     }
   }
+  .placehloder{
+    position: absolute;
+    left:0;right:0;
+    top:0;bottom:0;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color:#ddd;
+  }
 }
 </style>
 
 <template>
   <div class="parabola-container" @click="containerClick">
+    <div class="placehloder">click panel to animate</div>
     <div class="parabola-item" ref="parabolaItem" :class="{active:isActive}"></div>
   </div>
 </template>

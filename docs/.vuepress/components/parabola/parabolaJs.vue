@@ -19,11 +19,24 @@
     top: 0;
     background: #00adb5;
   }
+  .placehloder{
+    position: absolute;
+    left:0;right:0;
+    top:0;bottom:0;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color:#ddd;
+  }
 }
 </style>
 
 <template>
   <div class="parabola-container" @click="containerClick">
+    <div class="placehloder">click panel to animate</div>
+
     <div class="parabola-item" ref="parabolaItem"></div>
     <div class="click-point" ref="point"></div>
   </div>
