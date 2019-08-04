@@ -28,6 +28,7 @@ module.exports = {
     require("./plugins/cat/index"),
     require("./plugins/comment/index"),
     "@vuepress/nprogress",
+    '@vuepress/back-to-top'
   ],
   themeConfig: {
     themeConfig: {

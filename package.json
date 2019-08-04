@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/QiShaoXuan/css_tricks#readme",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
     "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
     "element-ui": "^2.9.1",
     "gh-pages": "^2.0.1",

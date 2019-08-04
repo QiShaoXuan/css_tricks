@@ -1,8 +1,5 @@
-import Cat from './cat.vue'
+import Cat from "./cat.vue";
 
-export default (params ) => {
-  const {Vue} = params
-  console.log(params)
-  
-  Vue.component('Cat', Cat)
-}
+export default ({ Vue }) => {
+  Vue.component("Cat", Cat);
+};

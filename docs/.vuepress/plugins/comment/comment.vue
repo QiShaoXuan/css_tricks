@@ -592,6 +592,16 @@ $gt-size-avatar-mobi = em(32px);
     transform: rotate(360deg);
 }
 }
+  .gitalk-container{
+    box-sizing border-box;
+    width:100%;
+    padding-left:20rem;
+  }
+  #gitalk-container{
+    padding:0 2.25rem;
+    max-width: 740px;
+    margin:0 auto;
+  }
 </style>
 
 <template>
@@ -606,6 +616,11 @@ export default {
     return {};
   },
   mounted() {
+    const content = document.querySelector(
+      ".theme-default-content.content__default"
+    );
+    console.log("conteny", content);
+
     if (window.location.host.indexOf("localhost") !== -1) {
       return;
     }
