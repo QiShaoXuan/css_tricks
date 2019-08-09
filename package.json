@@ -8,7 +8,9 @@
   },
   "scripts": {
     "docs:dev": "npx vuepress dev docs",
-    "docs:build": "npm run build:readme && vuepress build docs",
+    "dev": "npm run docs:dev",
+    "docs:build_back": "npm run build:readme && vuepress build docs",
+    "docs:build": "npm run build:readme && node ./build/addComponents.js && vuepress build docs && node ./build/delComponents.js",
     "deploy": "gh-pages -d dist",
     "deploy:build": "npm run docs:build && gh-pages -d dist",
     "build:readme": "node ./build/buildReadme.js"
@@ -25,6 +27,7 @@
   "homepage": "https://github.com/QiShaoXuan/css_tricks#readme",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+    "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
     "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
     "element-ui": "^2.9.1",
     "gh-pages": "^2.0.1",
@@ -32,5 +35,8 @@
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "vuepress": "^1.0.1"
+  },
+  "dependencies": {
+    "clipboard": "^2.0.4"
   }
 }

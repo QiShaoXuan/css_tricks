@@ -1,3 +1,4 @@
+const CONFIG = require("../../config");
 module.exports = {
   title: "CSS Tricks",
   description: "some CSS tricks, 一些常用的 CSS 样式, 一点 CSS 技巧",
@@ -25,10 +26,16 @@ module.exports = {
   ],
   repo: "https://github.com/QiShaoXuan/css_tricks", // 添加 github 链接
   plugins: [
-    require("./plugins/cat/index"),
+    // require("./plugins/cat/index"),
     require("./plugins/comment/index"),
+    require("./plugins/copy/index"),
     "@vuepress/nprogress",
-    '@vuepress/back-to-top'
+    [
+      "@vuepress/google-analytics",
+      {
+        ga: CONFIG.ga
+      }
+    ]
   ],
   themeConfig: {
     themeConfig: {

@@ -610,40 +610,19 @@ $gt-size-avatar-mobi = em(32px);
   </div>
 </template>
 <script>
+import initComment from "./initComment";
+
 export default {
   name: "comment",
   data() {
     return {};
   },
   mounted() {
-    const content = document.querySelector(
-      ".theme-default-content.content__default"
-    );
-    console.log("conteny", content);
+    initComment();
 
-    if (window.location.host.indexOf("localhost") !== -1) {
-      return;
-    }
-
-    let body = document.querySelector(".gitalk-container");
-
-    let script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js";
-    body.appendChild(script);
-
-    script.onload = () => {
-      const commentConfig = {
-        clientID: "9eb624fa10d287c81385",
-        clientSecret: "20e11930755d795b3230fd0b535b7ddacda5ad54",
-        repo: "css_tricks",
-        owner: "QiShaoXuan",
-        admin: ["QiShaoXuan"],
-        id: location.pathname,
-        distractionFreeMode: false
-      };
-      const gitalk = new Gitalk(commentConfig);
-      gitalk.render("gitalk-container");
-    };
+    this.$router.afterEach(() => {
+      initComment();
+    });
   }
 };
 </script>

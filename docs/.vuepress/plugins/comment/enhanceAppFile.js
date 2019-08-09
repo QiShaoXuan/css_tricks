@@ -1,5 +1,4 @@
-import Cat from "./comment.vue";
-
-export default ({ Vue }) => {
-  Vue.component("Comment", Cat);
+import Comment from "./comment.vue";
+export default ({ Vue, router }) => {
+  Vue.component("Comment", Comment);
 };
