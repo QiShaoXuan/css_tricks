@@ -26,7 +26,7 @@
 import ClipboardJS from "clipboard";
 import { Message } from "element-ui";
 export default {
-  name: "",
+  name: "Copy",
   data() {
     return {};
   },

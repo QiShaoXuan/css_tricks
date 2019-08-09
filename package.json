@@ -9,8 +9,8 @@
   "scripts": {
     "docs:dev": "npx vuepress dev docs",
     "dev": "npm run docs:dev",
-    "docs:build_back": "npm run build:readme && vuepress build docs",
-    "docs:build": "npm run build:readme && node ./build/addComponents.js && vuepress build docs && node ./build/delComponents.js",
+    "docs:build": "npm run build:readme && vuepress build docs",
+    "docs:build_back": "npm run build:readme && node ./build/addComponents.js && vuepress build docs && node ./build/delComponents.js",
     "deploy": "gh-pages -d dist",
     "deploy:build": "npm run docs:build && gh-pages -d dist",
     "build:readme": "node ./build/buildReadme.js"

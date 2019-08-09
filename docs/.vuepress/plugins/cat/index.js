@@ -1,6 +1,8 @@
-const { path } = require("@vuepress/shared-utils");
+const { resolve } = require("path");
 
-module.exports = {
-  enhanceAppFiles: [path.resolve(__dirname, "enhanceAppFile.js")],
-  globalUIComponents: "Cat"
+module.exports = (options, ctx) => {
+  return {
+    enhanceAppFiles: resolve(__dirname, "enhanceAppFiles.js"),
+    globalUIComponents: "Cat"
+  };
 };

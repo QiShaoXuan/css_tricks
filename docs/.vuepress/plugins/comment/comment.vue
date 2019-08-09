@@ -620,8 +620,10 @@ export default {
   mounted() {
     initComment();
 
-    this.$router.afterEach(() => {
-      initComment();
+    this.$router.afterEach((to, from) => {
+      if (to.path !== from.path) {
+        initComment();
+      }
     });
   }
 };

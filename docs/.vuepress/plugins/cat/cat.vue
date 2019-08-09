@@ -27,8 +27,10 @@ export default {
   },
   mounted() {
     this.initCat();
-    this.$router.afterEach(() => {
-      this.initCat();
+    this.$router.afterEach((to, from) => {
+      if (to.path !== from.path) {
+        this.initCat();
+      }
     });
   },
   methods: {
