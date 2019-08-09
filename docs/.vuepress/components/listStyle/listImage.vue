@@ -14,9 +14,12 @@
     <li>楼阴缺，栏杆影卧东厢月</li>
     <li>东厢月，一天风霜，杏花如雪</li>
   </ul>
-  <pre class="language-css"
-    style="margin-bottom:30px;"><code
-    ref="css"></code></pre>
+  <div class="language-css extra-class">
+      <pre class="language-css"
+        style="margin-bottom:30px;"><code
+        ref="css"></code></pre>
+  </div>
+
 
 </div>
 </template>

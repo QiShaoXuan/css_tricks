@@ -30,7 +30,7 @@
         <path :d="path" :fill="color"></path>
       </svg>
     </div>
-    <div class="code">
+    <div class="code language-css extra-class">
       <pre class="language-css"><code ref="code"></code></pre>
     </div>
     <div class="w-50">

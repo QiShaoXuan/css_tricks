@@ -28,8 +28,11 @@
       </el-switch>
     </div>
 
-    <pre class="language-css"><code
-      ref="css"></code></pre>
+    <div class="language-css extra-class">
+         <pre class="language-css"><code
+           ref="css"></code></pre>
+    </div>
+
   </div>
 </template>
 

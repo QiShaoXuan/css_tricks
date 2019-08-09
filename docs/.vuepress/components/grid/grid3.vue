@@ -31,7 +31,10 @@
       </div>
     </div>
 
-    <pre class="language-css"><code ref="placeSelf"></code></pre>
+    <div class="language-css extra-class">
+      <pre class="language-css"><code ref="placeSelf"></code></pre>
+
+    </div>
 
     <div class="key-value">
       <span>justify-self:&nbsp;&nbsp;</span>
@@ -41,7 +44,7 @@
       <span>align-self:&nbsp;&nbsp;&nbsp;&nbsp;</span>
       <el-radio v-for="(value, index) in value" :key="index" v-model="align" :label="value"></el-radio>
     </div>
-    
+
   </div>
 </template>
 

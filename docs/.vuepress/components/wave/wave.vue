@@ -40,8 +40,10 @@
     <div class="wave"></div>
     <div class="code-container">
       <el-button type="primary" size="mini" class="hide-btn" @click="hideCode">{{hide?'show':'hide'}} code</el-button>
-      <pre v-show="!hide" class="language-css"><code
-        ref="configContainer"></code></pre>
+      <div class="language-css extra-class">
+           <pre v-show="!hide" class="language-css"><code
+             ref="configContainer"></code></pre>
+      </div>
     </div>
     <div class="control">
       <div class="control-item">

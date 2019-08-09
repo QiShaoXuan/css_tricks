@@ -40,7 +40,9 @@
       </div>
     </div>
 
-    <pre class="language-css"><code ref="placeItems"></code></pre>
+    <div class="language-css extra-class">
+      <pre class="language-css"><code ref="placeItems"></code></pre>
+    </div>
 
     <div class="key-value">
       <span class="key">justify-items:</span>
@@ -55,7 +57,9 @@
       </div>
     </div>
 
-    <pre class="language-css"><code ref="placeContent"></code></pre>
+    <div class="language-css extra-class">
+      <pre class="language-css"><code ref="placeContent"></code></pre>
+    </div>
 
     <div class="key-value">
       <span class="key">justify-content:</span>

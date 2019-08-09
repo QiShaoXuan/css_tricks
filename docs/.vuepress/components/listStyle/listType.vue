@@ -27,9 +27,12 @@
         :href='item.href' target="_blank">{{item.name}}</a>
       </li>
     </ul>
-    <pre class="language-css"
-      style="margin-bottom:30px;"><code
-      ref="css"></code></pre>
+    <div class="language-css extra-class">
+          <pre class="language-css"
+            style="margin-bottom:30px;"><code
+            ref="css"></code></pre>
+    </div>
+
 
     <el-radio-group v-model="selectedType"
       class="type-container">

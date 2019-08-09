@@ -111,12 +111,13 @@
 @media screen and (max-width: 959px) {
   .createTriangle-container {
     position: relative;
-    padding-top:310px;
-    .triangle-container{
+    padding-top: 310px;
+    .triangle-container {
       position: absolute;
-      left:0;right:0;
-      top:0;
-      margin:auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
     }
   }
 
@@ -130,63 +131,187 @@
     <div class="createTriangle-container">
       <div class="tool-box">
         <section class="tool-flex">
-        <div>
+          <div>
             <h4>方向</h4>
             <div class="direction-contianer">
               <div class="placeholder"></div>
               <div class="square rotate">
-                <label for="top" class="direction-label" :class="setActive('top')"><input type="radio" v-model="direction" name="direction" id="top" value="top"></label>
-                <label for="right" class="direction-label" :class="setActive('right')"><input type="radio" v-model="direction" name="direction" id="right" value="right"></label>
-                <label for="left" class="direction-label" :class="setActive('left')"><input type="radio" v-model="direction" name="direction" id="left" value="left"></label>
-                <label for="bottom" class="direction-label" :class="setActive('bottom')"><input type="radio" v-model="direction" name="direction" id="bottom" value="bottom"></label>
-
+                <label
+                  for="top"
+                  class="direction-label"
+                  :class="setActive('top')"
+                  ><input
+                    type="radio"
+                    v-model="direction"
+                    name="direction"
+                    id="top"
+                    value="top"
+                /></label>
+                <label
+                  for="right"
+                  class="direction-label"
+                  :class="setActive('right')"
+                  ><input
+                    type="radio"
+                    v-model="direction"
+                    name="direction"
+                    id="right"
+                    value="right"
+                /></label>
+                <label
+                  for="left"
+                  class="direction-label"
+                  :class="setActive('left')"
+                  ><input
+                    type="radio"
+                    v-model="direction"
+                    name="direction"
+                    id="left"
+                    value="left"
+                /></label>
+                <label
+                  for="bottom"
+                  class="direction-label"
+                  :class="setActive('bottom')"
+                  ><input
+                    type="radio"
+                    v-model="direction"
+                    name="direction"
+                    id="bottom"
+                    value="bottom"
+                /></label>
               </div>
 
               <div class="square">
-                <label for="topLeft" class="direction-label" :class="setActive('topLeft')"><input type="radio" v-model="direction" name="direction" id="topLeft" value="topLeft"></label>
-                <label for="topRight" class="direction-label" :class="setActive('topRight')"><input type="radio" v-model="direction" name="direction" id="topRight" value="topRight"></label>
+                <label
+                  for="topLeft"
+                  class="direction-label"
+                  :class="setActive('topLeft')"
+                  ><input
+                    type="radio"
+                    v-model="direction"
+                    name="direction"
+                    id="topLeft"
+                    value="topLeft"
+                /></label>
+                <label
+                  for="topRight"
+                  class="direction-label"
+                  :class="setActive('topRight')"
+                  ><input
+                    type="radio"
+                    v-model="direction"
+                    name="direction"
+                    id="topRight"
+                    value="topRight"
+                /></label>
 
-                <label for="bottomLeft" class="direction-label" :class="setActive('bottomLeft')"><input type="radio" v-model="direction" name="direction" id="bottomLeft" value="bottomLeft"></label>
-                <label for="bottomRight" class="direction-label" :class="setActive('bottomRight')"><input type="radio" v-model="direction" name="direction" id="bottomRight" value="bottomRight"></label>
+                <label
+                  for="bottomLeft"
+                  class="direction-label"
+                  :class="setActive('bottomLeft')"
+                  ><input
+                    type="radio"
+                    v-model="direction"
+                    name="direction"
+                    id="bottomLeft"
+                    value="bottomLeft"
+                /></label>
+                <label
+                  for="bottomRight"
+                  class="direction-label"
+                  :class="setActive('bottomRight')"
+                  ><input
+                    type="radio"
+                    v-model="direction"
+                    name="direction"
+                    id="bottomRight"
+                    value="bottomRight"
+                /></label>
               </div>
               <!-- {{direction}} -->
             </div>
           </div>
-            <div>
-                <h4>颜色</h4>
-                <el-color-picker @change="update" v-model="choosenColor"></el-color-picker>
-            </div>
+          <div>
+            <h4>颜色</h4>
+            <el-color-picker
+              @change="update"
+              v-model="choosenColor"
+            ></el-color-picker>
+          </div>
         </section>
         <section>
           <h4>类型</h4>
-            <el-radio v-model="type" v-if="showEqu" label="equ">等边</el-radio>
-            <el-radio v-model="type" label="iso">等腰</el-radio>
-            <el-radio v-model="type" label="sca">不等边</el-radio>
+          <el-radio v-model="type" v-if="showEqu" label="equ">等边</el-radio>
+          <el-radio v-model="type" label="iso">等腰</el-radio>
+          <el-radio v-model="type" label="sca">不等边</el-radio>
         </section>
         <section class="size-section">
           <h4>大小 <span>（更改值后请敲回车）</span></h4>
           <p>宽度</p>
-          <el-input-number @change="update" v-model="width" :disabled="widthDisable" :min="0" :max="300" size='mini'></el-input-number>
+          <el-input-number
+            @change="update"
+            v-model="width"
+            :disabled="widthDisable"
+            :min="0"
+            :max="300"
+            size="mini"
+          ></el-input-number>
           <div class="tool-flex">
             <div>
               <p>左</p>
-              <el-input-number @change="update" v-model="left" :disabled="leftDisable" :min="0" :max="150" size='mini'></el-input-number>
+              <el-input-number
+                @change="update"
+                v-model="left"
+                :disabled="leftDisable"
+                :min="0"
+                :max="150"
+                size="mini"
+              ></el-input-number>
             </div>
             <div>
               <p>右</p>
-              <el-input-number @change="update" v-model="right" :disabled="rightDisable" :min="0" :max="150" size='mini'></el-input-number>
+              <el-input-number
+                @change="update"
+                v-model="right"
+                :disabled="rightDisable"
+                :min="0"
+                :max="150"
+                size="mini"
+              ></el-input-number>
             </div>
           </div>
-            <p>高度</p>
-            <el-input-number @change="update" v-model="height" :disabled="heightDisable" :min="0" :max="300" size='mini'></el-input-number>
+          <p>高度</p>
+          <el-input-number
+            @change="update"
+            v-model="height"
+            :disabled="heightDisable"
+            :min="0"
+            :max="300"
+            size="mini"
+          ></el-input-number>
           <div class="tool-flex">
             <div>
               <p>上</p>
-              <el-input-number @change="update" v-model="top" :disabled="topDisable" :min="0" :max="150" size='mini'></el-input-number>
+              <el-input-number
+                @change="update"
+                v-model="top"
+                :disabled="topDisable"
+                :min="0"
+                :max="150"
+                size="mini"
+              ></el-input-number>
             </div>
             <div>
               <p>下</p>
-              <el-input-number @change="update" v-model="bottom" :disabled="bottomDisable" :min="0" :max="150" size='mini'></el-input-number>
+              <el-input-number
+                @change="update"
+                v-model="bottom"
+                :disabled="bottomDisable"
+                :min="0"
+                :max="150"
+                size="mini"
+              ></el-input-number>
             </div>
           </div>
           <!-- <span>高度</span>
@@ -194,15 +319,19 @@
         </section>
       </div>
       <div class="triangle-container">
-          <div class="triangle-demo" :style="{borderWidth:lengths,borderColor:colors}"></div>
+        <div
+          class="triangle-demo"
+          :style="{ borderWidth: lengths, borderColor: colors }"
+        ></div>
       </div>
     </div>
     <div style="width:100%;">
-        <h3>CSS</h3>
+      <h3>CSS</h3>
+      <div class="language-css extra-class">
         <pre class="language-css"><code ref="code-container"></code></pre>
       </div>
+    </div>
   </div>
-
 </template>
 
 <script>

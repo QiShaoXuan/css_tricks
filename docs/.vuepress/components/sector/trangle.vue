@@ -158,11 +158,11 @@
         </div>
       </div>
     </div>
-    <div class="code">
+    <div class="code language-css extra-class">
       <pre class="language-css"><code
         ref="code"></code></pre>
     </div>
-    <div class="code">
+    <div class="code language-html extra-class">
       <pre class="language-html"><code
         ref="htmlcode"></code></pre>
     </div>

@@ -26,7 +26,7 @@ module.exports = {
   ],
   repo: "https://github.com/QiShaoXuan/css_tricks", // 添加 github 链接
   plugins: [
-    // require("./plugins/cat/index"),
+    require("./plugins/cat/index"),
     require("./plugins/comment/index"),
     require("./plugins/copy/index"),
     "@vuepress/nprogress",

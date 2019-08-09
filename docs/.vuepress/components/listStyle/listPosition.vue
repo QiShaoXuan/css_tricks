@@ -24,9 +24,12 @@
       <li>多歧路，今安在</li>
       <li>长风破浪会有时，直挂云帆济沧海</li>
     </ul>
-    <pre class="language-css"
-      style="margin-bottom:30px;"><code
-      ref="css"></code></pre>
+    <div class="language-css extra-class">
+       <pre class="language-css"
+         style="margin-bottom:30px;"><code
+         ref="css"></code></pre>
+    </div>
+
     <el-radio-group v-model="selectedType"
       class="position-container">
       <el-radio v-for="po in position" :key="po"

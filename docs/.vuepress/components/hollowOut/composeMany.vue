@@ -89,9 +89,12 @@
         active-color="#00adb5">
       </el-switch>
     </div>
+    <div class="language-css extra-class">
+         <pre class="language-css"><code
+           ref="css"></code></pre>
+    </div>
 
-    <pre class="language-css"><code
-      ref="css"></code></pre>
+
   </div>
 </template>
 

@@ -99,7 +99,9 @@
 <template>
   <div class="grid-container">
     <section class="property-value">
-      <pre class="language-css"><code ref="gridTemplateColumns"></code></pre>
+      <div class="language-css extra-class">
+        <pre class="language-css"><code ref="gridTemplateColumns"></code></pre>
+      </div>
       <div class="value-set">
         <div class="value-item" v-for="(item,index) in gridTemplateColumns" :key="index">
           <el-input size="mini"  v-model="item.value"></el-input>
@@ -111,7 +113,9 @@
       </div>
     </section>
     <section class="property-value">
-      <pre class="language-css"><code ref="gridTemplateRows"></code></pre>
+      <div class="language-css extra-class">
+        <pre class="language-css"><code ref="gridTemplateRows"></code></pre>
+      </div>
       <div class="value-set">
         <div class="value-item" v-for="(item,index) in gridTemplateRows" :key="index">
           <el-input size="mini"  v-model="item.value"></el-input>
@@ -125,7 +129,9 @@
     </section>
 
     <section class="property-value">
-      <pre class="language-css"><code ref="gridcolumnGaps"></code></pre>
+      <div class="language-css extra-class">
+        <pre class="language-css"><code ref="gridcolumnGaps"></code></pre>
+      </div>
       <div class="value-set">
         <div class="key-value w-50">
           <span class="key">grid-column-gap:&nbsp;&nbsp;</span>
@@ -152,7 +158,9 @@
     </div>
     <section class="property-value" v-if="choosenGridItem">
       <h4>grid-item-{{choosenGridItem.index}}</h4>
-      <pre class="language-css"><code ref="itemColumn"></code></pre>
+      <div class="language-css extra-class">
+        <pre class="language-css"><code ref="itemColumn"></code></pre>
+      </div>
       <div class="value-set">
         <div class="key-value w-50">
           <span class="key">grid-column-start:&nbsp;&nbsp;</span>
@@ -163,7 +171,9 @@
           <el-input-number :min="choosenGridItem.gridColumnStart + 1" :max="gridTemplateColumns.length + 1" size="mini" v-model="choosenGridItem.gridColumnEnd"></el-input-number>
         </div>
       </div>
-      <pre class="language-css"><code ref="itemRow"></code></pre>
+      <div class="language-css extra-class">
+        <pre class="language-css"><code ref="itemRow"></code></pre>
+      </div>
       <div class="value-set">
         <div class="key-value w-50 ">
           <span class="key">grid-row-start:&nbsp;&nbsp;</span>

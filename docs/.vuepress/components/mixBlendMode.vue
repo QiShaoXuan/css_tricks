@@ -69,7 +69,10 @@
       <div class="mode white" :style="{mixBlendMode:modeChoosen}"></div>
     </div>
 
-    <pre class="language-css" style="margin-bottom:30px;"><code ref="mixBlendModeCss"></code></pre>
+    <div class="language-css extra-class">
+      <pre class="language-css" style="margin-bottom:30px;"><code ref="mixBlendModeCss"></code></pre>
+
+    </div>
 
     <el-radio-group v-model="modeChoosen" class="radio-group">
         <div class="col-50" v-for="(item,index) in data" :key="index">

@@ -1,9 +1,5 @@
 import Cat from "./cat.vue";
 
-export default ({ Vue, router }) => {
+export default ({ Vue }) => {
   Vue.component("Cat", Cat);
-  router.afterEach(function (to) {
-    ga('set', 'page', to.fullPath)
-    ga('send', 'pageview')
-  })
 };

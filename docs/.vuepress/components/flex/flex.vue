@@ -88,8 +88,11 @@
       <span class="tip hide-btn" @click="()=>this.hideTop= !this.hideTop"><i :class="hideTop?'el-icon-arrow-up':'el-icon-arrow-down'"></i> {{hideTop?'show':'hide'}}</span>
     </p>
     <div class="bottom-border" v-show="!hideTop">
-      <pre class="language-css"><code
-        ref="flexContainer"></code></pre>
+      <div class="language-css extra-class">
+             <pre class="language-css"><code
+               ref="flexContainer"></code></pre>
+      </div>
+
 
       <div class="key-value">
         <span class="key">flex-direction:</span>
@@ -130,7 +133,9 @@
     <div class="bottom-border" v-show="choosenItemIndex != -1">
       <p
         class="title">style of item-{{choosenItemIndex+1}}</p>
-      <pre class="language-css"><code ref="flexItem"></code></pre>
+      <div class="language-css extra-class">
+        <pre class="language-css"><code ref="flexItem"></code></pre>
+      </div>
 
       <div class="key-value">
         <span class="key">order:</span>
