@@ -33,9 +33,12 @@ or submit an issue, any helpful suggestions are welcomed
 ## JS Tricks
 <a href="https://qishaoxuan.github.io/js_tricks/" target="_blank">view online</a>
 
-## 关于猫 About cat (问的人太多了...)
+## 关于猫 About cat
 
-<a href="https://github.com/QiShaoXuan/vuepress-plugin-cat" target="_blank">本来是写在 console 里的</a>
+- <a href="https://github.com/QiShaoXuan/vuepress-plugin-cat" target="_blank">vuepress-plugin-cat</a>
+- <a href="https://github.com/QiShaoXuan/live2DModel">live2d model</a>
+
+
 
 
 
