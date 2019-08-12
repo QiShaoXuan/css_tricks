@@ -28,7 +28,7 @@ module.exports = {
   plugins: [
     require("./plugins/comment/index"),
     require("./plugins/copy/index"),
-    require("./plugins/cat/index"),
+    "vuepress-plugin-cat",
     "@vuepress/nprogress",
     [
       "@vuepress/google-analytics",
