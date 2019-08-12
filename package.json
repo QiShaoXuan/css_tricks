@@ -38,6 +38,6 @@
   },
   "dependencies": {
     "clipboard": "^2.0.4",
-    "vuepress-plugin-cat": "^1.0.0"
+    "vuepress-plugin-cat": "^1.0.2"
   }
 }
