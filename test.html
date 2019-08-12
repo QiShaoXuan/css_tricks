@@ -1,16 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
-</head>
-<body>
-
-</body>
-<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body></body>
+  <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+  <script>
+    function getData(n) {
+      var arr = [],
+        i,
+        a,
+        b,
+        c,
+        spike;
+      for (i = 0; i < n; i = i + 1) {
+        if (i % 100 === 0) {
+          a = 2 * Math.random();
+        }
+        if (i % 1000 === 0) {
+          b = 2 * Math.random();
+        }
+        if (i % 10000 === 0) {
+          c = 2 * Math.random();
+        }
+        if (i % 50000 === 0) {
+          spike = 10;
+        } else {
+          spike = 0;
+        }
+        arr.push(2 * Math.sin(i / 100) + a + b + c + spike + Math.random());
+      }
+      return arr;
+    }
+  </script>
 </html>

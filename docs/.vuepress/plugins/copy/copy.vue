@@ -32,8 +32,10 @@ export default {
   },
   mounted() {
     this.initCopyBtn();
-    this.$router.afterEach(() => {
-      this.initCopyBtn();
+    this.$router.afterEach((to, from) => {
+      if (to.path !== from.path) {
+        this.initCopyBtn();
+      }
     });
   },
   methods: {
