@@ -1,25 +1,25 @@
 <div align="center"><img src="https://raw.githubusercontent.com/QiShaoXuan/css_tricks/master/logo.png"></div>
 
-<div style="display:none" id="local-en"></div>
+<div style="display:none" id="local-zh"></div>
 
-## 关于
+## About
 
-- 总结一些常用的 CSS 样式
-- 记录一些 CSS 的新属性和一点奇技淫巧
-- 在“动”部分下有些动画并不是 CSS 效果，因为没有地方放置，所以暂时寄存在这里
+- Summarize some common CSS styles.
+- Record some new CSS properties and a some tricks.
+- Some animations under the "Animate" section are not CSS effects, because there is no place to put them, so they are temporarily stored here.
 
-尽量少说废话，代码简单易用，方便复制
+As little nonsense as possible, the code is simple to use, easy to copy.
 
 > talk is cheap show me the code
 
-## 快速开始
+## Quick start
 
 - Clone the `https://github.com/QiShaoXuan/css_tricks.git`
 - Install package `npm install`
 - Development run `npm run docs:dev`
 - Open `http://localhost:8080` in your browser.
 
-<div style="display:none" id="list-zh"></div>
+<div style="display:none" id="list-en"></div>
 
 ## Contributing
 
@@ -30,13 +30,12 @@
 - Push to the branch: `git push origin new-branch`
 - Submit a pull request
 
-也可以提交 issue 或直接评论，欢迎需求 ~
+or submit an issue, any helpful suggestions are welcomed.
 
 ## JS Tricks
-
 <a href="https://qishaoxuan.github.io/js_tricks/" target="_blank">view online</a>
 
-## 关于猫
+## About cat
 
 - <a href="https://github.com/QiShaoXuan/vuepress-plugin-cat" target="_blank">vuepress-plugin-cat</a>
 - <a href="https://github.com/QiShaoXuan/live2DModel">live2d model</a>
