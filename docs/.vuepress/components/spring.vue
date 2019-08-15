@@ -56,7 +56,7 @@ h1 {
 <template>
 <div class="spring-container">
   <section>
-    <h1>弹簧动画</h1>
+    <h1>{{ __("弹簧动画") }}</h1>
   </section>
   <section>
     <div class="moveBox"></div>

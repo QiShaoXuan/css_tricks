@@ -125,14 +125,13 @@
   }
 }
 </style>
-
 <template>
   <div>
     <div class="createTriangle-container">
       <div class="tool-box">
         <section class="tool-flex">
           <div>
-            <h4>方向</h4>
+            <h4>{{ __("方向") }}</h4>
             <div class="direction-contianer">
               <div class="placeholder"></div>
               <div class="square rotate">
@@ -233,7 +232,7 @@
             </div>
           </div>
           <div>
-            <h4>颜色</h4>
+            <h4>{{__("颜色")}}</h4>
             <el-color-picker
               @change="update"
               v-model="choosenColor"
@@ -241,14 +240,14 @@
           </div>
         </section>
         <section>
-          <h4>类型</h4>
-          <el-radio v-model="type" v-if="showEqu" label="equ">等边</el-radio>
-          <el-radio v-model="type" label="iso">等腰</el-radio>
-          <el-radio v-model="type" label="sca">不等边</el-radio>
+          <h4>{{__("类型")}}</h4>
+          <el-radio v-model="type" v-if="showEqu" label="equ">{{ __("等边") }}</el-radio>
+          <el-radio v-model="type" label="iso">{{ __("等腰") }}</el-radio>
+          <el-radio v-model="type" label="sca">{{ __("不等边") }}</el-radio>
         </section>
         <section class="size-section">
-          <h4>大小 <span>（更改值后请敲回车）</span></h4>
-          <p>宽度</p>
+          <h4>{{__("大小")}} <span>{{ __("（更改值后请敲回车）") }}</span></h4>
+          <p>{{ __("宽度") }}</p>
           <el-input-number
             @change="update"
             v-model="width"
@@ -259,7 +258,7 @@
           ></el-input-number>
           <div class="tool-flex">
             <div>
-              <p>左</p>
+              <p>{{ __("左") }}</p>
               <el-input-number
                 @change="update"
                 v-model="left"
@@ -270,7 +269,7 @@
               ></el-input-number>
             </div>
             <div>
-              <p>右</p>
+              <p>{{ __("右") }}</p>
               <el-input-number
                 @change="update"
                 v-model="right"
@@ -281,7 +280,7 @@
               ></el-input-number>
             </div>
           </div>
-          <p>高度</p>
+          <p>{{ __("高度") }}</p>
           <el-input-number
             @change="update"
             v-model="height"
@@ -292,7 +291,7 @@
           ></el-input-number>
           <div class="tool-flex">
             <div>
-              <p>上</p>
+              <p>{{ __("上") }}</p>
               <el-input-number
                 @change="update"
                 v-model="top"
@@ -303,7 +302,7 @@
               ></el-input-number>
             </div>
             <div>
-              <p>下</p>
+              <p>{{ __("下") }}</p>
               <el-input-number
                 @change="update"
                 v-model="bottom"
@@ -314,8 +313,6 @@
               ></el-input-number>
             </div>
           </div>
-          <!-- <span>高度</span>
-          <el-input-number v-model="height"  disabled :min="0" :max="300" show-input input-size='mini'></el-input-number> -->
         </section>
       </div>
       <div class="triangle-container">

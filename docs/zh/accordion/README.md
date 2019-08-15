@@ -1,4 +1,3 @@
-# CSS 实现的手风琴样式
 <accordion/>
 
 ```html

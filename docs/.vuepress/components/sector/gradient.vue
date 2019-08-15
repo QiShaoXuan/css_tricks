@@ -44,23 +44,23 @@
         ref="code"></code></pre>
     </div>
     <div class="w-50">
-      <span class="key">半径</span>
+      <span class="key">{{ __("半径") }}</span>
       <el-slider class="slider" v-model="radius" :min="20"
         :max="150" show-input input-size="mini"></el-slider>
     </div>
     <div class="w-50">
-      <span class="key">角度</span>
+      <span class="key">{{ __("角度") }}</span>
       <el-slider class="slider" v-model="deg" :min="1"
         :max="359" show-input input-size="mini"></el-slider>
     </div>
     <div class="w-50">
-      <span class="key">起始角度</span>
+      <span class="key">{{ __("起始角度") }}</span>
       <el-slider class="slider" v-model="startAngle"
         :min="0" :max="startMax" show-input
         input-size="mini"></el-slider>
     </div>
     <div class="w-50">
-      <span class="key">颜色</span>
+      <span class="key">{{ __("颜色") }}</span>
       <div class="block">
         <el-color-picker v-model="color"></el-color-picker>
       </div>

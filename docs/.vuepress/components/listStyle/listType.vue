@@ -38,9 +38,9 @@
       class="type-container">
       <el-radio v-for="item in type" :key="item.name"
         :label="item.name">
-        {{item.name}} - {{item.comment}}
+        {{item.name}} - {{$lang ==="zh-CN"?item.comment:""}}
         <el-tooltip v-if="item.isTest" class="item"
-          effect="dark" content="实验属性，谨慎使用" placement="top">
+          effect="dark" :content='__("实验属性，谨慎使用")' placement="top">
           <img style="margin-bottom:-2px;" width="15"
             src="https://developer.mozilla.org/static/general/flask.6c6c1a459b56.svg"
             alt="">

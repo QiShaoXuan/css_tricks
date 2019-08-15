@@ -146,8 +146,8 @@
       </div>
     </section>
     <div class="btn-container">
-      <span class="tip">点击 grid-item 以改变其属性</span>
-      <el-button type="primary" plain size="mini" @click="addGridItem">增加 grid-item</el-button>
+      <span class="tip">{{ __("点击 grid-item 以改变其属性") }}</span>
+      <el-button type="primary" plain size="mini" @click="addGridItem">{{ __("增加") }} grid-item</el-button>
     </div>
     <div class="grid-wrapper" :style={gridTemplateColumns:gridTemplateColumnsCss,gridTemplateRows:gridTemplateRowsCss,gridGap:gridGapCss}>
       <div class="grid-item" v-for="(item,index) in gridItem" :class="'grid-item'+index" :key="index"

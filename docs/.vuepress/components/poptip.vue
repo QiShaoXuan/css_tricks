@@ -70,7 +70,7 @@ $distance: -12px;
 
 <template>
 <div class="poptip-container">
-  <div class="poptip btn" aria-controls="弹出气泡">hover to popup</div>
+  <div class="poptip btn" :aria-controls="__('弹出气泡')">hover to popup</div>
 </div>
 </template>
 

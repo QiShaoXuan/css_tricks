@@ -42,31 +42,31 @@
 <template>
   <div class="shadow-container">
     <div class="panel">
-      <p>无偏移投影</p>
+      <p>{{ __("无偏移投影") }}</p>
       <div class="box shadow1"></div>
     </div>
 
     <div class="panel">
-      <p>下侧投影</p>
+      <p>{{ __("下侧投影") }}</p>
       <div class="box shadow2"></div>
     </div>
 
     <div class="panel">
-      <p>右侧投影</p>
+      <p>{{ __("右侧投影") }}</p>
       <div class="box shadow3"></div>
     </div>
 
     <div class="panel">
-      <p>双侧投影</p>
+      <p>{{ __("双侧投影") }}</p>
       <div class="box shadow4"></div>
     </div>
     <div class="panel">
-      <p>菜单投影</p>
+      <p>{{ __("菜单投影") }}</p>
       <div class="box shadow5"></div>
     </div>
-    
+
     <div class="panel">
-      <p>投影边框</p>
+      <p>{{ __("投影边框") }}</p>
       <div class="box shadow6" style="background-color:#fff;"></div>
     </div>
 

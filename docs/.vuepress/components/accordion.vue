@@ -65,23 +65,23 @@
       return {
         items: [
           {
-            title: "背景1",
+            title: `${this.__('背景')}1`,
             src: require("../public/images/bg7.jpeg")
           },
           {
-            title: "背景2",
+            title: `${this.__('背景')}2`,
             src: require("../public/images/bg10.jpeg")
           },
           {
-            title: "背景3",
+            title: `${this.__('背景')}3`,
             src: require("../public/images/bg9.jpeg")
           },
           {
-            title: "背景4",
+            title: `${this.__('背景')}4`,
             src: require("../public/images/bg7.jpeg")
           },
           {
-            title: "背景5",
+            title: `${this.__('背景')}5`,
             src: require("../public/images/bg10.jpeg")
           }
         ]

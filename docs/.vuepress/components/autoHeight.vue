@@ -61,7 +61,7 @@
     <div class="container">
       <div class="top-child">
         <el-tag v-for="(item, key) in data" :key="key" :type="types[key % 6]"
-          >标签{{ item }}</el-tag
+          >{{ __("标签") }}{{ item }}</el-tag
         >
 
         <el-button

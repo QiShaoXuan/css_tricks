@@ -23,14 +23,14 @@
     .btn-container {
       margin-left: 15px;
     }
-    .code-container{
+    .code-container {
       position: relative;
-      min-height:60px;
+      min-height: 60px;
     }
-    .hide-btn{
+    .hide-btn {
       position: absolute;
-      right:15px;
-      top:15px;
+      right: 15px;
+      top: 15px;
     }
   }
 </style>
@@ -39,7 +39,9 @@
   <div class="wave-container">
     <div class="wave"></div>
     <div class="code-container">
-      <el-button type="primary" size="mini" class="hide-btn" @click="hideCode">{{hide?'show':'hide'}} code</el-button>
+      <el-button type="primary" size="mini" class="hide-btn"
+        @click="hideCode">{{hide?'show':'hide'}} code
+      </el-button>
       <div class="language-css extra-class">
            <pre v-show="!hide" class="language-css"><code
              ref="configContainer"></code></pre>
@@ -104,8 +106,7 @@
         <label>border.show</label>
         <el-switch
           v-model="config.border.show"
-          active-text="显示边框"
-          inactive-text="隐藏边框">
+        >
         </el-switch>
       </div>
       <div>
@@ -172,9 +173,9 @@
     name: 'wave',
     data() {
       return {
-        animate:true,
+        animate: true,
         wave: null,
-        hide:false,
+        hide: false,
         config: {
           number: 3,
           smooth: 50,
@@ -200,16 +201,16 @@
         },
         deep: true
       },
-      animate(){
-        if(this.animate){
+      animate() {
+        if (this.animate) {
           this.wave.animate()
-        }else{
+        } else {
           this.wave.pause()
         }
       }
     },
     methods: {
-      hideCode(){
+      hideCode() {
         this.hide = !this.hide
       },
       delColors() {
@@ -240,7 +241,7 @@
           if (Object.prototype.toString.call(obj[key]) === "[object Array]") {
             config += `${space}${key}: [${obj[key].join(', ')}],\n`
           } else if (Object.prototype.toString.call(obj[key]) === "[object Object]") {
-            config += `${space}${key}: {\n${this.getConfigStr(obj[key], index+1)}${space}},\n`
+            config += `${space}${key}: {\n${this.getConfigStr(obj[key], index + 1)}${space}},\n`
           } else {
             config += `${space}${key}: ${obj[key]},\n`
           }
@@ -249,7 +250,7 @@
       }
     },
     mounted() {
-      this.wave = new Wave('.wave',this.config)
+      this.wave = new Wave('.wave', this.config)
       this.wave.animate()
       this.setCode()
     }

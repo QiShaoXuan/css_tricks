@@ -1,7 +1,3 @@
-
-
-# Flexbox布局详解
-
 ## live demo
 <flex-flex/>
 

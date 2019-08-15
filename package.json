@@ -13,7 +13,8 @@
     "docs:build_back": "npm run build:readme && node ./build/addComponents.js && vuepress build docs && node ./build/delComponents.js",
     "deploy": "gh-pages -d dist",
     "deploy:build": "npm run docs:build && gh-pages -d dist",
-    "build:readme": "node ./build/buildReadme.js"
+    "build:readme": "node ./build/buildReadme.js",
+    "build":"vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
   },
   "dependencies": {
     "clipboard": "^2.0.4",
+    "vue-i18n": "^8.14.0",
     "vuepress-plugin-cat": "^1.0.2"
   }
 }

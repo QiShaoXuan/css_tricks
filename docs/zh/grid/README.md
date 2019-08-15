@@ -10,6 +10,6 @@
 
 <grid-grid2/>
 
-## justify-self && align-self
+## justify-self & align-self
 
 <grid-grid3/>

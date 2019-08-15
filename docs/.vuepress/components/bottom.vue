@@ -42,12 +42,12 @@
   <div class="container">
     <div class="poem-container">
       <article>
-        <el-checkbox style="margin-bottom: 15px;" v-model="hide">隐藏内容</el-checkbox>
+        <el-checkbox style="margin-bottom: 15px;" v-model="hide">{{ __("隐藏内容") }}</el-checkbox>
         <div class="poem" v-show="!hide">
           <p v-for="(value,index) in poem.split('。')">{{value}}</p>
         </div>
       </article>
-      <footer>底部始终在文档末尾，当文档较长时跟随在文档末尾，当文档较短时在窗口底部。</footer>
+      <footer>{{ __("底部始终在文档末尾，当文档较长时跟随在文档末尾，当文档较短时在窗口底部。") }}</footer>
     </div>
 
 

@@ -184,72 +184,72 @@ module.exports = {
             collapsable: false,
             children: [
               ["/en/createTriangle/", "Triangle generator"],
-              // ["/en/sector/", "Fan generator"]
+              ["/en/sector/", "Fan generator"]
             ]
           },
-          // {
-          //   title: "Attribute",
-          //   collapsable: false,
-          //   children: [
-          //     ["/en/filter/", "Filter"],
-          //     ["/en/flexbox/", "Flexbox"],
-          //     ["/en/grid/", "Grid"],
-          //     ["/en/object/", "object-fit, object-position"],
-          //     ["/en/mixBlendMode/", "mix-blend-mode"],
-          //     ["/en/list/", "list-style"]
-          //   ]
-          // },
-          // {
-          //   title: "Animate",
-          //   collapsable: false,
-          //   children: [
-          //     ["/en/poptip/", "Poptip"],
-          //     ["/en/accordion/", "Accordion"],
-          //     ["/en/hover/", "Hover"],
-          //     ["/en/loading/", "Loading"],
-          //     ["/en/spring/", "Spring"],
-          //     ["/en/stickyBall/", "Sticky ball"],
-          //     ["/en/parabola/", "Parabola"],
-          //     ["/en/notCSS/ripple", "Ripple"],
-          //     ["/en/notCSS/wave", "Wave"]
-          //   ]
-          // },
-          // {
-          //   title: "Static",
-          //   collapsable: false,
-          //   children: [
-          //     ["/en/reset/", "Reset style"],
-          //     ["/en/scrollTemp/", "Scroll bar style"],
-          //     ["/en/media/", "Media"],
-          //     ["/en/landscapeScreen/", "LandscapeScreen"],
-          //     ["/en/cursor/", "ursor"],
-          //     ["/en/shadow/", "Shadow"],
-          //     ["/en/remDpi/", "Setting of rem & dpi"],
-          //     ["/en/paper/", "Paper style"]
-          //   ]
-          // },
-          // {
-          //   title: "Tricks",
-          //   collapsable: false,
-          //   children: [
-          //     ["/en/verticalMiddle/", "Vertical middle"],
-          //     ["/en/autoHeight/", "Auto height"],
-          //     ["/en/vertical/", "Clear image empty & Image vertical"],
-          //     ["/en/bottom/", "Sticky footer"],
-          //     ["/en/triangle/", "Triangle border"],
-          //     ["/en/ellipsis/", "Text ellipsis"],
-          //     ["/en/lineBreak/", "insert line break"],
-          //     ["/en/glass/", "Ground glass"],
-          //     ["/en/align/", "Params layout"],
-          //     ["/en/positionWidth/", "Auto width in absoulte position"],
-          //     ["/en/longText/", "Berak line in long text"],
-          //     ["/en/textShadow/", "Text shadow"],
-          //     ["/en/tab/", "Tab animate"],
-          //     ["/en/hollowOut/", "Circle hollowout"],
-          //     ["/en/hollowOut/trangle.md", "Trangle hollowout"],
-          //     ["/en/polygonLayout/", "Polygon layout"]
-          //   ]
-          // }
+          {
+            title: "Attribute",
+            collapsable: false,
+            children: [
+              ["/en/filter/", "Filter"],
+              ["/en/flexbox/", "Flexbox"],
+              ["/en/grid/", "Grid"],
+              ["/en/object/", "object-fit, object-position"],
+              ["/en/mixBlendMode/", "mix-blend-mode"],
+              ["/en/list/", "list-style"]
+            ]
+          },
+          {
+            title: "Animate",
+            collapsable: false,
+            children: [
+              ["/en/poptip/", "Poptip"],
+              ["/en/accordion/", "Accordion"],
+              ["/en/hover/", "Hover"],
+              ["/en/loading/", "Loading"],
+              ["/en/spring/", "Spring"],
+              ["/en/stickyBall/", "Sticky ball"],
+              ["/en/parabola/", "Parabola"],
+              ["/en/notCSS/ripple", "Ripple"],
+              ["/en/notCSS/wave", "Wave"]
+            ]
+          },
+          {
+            title: "Static",
+            collapsable: false,
+            children: [
+              ["/en/reset/", "Reset style"],
+              ["/en/scrollTemp/", "Scroll bar style"],
+              ["/en/media/", "Media"],
+              ["/en/landscapeScreen/", "Focus landscape screen"],
+              ["/en/cursor/", "Cursor"],
+              ["/en/shadow/", "Shadow"],
+              ["/en/remDpi/", "Setting of rem & dpi"],
+              ["/en/paper/", "Paper style"]
+            ]
+          },
+          {
+            title: "Tricks",
+            collapsable: false,
+            children: [
+              ["/en/verticalMiddle/", "Vertical middle"],
+              ["/en/autoHeight/", "Auto height"],
+              ["/en/vertical/", "Clear image empty & Image vertical"],
+              ["/en/bottom/", "Sticky footer"],
+              ["/en/triangle/", "Triangle border"],
+              ["/en/ellipsis/", "Text ellipsis"],
+              ["/en/lineBreak/", "insert line break"],
+              ["/en/glass/", "Ground glass"],
+              ["/en/align/", "Params layout"],
+              ["/en/positionWidth/", "Auto width in absoulte position"],
+              ["/en/longText/", "Berak line in long text"],
+              ["/en/textShadow/", "Text shadow"],
+              ["/en/tab/", "Tab animate"],
+              ["/en/hollowOut/", "Circle hollowout"],
+              ["/en/hollowOut/trangle.md", "Trangle hollowout"],
+              ["/en/polygonLayout/", "Polygon layout"]
+            ]
+          }
         ]
       }
     }
