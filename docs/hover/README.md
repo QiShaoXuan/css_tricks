@@ -62,7 +62,9 @@ document.querySelector('.button').addEventListener('mousemove', function (e) {
 <hoverBorder/>
 
 ```html
-<div class="button">hover me to change</div>
+ <div class="button">
+   <div class="button__content">hover me to change</div>
+ </div>
 ```
 
 ```scss
