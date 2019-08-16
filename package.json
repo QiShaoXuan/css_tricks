@@ -11,9 +11,8 @@
     "dev": "npm run docs:dev",
     "build": "npm run build:readme && vuepress build docs",
     "deploy": "gh-pages -d dist",
-    "deploy:build": "npm run docs:build && gh-pages -d dist",
-    "build:readme": "node ./build/buildReadme.js",
-    "build_back":"vuepress build docs"
+    "deploy:build": "npm run build && gh-pages -d dist",
+    "build:readme": "node ./build/buildReadme.js"
   },
   "repository": {
     "type": "git",
