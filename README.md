@@ -1,6 +1,8 @@
 <div align="center"><img src="https://raw.githubusercontent.com/QiShaoXuan/css_tricks/master/logo.png"></div>
 
-## 关于 About
+<a href='https://github.com/QiShaoXuan/css_tricks/blob/master/README_en.md'>English</a>
+
+## 关于
 
 - 总结一些常用的 CSS 样式
 - 记录一些 CSS 的新属性和一点奇技淫巧
@@ -10,14 +12,14 @@
 
 > talk is cheap show me the code
 
-## 快速开始 Quick start
+## 快速开始
 
 - Clone the `https://github.com/QiShaoXuan/css_tricks.git`
 - Install package `npm install`
 - Development run `npm run docs:dev`
 - Open `http://localhost:8080` in your browser.
 
-## 内容 inclued 
+## 内容 
 
 ### 工具
 - <a href="https://qishaoxuan.github.io/css_tricks/createTriangle/">三角形生成器</a>
@@ -80,18 +82,13 @@
 - Push to the branch: `git push origin new-branch`
 - Submit a pull request
 
-or submit an issue, any helpful suggestions are welcomed
+也可以提交 issue 或直接评论，欢迎需求 ~
 
 ## JS Tricks
+
 <a href="https://qishaoxuan.github.io/js_tricks/" target="_blank">view online</a>
 
-## 关于猫 About cat
+## 关于猫
 
 - <a href="https://github.com/QiShaoXuan/vuepress-plugin-cat" target="_blank">vuepress-plugin-cat</a>
 - <a href="https://github.com/QiShaoXuan/live2DModel">live2d model</a>
-
-
-
-
-
-
