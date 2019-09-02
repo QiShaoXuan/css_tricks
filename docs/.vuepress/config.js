@@ -28,14 +28,14 @@ module.exports = {
         content: "#00adb5"
       }
     ],
-    // [
-    //   "meta",
-    //   {
-    //     name: "description",
-    //     itemprop: "description",
-    //     content: "some CSS tricks, 一些常用的 CSS 样式, 一点 CSS 技巧"
-    //   }
-    // ],
+    [
+      "meta",
+      {
+        name: "description",
+        itemprop: "description",
+        content: "some CSS tricks, 一些常用的 CSS 样式, 一点 CSS 技巧"
+      }
+    ],
     ["meta", { itemprop: "name", content: "CSSTricks" }],
     [
       "meta",
@@ -123,6 +123,7 @@ module.exports = {
               ["/poptip/", "提示气泡"],
               ["/accordion/", "手风琴"],
               ["/hover/", "悬停"],
+              ["/flash/", "图片闪光"],
               ["/loading/", "加载动画"],
               ["/spring/", "弹簧动画"],
               ["/stickyBall/", "粘性球"],
@@ -206,6 +207,7 @@ module.exports = {
               ["/_en/poptip/", "Poptip"],
               ["/_en/accordion/", "Accordion"],
               ["/_en/hover/", "Hover"],
+              ["/_en/flash/", "Picture flash"],
               ["/_en/loading/", "Loading"],
               ["/_en/spring/", "Spring"],
               ["/_en/stickyBall/", "Sticky ball"],

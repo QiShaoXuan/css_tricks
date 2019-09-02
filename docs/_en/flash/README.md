@@ -1,4 +1,12 @@
-<style scoped lang="scss">
+<flash/>
+
+```html
+  <div class="flash-container">
+    <img src="..." alt="">
+  </div>
+```
+
+```scss
 .flash-container {
   width: 300px;
   height: 500px;
@@ -32,19 +40,8 @@
     transform: translate(200px, 200px) rotate(45deg);
   }
 }
-</style>
+```
 
-<template>
-  <div class="flash-container">
-    <img :src="require('../public/images/bg7.jpeg')" alt="" />
-  </div>
-</template>
-
-<script>
-export default {
-  name: "",
-  data() {
-    return {};
-  }
-};
-</script>
+:::tip
+Hover is more natural.
+:::

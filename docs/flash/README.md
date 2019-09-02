@@ -15,35 +15,28 @@
   position: relative;
   overflow: hidden;
 
-  &::after{
-    content:'';
+  &::after {
+    content: "";
     height: 150%;
-    width: 10px;
+    width: 25px;
     background: #fff;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
+    bottom:0;
     margin: auto;
+    opacity: .6;
     filter: blur(6px);
-    animation: move 1.8s infinite ease-in;
+    animation: move 1s infinite ease-out;
   }
 }
 
 @keyframes move {
   0% {
-    opacity: 0;
     transform: translate(-200px, -200px) rotate(45deg);
   }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-    transform: translate(200px, 200px) rotate(45deg);
-  }
   100% {
-    opacity: 0;
     transform: translate(200px, 200px) rotate(45deg);
   }
 }
