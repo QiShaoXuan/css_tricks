@@ -37,6 +37,7 @@ As little nonsense as possible, the code is simple to use, easy to copy.
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/poptip/">Poptip</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/accordion/">Accordion</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/hover/">Hover</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/_en/flash/">Picture flash</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/loading/">Loading</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/spring/">Spring</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/stickyBall/">Sticky ball</a>
@@ -91,3 +92,12 @@ or submit an issue, any helpful suggestions are welcomed.
 
 - <a href="https://github.com/QiShaoXuan/vuepress-plugin-cat" target="_blank">vuepress-plugin-cat</a>
 - <a href="https://github.com/QiShaoXuan/live2DModel">live2d model</a>
+
+### Maintenance is not easy
+
+If you like it, you are welcome to pay a reward ~
+
+<div style="display: flex;justify-content: space-around;">
+  <img width="250" src="https://raw.githubusercontent.com/QiShaoXuan/css_tricks/master/buyCoffee/alipay.png" alt="Poor qr code">
+  <img width="250" src="https://raw.githubusercontent.com/QiShaoXuan/css_tricks/master/buyCoffee/wx.png" alt="Poor qr code">
+</div>
