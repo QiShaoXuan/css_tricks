@@ -54,6 +54,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/shadow/">投影</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/remDpi/">rem, dpi 设置</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/paper/">纸页效果</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/colorShadow/">彩色阴影</a>
 
 ### 技巧
 - <a href="https://qishaoxuan.github.io/css_tricks/verticalMiddle/">垂直居中</a>

@@ -143,7 +143,8 @@ module.exports = {
               ["/cursor/", "手型"],
               ["/shadow/", "投影"],
               ["/remDpi/", "rem, dpi 设置"],
-              ["/paper/", "纸页效果"]
+              ["/paper/", "纸页效果"],
+              ["/colorShadow/", "彩色阴影"]
             ]
           },
           {
@@ -227,7 +228,8 @@ module.exports = {
               ["/_en/cursor/", "Cursor"],
               ["/_en/shadow/", "Shadow"],
               ["/_en/remDpi/", "Setting of rem & dpi"],
-              ["/_en/paper/", "Paper style"]
+              ["/_en/paper/", "Paper style"],
+              ["/_en/colorShadow/", "Color shadow"]
             ]
           },
           {

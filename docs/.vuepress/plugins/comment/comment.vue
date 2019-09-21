@@ -602,6 +602,12 @@ $gt-size-avatar-mobi = em(32px);
     max-width: 740px;
     margin:0 auto;
   }
+//background: linear-gradient(
+//  0deg,
+//  rgba(0, 0, 0, 0.7) 0,
+//  rgba(0, 0, 0, 0.3) 70%,
+//  transparent
+//);
 </style>
 
 <template>
@@ -618,6 +624,10 @@ export default {
     return {};
   },
   mounted() {
+    if (window.location.host.indexOf("localhost") !== -1) {
+      return;
+    }
+
     initComment();
 
     this.$router.afterEach((to, from) => {

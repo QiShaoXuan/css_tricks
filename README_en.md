@@ -54,6 +54,7 @@ As little nonsense as possible, the code is simple to use, easy to copy.
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/shadow/">Shadow</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/remDpi/">Setting of rem & dpi</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/paper/">Paper style</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/_en/colorShadow/">Color shadow</a>
 
 ### Tricks
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/verticalMiddle/">Vertical middle</a>
