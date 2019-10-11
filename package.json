@@ -33,7 +33,8 @@
     "gitalk": "^1.5.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
-    "vuepress": "^1.0.1"
+    "vuepress": "^1.0.1",
+    "vuepress-plugin-google-adsense": "0.0.3"
   },
   "dependencies": {
     "clipboard": "^2.0.4",

@@ -68,6 +68,13 @@ module.exports = {
       {
         ga: CONFIG.ga
       }
+    ],
+    [
+      'vuepress-plugin-google-adsense',
+      {
+        'google_ad_client': 'ca-pub-3591151685475548',
+        'enable_page_level_ads': true
+      }
     ]
   ],
   themeConfig: {
