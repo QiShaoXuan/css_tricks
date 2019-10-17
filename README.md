@@ -94,12 +94,3 @@
 
 - <a href="https://github.com/QiShaoXuan/vuepress-plugin-cat" target="_blank">vuepress-plugin-cat</a>
 - <a href="https://github.com/QiShaoXuan/live2DModel">live2d model</a>
-
-### 维护不易
-
-如果你觉得不错，欢迎打赏 ~
-
-<div style="display: flex;justify-content: space-around;">
-  <img width="250" src="https://raw.githubusercontent.com/QiShaoXuan/css_tricks/master/buyCoffee/alipay.png" alt="贫穷的二维码">
-  <img width="250" src="https://raw.githubusercontent.com/QiShaoXuan/css_tricks/master/buyCoffee/wx.png" alt="贫穷的二维码">
-</div>
