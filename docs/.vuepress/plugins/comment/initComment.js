@@ -1,9 +1,9 @@
 const CONFIG = require("../../../../config");
 
 export default function initComment() {
-  if (location.host.indexOf("localhost") !== -1) {
-    return;
-  }
+  // if (location.host.indexOf("localhost") !== -1) {
+  //   return;
+  // }
 
   const body = document.querySelector(".gitalk-container");
   const script = document.createElement("script");
