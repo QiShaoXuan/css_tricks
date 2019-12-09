@@ -24,6 +24,7 @@
 ### 工具
 - <a href="https://qishaoxuan.github.io/css_tricks/createTriangle/">三角形生成器</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/sector/">扇形生成器</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/hollowOut/"> 卡券生成器</a>
 
 ### 属性
 - <a href="https://qishaoxuan.github.io/css_tricks/filter/">滤镜 filter</a>
@@ -70,6 +71,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/longText/">长文本折行</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/textShadow/">文字特效</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/tab/">tab 栏底部动画</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/tab/circle-border.md">tab 底部圆形边框衔接</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/hollowOut/">圆形镂空</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/hollowOut/trangle.md">三角形镂空</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/polygonLayout/">多边形布局</a>

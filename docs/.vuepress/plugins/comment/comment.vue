@@ -609,6 +609,7 @@
     .gitalk-container {
       padding-left: 0;
     }
+
   }
 
   //background: linear-gradient(

@@ -70,10 +70,10 @@ module.exports = {
       }
     ],
     [
-      'vuepress-plugin-google-adsense',
+      "vuepress-plugin-google-adsense",
       {
-        'google_ad_client': 'ca-pub-3591151685475548',
-        'enable_page_level_ads': true
+        google_ad_client: "ca-pub-3591151685475548",
+        enable_page_level_ads: true
       }
     ]
   ],
@@ -108,7 +108,8 @@ module.exports = {
             collapsable: false,
             children: [
               ["/createTriangle/", "三角形生成器"],
-              ["/sector/", "扇形生成器"]
+              ["/sector/", "扇形生成器"],
+              ["/hollowOut/", " 卡券生成器"]
             ]
           },
           {
@@ -171,6 +172,7 @@ module.exports = {
               ["/longText/", "长文本折行"],
               ["/textShadow/", "文字特效"],
               ["/tab/", "tab 栏底部动画"],
+              ["/tab/circle-border.md", "tab 底部圆形边框衔接"],
               ["/hollowOut/", "圆形镂空"],
               ["/hollowOut/trangle.md", "三角形镂空"],
               ["/polygonLayout/", "多边形布局"]
@@ -256,6 +258,7 @@ module.exports = {
               ["/_en/longText/", "Berak line in long text"],
               ["/_en/textShadow/", "Text shadow"],
               ["/_en/tab/", "Tab animate"],
+              ["/_en/tab/circle-border.md", "Tab bottom circle convergence"],
               ["/_en/hollowOut/", "Circle hollowout"],
               ["/_en/hollowOut/trangle.md", "Trangle hollowout"],
               ["/_en/polygonLayout/", "Polygon layout"]
