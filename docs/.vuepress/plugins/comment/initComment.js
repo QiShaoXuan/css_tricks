@@ -1,4 +1,4 @@
-const CONFIG = require("../../../../config");
+const CONFIG = require("../../../../private-config");
 
 export default function initComment() {
   // if (location.host.indexOf("localhost") !== -1) {
