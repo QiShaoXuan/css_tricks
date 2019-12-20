@@ -152,7 +152,8 @@ module.exports = {
               ["/shadow/", "投影"],
               ["/remDpi/", "rem, dpi 设置"],
               ["/paper/", "纸页效果"],
-              ["/colorShadow/", "彩色阴影"]
+              ["/colorShadow/", "彩色阴影"],
+              ["/smallFont/", "小于 12px 的文字"]
             ]
           },
           {
