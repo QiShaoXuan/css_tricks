@@ -1,485 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flipper</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Flipper</title>
-</head>
+  <body>
+    <div class="single-demo">
+      <div class="flip down" id="flip">
+        <div class="digital front number0"></div>
+        <div class="digital back number1"></div>
+      </div>
+      <div class="btn-con">
+        <button id="btn1">向下翻+1</button>
+        <button id="btn2">向上翻-1</button>
+      </div>
+    </div>
+    <div class="clock" id="clock">
+      <div class="flip down">
+        <div class="digital front number0"></div>
+        <div class="digital back number1"></div>
+      </div>
+      <div class="flip down">
+        <div class="digital front number0"></div>
+        <div class="digital back number1"></div>
+      </div>
+      <em>:</em>
+      <div class="flip down">
+        <div class="digital front number0"></div>
+        <div class="digital back number1"></div>
+      </div>
+      <div class="flip down">
+        <div class="digital front number0"></div>
+        <div class="digital back number1"></div>
+      </div>
+      <em>:</em>
+      <div class="flip down">
+        <div class="digital front number0"></div>
+        <div class="digital back number1"></div>
+      </div>
+      <div class="flip down">
+        <div class="digital front number0"></div>
+        <div class="digital back number1"></div>
+      </div>
+      <svg width="10000" height="11.515625">
+        <text
+          dominant-baseline="baseline"
+          font-size="10"
+          y="9.515625"
+          style="line-height: 1; vertical-align: middle;"
+        >
+          千山鸟飞绝 - from hill to hill no bird in flight
+        </text>
+      </svg>
+    </div>
+  </body>
+  <script>
+    var flip = document.getElementById("flip");
+    var backNode = document.querySelector(".back");
+    var frontNode = document.querySelector(".front");
+    var btn = document.getElementById("btn");
+    btn1.addEventListener("click", function() {
+      flipDown();
+    });
+    btn2.addEventListener("click", function() {
+      flipUp();
+    });
+    // 当前数字
+    var count = 0;
+    // 是否正在翻转（防止翻转未结束就进行下一次翻转）
+    var isFlipping = false;
 
-<body>
-<div class="single-demo">
-  <div class="flip down" id="flip">
-    <div class="digital front number0"></div>
-    <div class="digital back number1"></div>
-  </div>
-  <div class="btn-con">
-    <button id="btn1">向下翻+1</button>
-    <button id="btn2">向上翻-1</button>
-  </div>
-</div>
-<div class="clock" id="clock">
-  <div class="flip down">
-    <div class="digital front number0"></div>
-    <div class="digital back number1"></div>
-  </div>
-  <div class="flip down">
-    <div class="digital front number0"></div>
-    <div class="digital back number1"></div>
-  </div>
-  <em>:</em>
-  <div class="flip down">
-    <div class="digital front number0"></div>
-    <div class="digital back number1"></div>
-  </div>
-  <div class="flip down">
-    <div class="digital front number0"></div>
-    <div class="digital back number1"></div>
-  </div>
-  <em>:</em>
-  <div class="flip down">
-    <div class="digital front number0"></div>
-    <div class="digital back number1"></div>
-  </div>
-  <div class="flip down">
-    <div class="digital front number0"></div>
-    <div class="digital back number1"></div>
-  </div>
-</div>
-</body>
-<script>
-  var flip = document.getElementById('flip')
-  var backNode = document.querySelector('.back')
-  var frontNode = document.querySelector('.front')
-  var btn = document.getElementById('btn')
-  btn1.addEventListener('click', function() {
-    flipDown();
-  })
-  btn2.addEventListener('click', function() {
-    flipUp();
-  })
-  // 当前数字
-  var count = 0
-  // 是否正在翻转（防止翻转未结束就进行下一次翻转）
-  var isFlipping = false
-
-  // 向下翻转+1
-  function flipDown() {
-    // 如果处于翻转中，则不执行
-    if (isFlipping) {
-      return false
-    }
-    // 设置前牌的文字
-    frontNode.setAttribute('class', 'digital front number' + count)
-    // 计算后牌文字（越界判断）
-    var nextCount = count >= 9 ? 0 : (count + 1)
-    // 设置后牌的文字
-    backNode.setAttribute('class', 'digital back number' + nextCount)
-    // 添加go，执行翻转动画
-    flip.setAttribute('class', 'flip down go')
-    // 当翻转态设置为true
-    isFlipping = true
-    // 翻转结束后，恢复状态
-    setTimeout(function() {
-      // 去掉go
-      flip.setAttribute('class', 'flip down')
-      // 当翻转态设置为false
-      isFlipping = false
-      // 设置前牌文字为+1后的数字
-      frontNode.setAttribute('class', 'digital front number' + nextCount)
-      // 更新当前文字
-      count = nextCount
-    }, 1000)
-  }
-  // 向上翻转-1（同理，注释略）
-  function flipUp() {
-    if (isFlipping) {
-      return false
-    }
-    frontNode.setAttribute('class', 'digital front number' + count)
-    var nextCount = count <= 0 ? 9 : (count - 1)
-    backNode.setAttribute('class', 'digital back number' + nextCount)
-    flip.setAttribute('class', 'flip up go')
-    isFlipping = true
-    setTimeout(function() {
-      flip.setAttribute('class', 'flip up')
-      isFlipping = false
-      frontNode.setAttribute('class', 'digital front number' + nextCount)
-      count = nextCount
-    }, 1000)
-  }
-
-
-  /* 时钟代码 */
-  // 时钟翻牌
-  function Flipper(config) {
-    // 默认配置
-    this.config = {
-      // 时钟模块的节点
-      node: null,
-      // 初始前牌文字
-      frontText: 'number0',
-      // 初始后牌文字
-      backText: 'number1',
-      // 翻转动画时间（毫秒，与翻转动画CSS 设置的animation-duration时间要一致）
-      duration: 600
-    }
-    // 节点的原本class，与html对应，方便后面添加/删除新的class
-    this.nodeClass = {
-      flip: 'flip',
-      front: 'digital front',
-      back: 'digital back'
-    }
-    // 覆盖默认配置
-    Object.assign(this.config, config)
-    // 定位前后两个牌的DOM节点
-    this.frontNode = this.config.node.querySelector('.front')
-    this.backNode = this.config.node.querySelector('.back')
-    // 是否处于翻牌动画过程中（防止动画未完成就进入下一次翻牌）
-    this.isFlipping = false
-    // 初始化
-    this._init()
-  }
-  Flipper.prototype = {
-    constructor: Flipper,
-    // 初始化
-    _init: function() {
-      // 设置初始牌面字符
-      this._setFront(this.config.frontText)
-      this._setBack(this.config.backText)
-    },
-    // 设置前牌文字
-    _setFront: function(className) {
-      this.frontNode.setAttribute('class', this.nodeClass.front + ' ' + className)
-    },
-    // 设置后牌文字
-    _setBack: function(className) {
-      this.backNode.setAttribute('class', this.nodeClass.back + ' ' + className)
-    },
-    _flip: function(type, front, back) {
+    // 向下翻转+1
+    function flipDown() {
       // 如果处于翻转中，则不执行
-      if (this.isFlipping) {
-        return false
+      if (isFlipping) {
+        return false;
       }
-      // 设置翻转状态为true
-      this.isFlipping = true
+      // 设置前牌的文字
+      frontNode.setAttribute("class", "digital front number" + count);
+      // 计算后牌文字（越界判断）
+      var nextCount = count >= 9 ? 0 : count + 1;
+      // 设置后牌的文字
+      backNode.setAttribute("class", "digital back number" + nextCount);
+      // 添加go，执行翻转动画
+      flip.setAttribute("class", "flip down go");
+      // 当翻转态设置为true
+      isFlipping = true;
+      // 翻转结束后，恢复状态
+      setTimeout(function() {
+        // 去掉go
+        flip.setAttribute("class", "flip down");
+        // 当翻转态设置为false
+        isFlipping = false;
+        // 设置前牌文字为+1后的数字
+        frontNode.setAttribute("class", "digital front number" + nextCount);
+        // 更新当前文字
+        count = nextCount;
+      }, 1000);
+    }
+    // 向上翻转-1（同理，注释略）
+    function flipUp() {
+      if (isFlipping) {
+        return false;
+      }
+      frontNode.setAttribute("class", "digital front number" + count);
+      var nextCount = count <= 0 ? 9 : count - 1;
+      backNode.setAttribute("class", "digital back number" + nextCount);
+      flip.setAttribute("class", "flip up go");
+      isFlipping = true;
+      setTimeout(function() {
+        flip.setAttribute("class", "flip up");
+        isFlipping = false;
+        frontNode.setAttribute("class", "digital front number" + nextCount);
+        count = nextCount;
+      }, 1000);
+    }
+
+    /* 时钟代码 */
+    // 时钟翻牌
+    function Flipper(config) {
+      // 默认配置
+      this.config = {
+        // 时钟模块的节点
+        node: null,
+        // 初始前牌文字
+        frontText: "number0",
+        // 初始后牌文字
+        backText: "number1",
+        // 翻转动画时间（毫秒，与翻转动画CSS 设置的animation-duration时间要一致）
+        duration: 600
+      };
+      // 节点的原本class，与html对应，方便后面添加/删除新的class
+      this.nodeClass = {
+        flip: "flip",
+        front: "digital front",
+        back: "digital back"
+      };
+      // 覆盖默认配置
+      Object.assign(this.config, config);
+      // 定位前后两个牌的DOM节点
+      this.frontNode = this.config.node.querySelector(".front");
+      this.backNode = this.config.node.querySelector(".back");
+      // 是否处于翻牌动画过程中（防止动画未完成就进入下一次翻牌）
+      this.isFlipping = false;
+      // 初始化
+      this._init();
+    }
+    Flipper.prototype = {
+      constructor: Flipper,
+      // 初始化
+      _init: function() {
+        // 设置初始牌面字符
+        this._setFront(this.config.frontText);
+        this._setBack(this.config.backText);
+      },
       // 设置前牌文字
-      this._setFront(front)
+      _setFront: function(className) {
+        this.frontNode.setAttribute(
+          "class",
+          this.nodeClass.front + " " + className
+        );
+      },
       // 设置后牌文字
-      this._setBack(back)
-      // 根据传递过来的type设置翻转方向
-      let flipClass = this.nodeClass.flip;
-      if (type === 'down') {
-        flipClass += ' down'
-      } else {
-        flipClass += ' up'
+      _setBack: function(className) {
+        this.backNode.setAttribute(
+          "class",
+          this.nodeClass.back + " " + className
+        );
+      },
+      _flip: function(type, front, back) {
+        // 如果处于翻转中，则不执行
+        if (this.isFlipping) {
+          return false;
+        }
+        // 设置翻转状态为true
+        this.isFlipping = true;
+        // 设置前牌文字
+        this._setFront(front);
+        // 设置后牌文字
+        this._setBack(back);
+        // 根据传递过来的type设置翻转方向
+        let flipClass = this.nodeClass.flip;
+        if (type === "down") {
+          flipClass += " down";
+        } else {
+          flipClass += " up";
+        }
+        // 添加翻转方向和执行动画的class，执行翻转动画
+        this.config.node.setAttribute("class", flipClass + " go");
+        // 根据设置的动画时间，在动画结束后，还原class并更新前牌文字
+        setTimeout(() => {
+          // 还原class
+          this.config.node.setAttribute("class", flipClass);
+          // 设置翻转状态为false
+          this.isFlipping = false;
+          // 将前牌文字设置为当前新的数字，后牌因为被前牌挡住了，就不用设置了。
+          this._setFront(back);
+        }, this.config.duration);
+      },
+      // 下翻牌
+      flipDown: function(front, back) {
+        this._flip("down", front, back);
+      },
+      // 上翻牌
+      flipUp: function(front, back) {
+        this._flip("up", front, back);
       }
-      // 添加翻转方向和执行动画的class，执行翻转动画
-      this.config.node.setAttribute('class', flipClass + ' go')
-      // 根据设置的动画时间，在动画结束后，还原class并更新前牌文字
-      setTimeout(() => {
-        // 还原class
-        this.config.node.setAttribute('class', flipClass)
-        // 设置翻转状态为false
-        this.isFlipping = false
-        // 将前牌文字设置为当前新的数字，后牌因为被前牌挡住了，就不用设置了。
-        this._setFront(back)
-      }, this.config.duration)
-    },
-    // 下翻牌
-    flipDown: function(front, back) {
-      this._flip('down', front, back)
-    },
-    // 上翻牌
-    flipUp: function(front, back) {
-      this._flip('up', front, back)
-    }
-  }
+    };
 
-  // 定位时钟模块
-  let clock = document.getElementById('clock')
-  // 定位6个翻板
-  let flips = clock.querySelectorAll('.flip')
-  // 获取当前时间
-  let now = new Date()
-  // 格式化当前时间，例如现在是20:30:10，则输出"203010"字符串
-  let nowTimeStr = formatDate(now, 'hhiiss')
-  // 格式化下一秒的时间
-  let nextTimeStr = formatDate(new Date(now.getTime() + 1000), 'hhiiss')
-  // 定义牌板数组，用来存储6个Flipper翻板对象
-  let flipObjs = []
-  for (let i = 0; i < flips.length; i++) {
-    // 创建6个Flipper实例，并初始化
-    flipObjs.push(new Flipper({
-      // 每个flipper实例按数组顺序与翻板DOM的顺序一一对应
-      node: flips[i],
-      // 按数组顺序取时间字符串对应位置的数字
-      frontText: 'number' + nowTimeStr[i],
-      backText: 'number' + nextTimeStr[i]
-    }))
-  }
-
-
-  // 开始计时
-  setInterval(function() {
+    // 定位时钟模块
+    let clock = document.getElementById("clock");
+    // 定位6个翻板
+    let flips = clock.querySelectorAll(".flip");
     // 获取当前时间
-    let now = new Date()
-    let nowTimeStr = formatDate(new Date(now.getTime() - 1000), 'hhiiss')
-    let nextTimeStr = formatDate(now, 'hhiiss')
-    for (let i = 0; i < flipObjs.length; i++) {
-      if (nowTimeStr[i] === nextTimeStr[i]) {
-        continue
-      }
-      flipObjs[i].flipDown('number' + nowTimeStr[i], 'number' + nextTimeStr[i])
+    let now = new Date();
+    // 格式化当前时间，例如现在是20:30:10，则输出"203010"字符串
+    let nowTimeStr = formatDate(now, "hhiiss");
+    // 格式化下一秒的时间
+    let nextTimeStr = formatDate(new Date(now.getTime() + 1000), "hhiiss");
+    // 定义牌板数组，用来存储6个Flipper翻板对象
+    let flipObjs = [];
+    for (let i = 0; i < flips.length; i++) {
+      // 创建6个Flipper实例，并初始化
+      flipObjs.push(
+        new Flipper({
+          // 每个flipper实例按数组顺序与翻板DOM的顺序一一对应
+          node: flips[i],
+          // 按数组顺序取时间字符串对应位置的数字
+          frontText: "number" + nowTimeStr[i],
+          backText: "number" + nextTimeStr[i]
+        })
+      );
     }
-  }, 1000)
 
-  //正则格式化日期
-  function formatDate(date, dateFormat) {
-    /* 单独格式化年份，根据y的字符数量输出年份
+    // 开始计时
+    setInterval(function() {
+      // 获取当前时间
+      let now = new Date();
+      let nowTimeStr = formatDate(new Date(now.getTime() - 1000), "hhiiss");
+      let nextTimeStr = formatDate(now, "hhiiss");
+      for (let i = 0; i < flipObjs.length; i++) {
+        if (nowTimeStr[i] === nextTimeStr[i]) {
+          continue;
+        }
+        flipObjs[i].flipDown(
+          "number" + nowTimeStr[i],
+          "number" + nextTimeStr[i]
+        );
+      }
+    }, 1000);
+
+    //正则格式化日期
+    function formatDate(date, dateFormat) {
+      /* 单独格式化年份，根据y的字符数量输出年份
      * 例如：yyyy => 2019
             yy => 19
             y => 9
      */
-    if (/(y+)/.test(dateFormat)) {
-      dateFormat = dateFormat.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length));
+      if (/(y+)/.test(dateFormat)) {
+        dateFormat = dateFormat.replace(
+          RegExp.$1,
+          (date.getFullYear() + "").substr(4 - RegExp.$1.length)
+        );
+      }
+      // 格式化月、日、时、分、秒
+      let o = {
+        "m+": date.getMonth() + 1,
+        "d+": date.getDate(),
+        "h+": date.getHours(),
+        "i+": date.getMinutes(),
+        "s+": date.getSeconds()
+      };
+      for (let k in o) {
+        if (new RegExp(`(${k})`).test(dateFormat)) {
+          // 取出对应的值
+          let str = o[k] + "";
+          /* 根据设置的格式，输出对应的字符
+           * 例如: 早上8时，hh => 08，h => 8
+           * 但是，当数字>=10时，无论格式为一位还是多位，不做截取，这是与年份格式化不一致的地方
+           * 例如: 下午15时，hh => 15, h => 15
+           */
+          dateFormat = dateFormat.replace(
+            RegExp.$1,
+            RegExp.$1.length === 1 ? str : padLeftZero(str)
+          );
+        }
+      }
+      return dateFormat;
     }
-    // 格式化月、日、时、分、秒
-    let o = {
-      'm+': date.getMonth() + 1,
-      'd+': date.getDate(),
-      'h+': date.getHours(),
-      'i+': date.getMinutes(),
-      's+': date.getSeconds()
-    };
-    for (let k in o) {
-      if (new RegExp(`(${k})`).test(dateFormat)) {
-        // 取出对应的值
-        let str = o[k] + '';
-        /* 根据设置的格式，输出对应的字符
-         * 例如: 早上8时，hh => 08，h => 8
-         * 但是，当数字>=10时，无论格式为一位还是多位，不做截取，这是与年份格式化不一致的地方
-         * 例如: 下午15时，hh => 15, h => 15
-         */
-        dateFormat = dateFormat.replace(RegExp.$1, (RegExp.$1.length === 1) ? str : padLeftZero(str));
+
+    //日期时间补零
+    function padLeftZero(str) {
+      return ("00" + str).substr(str.length);
+    }
+  </script>
+  <style>
+    .single-demo {
+      margin: 50px auto;
+      padding: 30px;
+      width: 600px;
+      text-align: center;
+      border: solid 1px #999;
+    }
+
+    .flip {
+      display: inline-block;
+      position: relative;
+      width: 60px;
+      height: 100px;
+      line-height: 100px;
+      border: solid 1px #000;
+      border-radius: 10px;
+      background: #fff;
+      font-size: 66px;
+      color: #fff;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      font-family: "Helvetica Neue";
+    }
+
+    .flip .digital:before,
+    .flip .digital:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      background: #000;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .flip .digital:before {
+      top: 0;
+      bottom: 50%;
+      border-radius: 10px 10px 0 0;
+      border-bottom: solid 1px #666;
+    }
+
+    .flip .digital:after {
+      top: 50%;
+      bottom: 0;
+      border-radius: 0 0 10px 10px;
+      line-height: 0;
+    }
+
+    /*向下翻*/
+    .flip.down .front:before {
+      z-index: 3;
+    }
+
+    .flip.down .back:after {
+      z-index: 2;
+      transform-origin: 50% 0%;
+      transform: perspective(160px) rotateX(180deg);
+    }
+
+    .flip.down .front:after,
+    .flip.down .back:before {
+      z-index: 1;
+    }
+
+    .flip.down.go .front:before {
+      transform-origin: 50% 100%;
+      animation: frontFlipDown 0.6s ease-in-out both;
+      box-shadow: 0 -2px 6px rgba(255, 255, 255, 0.3);
+      backface-visibility: hidden;
+    }
+
+    .flip.down.go .back:after {
+      animation: backFlipDown 0.6s ease-in-out both;
+    }
+
+    /*向上翻*/
+    .flip.up .front:after {
+      z-index: 3;
+    }
+
+    .flip.up .back:before {
+      z-index: 2;
+      transform-origin: 50% 100%;
+      transform: perspective(160px) rotateX(-180deg);
+    }
+
+    .flip.up .front:before,
+    .flip.up .back:after {
+      z-index: 1;
+    }
+
+    .flip.up.go .front:after {
+      transform-origin: 50% 0;
+      animation: frontFlipUp 0.6s ease-in-out both;
+      box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+      backface-visibility: hidden;
+    }
+
+    .flip.up.go .back:before {
+      animation: backFlipUp 0.6s ease-in-out both;
+    }
+
+    @keyframes frontFlipDown {
+      0% {
+        transform: perspective(160px) rotateX(0deg);
+      }
+
+      100% {
+        transform: perspective(160px) rotateX(-180deg);
       }
     }
-    return dateFormat;
-  };
 
-  //日期时间补零
-  function padLeftZero(str) {
-    return ('00' + str).substr(str.length);
-  }
+    @keyframes backFlipDown {
+      0% {
+        transform: perspective(160px) rotateX(180deg);
+      }
 
-</script>
-<style>
-  .single-demo {
-    margin: 50px auto;
-    padding: 30px;
-    width: 600px;
-    text-align: center;
-    border: solid 1px #999;
-  }
-
-
-  .flip {
-    display: inline-block;
-    position: relative;
-    width: 60px;
-    height: 100px;
-    line-height: 100px;
-    border: solid 1px #000;
-    border-radius: 10px;
-    background: #fff;
-    font-size: 66px;
-    color: #fff;
-    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-    text-align: center;
-    font-family: "Helvetica Neue"
-  }
-
-  .flip .digital:before,
-  .flip .digital:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    background: #000;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-
-  .flip .digital:before {
-    top: 0;
-    bottom: 50%;
-    border-radius: 10px 10px 0 0;
-    border-bottom: solid 1px #666;
-  }
-
-  .flip .digital:after {
-    top: 50%;
-    bottom: 0;
-    border-radius: 0 0 10px 10px;
-    line-height: 0;
-  }
-
-  /*向下翻*/
-  .flip.down .front:before {
-    z-index: 3;
-  }
-
-  .flip.down .back:after {
-    z-index: 2;
-    transform-origin: 50% 0%;
-    transform: perspective(160px) rotateX(180deg);
-  }
-
-  .flip.down .front:after,
-  .flip.down .back:before {
-    z-index: 1;
-  }
-
-  .flip.down.go .front:before {
-    transform-origin: 50% 100%;
-    animation: frontFlipDown 0.6s ease-in-out both;
-    box-shadow: 0 -2px 6px rgba(255, 255, 255, 0.3);
-    backface-visibility: hidden;
-  }
-
-  .flip.down.go .back:after {
-    animation: backFlipDown 0.6s ease-in-out both;
-  }
-
-  /*向上翻*/
-  .flip.up .front:after {
-    z-index: 3;
-  }
-
-  .flip.up .back:before {
-    z-index: 2;
-    transform-origin: 50% 100%;
-    transform: perspective(160px) rotateX(-180deg);
-  }
-
-  .flip.up .front:before,
-  .flip.up .back:after {
-    z-index: 1;
-  }
-
-  .flip.up.go .front:after {
-    transform-origin: 50% 0;
-    animation: frontFlipUp 0.6s ease-in-out both;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
-    backface-visibility: hidden;
-  }
-
-  .flip.up.go .back:before {
-    animation: backFlipUp 0.6s ease-in-out both;
-  }
-
-  @keyframes frontFlipDown {
-    0% {
-      transform: perspective(160px) rotateX(0deg);
+      100% {
+        transform: perspective(160px) rotateX(0deg);
+      }
     }
 
-    100% {
-      transform: perspective(160px) rotateX(-180deg);
-    }
-  }
+    @keyframes frontFlipUp {
+      0% {
+        transform: perspective(160px) rotateX(0deg);
+      }
 
-  @keyframes backFlipDown {
-    0% {
-      transform: perspective(160px) rotateX(180deg);
-    }
-
-    100% {
-      transform: perspective(160px) rotateX(0deg);
-    }
-  }
-
-
-  @keyframes frontFlipUp {
-    0% {
-      transform: perspective(160px) rotateX(0deg);
+      100% {
+        transform: perspective(160px) rotateX(180deg);
+      }
     }
 
-    100% {
-      transform: perspective(160px) rotateX(180deg);
+    @keyframes backFlipUp {
+      0% {
+        transform: perspective(160px) rotateX(-180deg);
+      }
+
+      100% {
+        transform: perspective(160px) rotateX(0deg);
+      }
     }
-  }
 
-  @keyframes backFlipUp {
-    0% {
-      transform: perspective(160px) rotateX(-180deg);
+    .flip .number0:before,
+    .flip .number0:after {
+      content: "0";
     }
 
-    100% {
-      transform: perspective(160px) rotateX(0deg);
+    .flip .number1:before,
+    .flip .number1:after {
+      content: "1";
     }
-  }
 
-  .flip .number0:before,
-  .flip .number0:after {
-    content: "0";
-  }
+    .flip .number2:before,
+    .flip .number2:after {
+      content: "2";
+    }
 
-  .flip .number1:before,
-  .flip .number1:after {
-    content: "1";
-  }
+    .flip .number3:before,
+    .flip .number3:after {
+      content: "3";
+    }
 
-  .flip .number2:before,
-  .flip .number2:after {
-    content: "2";
-  }
+    .flip .number4:before,
+    .flip .number4:after {
+      content: "4";
+    }
 
-  .flip .number3:before,
-  .flip .number3:after {
-    content: "3";
-  }
+    .flip .number5:before,
+    .flip .number5:after {
+      content: "5";
+    }
 
-  .flip .number4:before,
-  .flip .number4:after {
-    content: "4";
-  }
+    .flip .number6:before,
+    .flip .number6:after {
+      content: "6";
+    }
 
-  .flip .number5:before,
-  .flip .number5:after {
-    content: "5";
-  }
+    .flip .number7:before,
+    .flip .number7:after {
+      content: "7";
+    }
 
-  .flip .number6:before,
-  .flip .number6:after {
-    content: "6";
-  }
+    .flip .number8:before,
+    .flip .number8:after {
+      content: "8";
+    }
 
-  .flip .number7:before,
-  .flip .number7:after {
-    content: "7";
-  }
+    .flip .number9:before,
+    .flip .number9:after {
+      content: "9";
+    }
 
-  .flip .number8:before,
-  .flip .number8:after {
-    content: "8";
-  }
+    .clock {
+      text-align: center;
+      margin-bottom: 200px;
+    }
 
-  .flip .number9:before,
-  .flip .number9:after {
-    content: "9";
-  }
-
-  .clock {
-    text-align: center;
-    margin-bottom: 200px;
-  }
-
-  .clock em {
-    display: inline-block;
-    line-height: 102px;
-    font-size: 66px;
-    font-style: normal;
-    vertical-align: top;
-  }
-</style>
-
+    .clock em {
+      display: inline-block;
+      line-height: 102px;
+      font-size: 66px;
+      font-style: normal;
+      vertical-align: top;
+    }
+  </style>
 </html>

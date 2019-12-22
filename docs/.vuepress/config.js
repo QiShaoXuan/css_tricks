@@ -109,7 +109,8 @@ module.exports = {
             children: [
               ["/createTriangle/", "三角形生成器"],
               ["/sector/", "扇形生成器"],
-              ["/hollowOut/", " 卡券生成器"]
+              ["/hollowOut/", " 卡券生成器"],
+              ["/smallFont/", "小于 12px 的文字生成器"]
             ]
           },
           {
@@ -153,7 +154,6 @@ module.exports = {
               ["/remDpi/", "rem, dpi 设置"],
               ["/paper/", "纸页效果"],
               ["/colorShadow/", "彩色阴影"],
-              ["/smallFont/", "小于 12px 的文字"]
             ]
           },
           {
@@ -196,7 +196,8 @@ module.exports = {
             collapsable: false,
             children: [
               ["/_en/createTriangle/", "Triangle generator"],
-              ["/_en/sector/", "Fan generator"]
+              ["/_en/sector/", "Fan generator"],
+              ["/_en/smallFont/", "Less than 12px text generator"],
             ]
           },
           {

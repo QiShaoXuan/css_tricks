@@ -230,8 +230,6 @@
     },
     watch: {
       code() {
-        console.log('hihi')
-
         this.setCode();
       }
     },
