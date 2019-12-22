@@ -24,6 +24,7 @@ As little nonsense as possible, the code is simple to use, easy to copy.
 ### Tool
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/createTriangle/">Triangle generator</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/sector/">Fan generator</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/_en/smallFont/">Less than 12px text generator</a>
 
 ### Attribute
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/filter/">Filter</a>

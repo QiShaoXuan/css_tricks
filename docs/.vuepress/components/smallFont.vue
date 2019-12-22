@@ -151,20 +151,22 @@ export default {
   },
   methods: {
     setCode() {
-      this.$nextTick(function() {
-        this.$refs["code"].innerHTML = Prism.highlight(
-          getSvgTemplate(this.fontsize, this.height, this.y, this.content),
-          Prism.languages.html
-        );
-      });
+      this.$refs["code"].innerHTML = Prism.highlight(
+        getSvgTemplate(this.fontsize, this.height, this.y, this.content),
+        Prism.languages.html
+      );
     }
   },
   watch: {
     fontsize: function() {
-      this.setCode();
+      this.$nextTick(function() {
+        this.setCode();
+      });
     },
     content: function() {
-      this.setCode();
+      this.$nextTick(function() {
+        this.setCode();
+      });
     }
   },
   mounted() {

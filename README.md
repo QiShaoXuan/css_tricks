@@ -25,6 +25,7 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/createTriangle/">三角形生成器</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/sector/">扇形生成器</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/hollowOut/"> 卡券生成器</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/smallFont/">小于 12px 的文字生成器</a>
 
 ### 属性
 - <a href="https://qishaoxuan.github.io/css_tricks/filter/">滤镜 filter</a>
