@@ -91,8 +91,8 @@ const fontsizeHeightMap = {
   11: 13.02,
   12: 14
 };
-function getSvgTemplate(fontsize, height, y, content) {
-  return `<svg width="10000" height="${height}">
+function getSvgTemplate(fontsize,width, height, y, content) {
+  return `<svg width="${width===null?1000:width}" height="${height}">
   <text
     dominant-baseline="baseline"
     font-size="${fontsize}"
@@ -130,6 +130,7 @@ export default {
       div.id = "small-font-mock-dom";
       div.innerHTML = getSvgTemplate(
         this.fontsize,
+        null,
         this.height,
         this.y,
         this.content
@@ -140,8 +141,9 @@ export default {
       const width = document
         .querySelector("#small-font-mock-dom text")
         .getBoundingClientRect()["width"];
+console.log('width',width)
 
-      document.body.removeChild(div);
+      // document.body.removeChild(div);
 
       return width;
     },
@@ -152,7 +154,7 @@ export default {
   methods: {
     setCode() {
       this.$refs["code"].innerHTML = Prism.highlight(
-        getSvgTemplate(this.fontsize, this.height, this.y, this.content),
+        getSvgTemplate(this.fontsize,this.width, this.height, this.y, this.content),
         Prism.languages.html
       );
     }
