@@ -1,10 +1,6 @@
 const CONFIG = require("../../../../config");
 
 export default function initComment() {
-  // if (location.host.indexOf("localhost") !== -1) {
-  //   return;
-  // }
-
   const body = document.querySelector(".gitalk-container");
   const script = document.createElement("script");
 
@@ -12,7 +8,7 @@ export default function initComment() {
   body.appendChild(script);
   script.onload = () => {
     const commentConfig = Object.assign(CONFIG.gitalk, {
-       id: `/css_tricks/${location.pathname}`,
+       id: `/css_tricks${location.pathname}`
     });
     const gitalk = new Gitalk(commentConfig);
     gitalk.render("gitalk-container");
