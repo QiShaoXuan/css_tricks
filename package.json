@@ -28,6 +28,7 @@
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
     "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
+    "chalk": "^3.0.0",
     "element-ui": "^2.9.1",
     "gh-pages": "^2.0.1",
     "gitalk": "^1.5.0",

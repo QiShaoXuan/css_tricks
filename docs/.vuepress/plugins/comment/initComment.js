@@ -1,4 +1,4 @@
-const CONFIG = require("../../../../private-config");
+const CONFIG = require("../../../../config");
 
 export default function initComment() {
   // if (location.host.indexOf("localhost") !== -1) {
@@ -12,7 +12,7 @@ export default function initComment() {
   body.appendChild(script);
   script.onload = () => {
     const commentConfig = Object.assign(CONFIG.gitalk, {
-      id: window.location.pathname
+       id: `/css_tricks/${location.pathname}`,
     });
     const gitalk = new Gitalk(commentConfig);
     gitalk.render("gitalk-container");
