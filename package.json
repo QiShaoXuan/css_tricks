@@ -10,7 +10,7 @@
     "docs:dev": "npx vuepress dev docs",
     "dev": "npm run docs:dev",
     "build": "npm run build:readme && vuepress build docs",
-    "deploy": "gh-pages -d dist -b deploy",
+    "deploy": "gh-pages -d dist",
     "deploy:build": "npm run build && npm run deploy",
     "build:readme": "node ./build/buildReadme.js"
   },

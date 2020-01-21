@@ -8,7 +8,8 @@ export default function initComment() {
   body.appendChild(script);
   script.onload = () => {
     const commentConfig = Object.assign(CONFIG.gitalk, {
-       id: `/css_tricks${location.pathname}`
+       // id: `/css_tricks${location.pathname}`
+       id: location.pathname
     });
     const gitalk = new Gitalk(commentConfig);
     gitalk.render("gitalk-container");
