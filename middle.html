@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>CSS Tricks has been migrated</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      margin: 0;
+      color: #333;
+      text-align: center;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    article {
+      margin-top: 15%;
+    }
+
+    article p {
+      font-size: 22px;
+    }
+
+    a {
+      color: #00adb5;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    section p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+<article>
+  <p>CSS Tricks 已经迁移至<a
+    href="http://css-tricks.neatbang.com/">这里</a>，如果你已收藏当前网址，请在跳转后更新
+  </p>
+  <p>CSS Tricks has been migrated <a
+    href="http://css-tricks.neatbang.com/">here</a>, please update after the jump if you have a favorite current url
+  </p>
+
+  <section>
+    <p>
+      页面会在 <span class="second"></span> 秒后跳转
+    </p>
+    <p>
+      The page will jump after <span
+      class="second"></span> seconds
+    </p>
+  </section>
+</article>
+
+</body>
+<script>
+  const secondSpans = document.querySelectorAll('.second')
+  countdown(8, secondSpans, () => {
+    window.location.href = 'http://css-tricks.neatbang.com/'
+  })
+
+  function countdown(second, doms, callback) {
+
+    doms.forEach((dom) => {
+      dom.innerText = second
+    })
+
+    if (second == 0) {
+      return callback && callback()
+    }
+
+    setTimeout(() => {
+      countdown(second - 1, doms, callback)
+    }, 1000)
+  }
+</script>
+</html>
