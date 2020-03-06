@@ -613,15 +613,7 @@
       body.appendChild(script);
 
       script.onload = () => {
-        const commentConfig = {
-          clientID: "9eb624fa10d287c81385",
-          clientSecret: "20e11930755d795b3230fd0b535b7ddacda5ad54",
-          repo: "css_tricks",
-          owner: "QiShaoXuan",
-          admin: ["QiShaoXuan"],
-          id: location.pathname,
-          distractionFreeMode: false
-        };
+        const commentConfig = require('../../../../private-config')['gitalk'];
         const gitalk = new Gitalk(commentConfig);
         gitalk.render("gitalk-container");
       }
