@@ -17,11 +17,22 @@
     margin: 0 auto;
   }
 }
+.text1 {
+  font-size: 14px;
+}
+.text2 {
+  font-size: 14.7px;
+}
 </style>
 
 <template>
   <div class="list-type-container">
-    <div class="text-contaienr"><span></span></div>
+    <div class="text-contaienr">
+      <span class="text1">测试字号14px</span
+      ><span class="text2" :style="{ textRendering: selectedType }"
+        >测试字号14.7px</span
+      >
+    </div>
     <div class="language-css extra-class">
       <pre class="language-css" style="margin-bottom:30px;"><code
             ref="css"></code></pre>
@@ -48,7 +59,7 @@ export default {
         "optimizeLegibility",
         "geometricPrecision"
       ],
-      selectedType: "disc"
+      selectedType: "auto"
     };
   },
   computed: {
