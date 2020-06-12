@@ -1,6 +1,15 @@
 ## rem 设置
 <<< ./tpl/rem.js
 
+:::tip
+防止 ios 中微信字体变大后布局错乱
+```scss
+body{
+  -webkit-text-size-adjust: 100% !important;
+}
+```
+:::
+
 ## dpi 设置
 <<< ./tpl/dpi.js
 
