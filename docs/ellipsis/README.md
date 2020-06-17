@@ -27,6 +27,23 @@
 }
 ```
 
+## scss 混合
+```scss
+@mixin textEllipsis($lineNum) {
+  @if $lineNum == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lineNum; //需要显示的行数
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+```
 
 
 
