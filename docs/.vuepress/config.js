@@ -134,7 +134,7 @@ module.exports = {
               ["/accordion/", "手风琴"],
               ["/hover/", "悬停"],
               ["/flash/", "图片闪光"],
-              ["/loading/", "加载动画"],
+              ["/loading/", "加载动画 loading"],
               ["/spring/", "弹簧动画"],
               ["/stickyBall/", "粘性球"],
               ["/parabola/", "抛物线"],
