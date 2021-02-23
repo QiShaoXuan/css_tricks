@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const CONFIG = require("../docs/.vuepress/config");
-const linkHead = "http://css-tricks.neatbang.com";
+const linkHead = "https://qishaoxuan.github.io/css_tricks";
 //
 buildZh();
 buildEn();

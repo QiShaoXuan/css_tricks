@@ -3,7 +3,7 @@ module.exports = {
   title: "CSS Tricks",
   description: "some CSS tricks, 一些常用的 CSS 样式, 一点 CSS 技巧",
   dest: "./dist",
-  // base: "/css_tricks/",
+  base: "/css_tricks/",
   head: [
     ["link", { rel: "icon", href: "/images/favicon.png" }],
     ["meta", { name: "theme-color", content: "#00adb5" }],
