@@ -75,7 +75,7 @@
 
 <template>
   <div class="live-flex">
-    <p class="tip">click item to change stlye</p>
+    <p class="tip">click item to change style</p>
     <div class="flex-container" :style="containerStyle">
       <div class="flex-item"
         v-for="(item ,index) in itemStyles" :key="index"
