@@ -1,45 +1,12 @@
 {
-  "name": "css_tricks",
+  "name": "css-tricks",
   "version": "1.0.0",
-  "description": "<div align=\"center\"><img src=\"https://raw.githubusercontent.com/QiShaoXuan/css_tricks/master/logo.png\"></div>",
+  "description": "",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
-    "docs:dev": "npx vuepress dev docs",
-    "dev": "npm run docs:dev",
-    "build": "npm run build:readme && vuepress build docs",
-    "deploy": "gh-pages -d dist",
-    "deploy:build": "npm run build && npm run deploy",
-    "build:readme": "node ./build/buildReadme.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/QiShaoXuan/css_tricks.git"
-  },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/QiShaoXuan/css_tricks/issues"
-  },
-  "homepage": "https://github.com/QiShaoXuan/css_tricks#readme",
-  "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
-    "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
-    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
-    "chalk": "^3.0.0",
-    "element-ui": "^2.9.1",
-    "gh-pages": "^2.0.1",
-    "gitalk": "^1.5.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "vuepress": "^1.0.1",
-    "vuepress-plugin-google-adsense": "0.0.3"
-  },
-  "dependencies": {
-    "clipboard": "^2.0.4",
-    "vue-i18n": "^8.14.0",
-    "vuepress-plugin-cat": "^1.0.2"
-  }
+  "license": "ISC"
 }
