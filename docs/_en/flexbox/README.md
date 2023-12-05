@@ -1,2 +1,0 @@
-## live demo
-<flex-flex/>
