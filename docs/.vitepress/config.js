@@ -45,18 +45,6 @@ module.exports = {
     ],
   ],
   repo: "https://github.com/QiShaoXuan/css_tricks",
-  locales: {
-    "/": {
-      lang: "zh-CN",
-      title: "CSS Tricks",
-      description: "一些常用的 CSS 样式, 一点 CSS 技巧",
-    },
-    "/_en/": {
-      lang: "en-US",
-      title: "CSS Tricks",
-      description: "Some CSS tricks, some common CSS styles.",
-    },
-  },
   // plugins: [
   //   require("./plugins/comment"),
   //   require("./plugins/copy"),
@@ -88,7 +76,7 @@ module.exports = {
     sidebar: [
       // {
       //   text: "工具",
-      //   collapsable: false,
+
       //   items: [
       //     {
       //       link: "/createTriangle/",
@@ -108,89 +96,87 @@ module.exports = {
       //     },
       //   ],
       // },
-      // {
-      //   text: "属性",
-      //   collapsable: false,
-      //   items: [
-      //     {
-      //       link: "/filter/",
-      //       text: "滤镜 filter",
-      //     },
-      //     {
-      //       link: "/flexbox/",
-      //       text: "flexbox",
-      //     },
-      //     {
-      //       link: "/grid/",
-      //       text: "grid",
-      //     },
-      //     {
-      //       link: "/object/",
-      //       text: "object-fit, object-position",
-      //     },
-      //     {
-      //       link: "/mixBlendMode/",
-      //       text: "mix-blend-mode",
-      //     },
-      //     {
-      //       link: "/list/",
-      //       text: "list-style",
-      //     },
       {
-        link: "/text/",
-        text: "text",
+        text: "属性",
+        items: [
+          //     {
+          //       link: "/filter/",
+          //       text: "滤镜 filter",
+          //     },
+          //     {
+          //       link: "/flexbox/",
+          //       text: "flexbox",
+          //     },
+          //     {
+          //       link: "/grid/",
+          //       text: "grid",
+          //     },
+          //     {
+          //       link: "/object/",
+          //       text: "object-fit, object-position",
+          //     },
+          //     {
+          //       link: "/mixBlendMode/",
+          //       text: "mix-blend-mode",
+          //     },
+          //     {
+          //       link: "/list/",
+          //       text: "list-style",
+          //     },
+          {
+            link: "/text/",
+            text: "text",
+          },
+          //   ],
+          // },
+          // {
+          //   text: "动",
+
+          //   items: [
+          //     {
+          //       link: "/poptip/",
+          //       text: "提示气泡",
+          //     },
+          //     {
+          //       link: "/accordion/",
+          //       text: "手风琴",
+          //     },
+          //     {
+          //       link: "/hover/",
+          //       text: "悬停",
+          //     },
+          //     {
+          //       link: "/flash/",
+          //       text: "图片闪光",
+          //     },
+          //     {
+          //       link: "/loading/",
+          //       text: "加载动画 loading",
+          //     },
+          //     {
+          //       link: "/spring/",
+          //       text: "弹簧动画",
+          //     },
+          //     {
+          //       link: "/stickyBall/",
+          //       text: "粘性球",
+          //     },
+          //     {
+          //       link: "/parabola/",
+          //       text: "抛物线",
+          //     },
+          //     {
+          //       link: "/notCSS/ripple",
+          //       text: "涟漪",
+          //     },
+          //     {
+          //       link: "/notCSS/wave",
+          //       text: "波浪",
+          //     },
+        ],
       },
-      //   ],
-      // },
-      // {
-      //   text: "动",
-      //   collapsable: false,
-      //   items: [
-      //     {
-      //       link: "/poptip/",
-      //       text: "提示气泡",
-      //     },
-      //     {
-      //       link: "/accordion/",
-      //       text: "手风琴",
-      //     },
-      //     {
-      //       link: "/hover/",
-      //       text: "悬停",
-      //     },
-      //     {
-      //       link: "/flash/",
-      //       text: "图片闪光",
-      //     },
-      //     {
-      //       link: "/loading/",
-      //       text: "加载动画 loading",
-      //     },
-      //     {
-      //       link: "/spring/",
-      //       text: "弹簧动画",
-      //     },
-      //     {
-      //       link: "/stickyBall/",
-      //       text: "粘性球",
-      //     },
-      //     {
-      //       link: "/parabola/",
-      //       text: "抛物线",
-      //     },
-      //     {
-      //       link: "/notCSS/ripple",
-      //       text: "涟漪",
-      //     },
-      //     {
-      //       link: "/notCSS/wave",
-      //       text: "波浪",
-      //     },
-      //   ],
-      // },
       {
         text: "静",
-        collapsable: false,
         items: [
           {
             link: "/reset/",
@@ -232,7 +218,7 @@ module.exports = {
       },
       {
         text: "技巧",
-        collapsable: false,
+
         items: [
           {
             link: "/verticalMiddle/",
