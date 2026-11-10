@@ -1,11 +1,23 @@
 <script setup>
 import DefaultTheme from "vitepress/theme";
 import { useData, withBase } from "vitepress";
+import { onMounted, onUnmounted } from "vue";
 import logo from "../../../logo.png";
 import SiteCat from "./integrations/SiteCat.vue";
 import SiteComments from "./integrations/SiteComments.vue";
 
 const { frontmatter, lang } = useData();
+
+let dockedSidebar;
+function closeDrawerOnDock(event) {
+  if (event.matches) document.querySelector(".Layout > .VPBackdrop")?.click();
+}
+
+onMounted(() => {
+  dockedSidebar = window.matchMedia("(min-width: 900px)");
+  dockedSidebar.addEventListener("change", closeDrawerOnDock);
+});
+onUnmounted(() => dockedSidebar?.removeEventListener("change", closeDrawerOnDock));
 </script>
 
 <template>
