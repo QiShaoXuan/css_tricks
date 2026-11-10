@@ -23,6 +23,56 @@
   color: var(--vp-c-brand-1);
 }
 
+@media (min-width: 900px) {
+  .Layout {
+    --vp-sidebar-width: clamp(224px, 22vw, 272px);
+  }
+
+  .VPLocalNav.has-sidebar {
+    display: none;
+  }
+}
+
+/* Extend the default theme's docked sidebar below its 960px breakpoint. */
+@media (900px <= width < 960px) {
+  .Layout:has(> .VPSidebar) > .VPNav {
+    position: sticky;
+  }
+
+  .Layout > .VPSidebar {
+    top: calc(var(--vp-layout-top-height, 0px) + var(--vp-nav-height));
+    z-index: calc(var(--vp-z-index-nav) - 1);
+    width: var(--vp-sidebar-width);
+    padding: 24px 24px 48px;
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .Layout > .VPContent.has-sidebar {
+    padding-left: var(--vp-sidebar-width);
+  }
+
+  .VPDoc.has-sidebar {
+    padding-inline: 24px;
+  }
+}
+
+/* Keep the sidebar and its matching offsets flush with the viewport. */
+@media (min-width: 1440px) {
+  .Layout > .VPSidebar,
+  .VPNavBar.has-sidebar .container > .title {
+    width: var(--vp-sidebar-width);
+    padding-left: 32px;
+  }
+
+  .Layout > .VPContent.has-sidebar,
+  .VPNavBar.has-sidebar .container > .content,
+  .Layout .VPNavBar.has-sidebar .divider {
+    padding-left: var(--vp-sidebar-width);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .route-loading::before {
     content: "";
