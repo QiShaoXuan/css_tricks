@@ -1,0 +1,1 @@
+import{_ as a}from"./bg1.DQ4JSE-U.js";import{_ as s,o,c as r,j as t}from"./framework.b1umHdsy.js";const n={name:"vertical-middle",data(){return{}}},c={class:"container"};function d(i,e,_,l,p,m){return o(),r("div",c,[...e[0]||(e[0]=[t("img",{src:a},null,-1),t("span",null,"安能摧眉折腰事权贵，使我不得开心颜",-1)])])}const v=s(n,[["render",d],["__scopeId","data-v-c343aab2"]]);export{v as default};

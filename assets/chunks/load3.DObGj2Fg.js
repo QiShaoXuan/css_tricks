@@ -1,0 +1,1 @@
+import{_ as o,o as e,c as s,j as t}from"./framework.b1umHdsy.js";const c={name:"load3",data(){return{}}},n={class:"load-container"};function d(r,a,l,_,p,i){return e(),s("div",n,[...a[0]||(a[0]=[t("div",{class:"load"},null,-1)])])}const u=o(c,[["render",d],["__scopeId","data-v-c4fd4ac9"]]);export{u as default};

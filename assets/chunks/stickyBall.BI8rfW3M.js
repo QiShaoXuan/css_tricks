@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,j as s}from"./framework.b1umHdsy.js";const o={name:"sticky-ball",data(){return{}}},l={class:"sticky-container"};function r(n,a,d,i,_,p){return t(),c("div",l,[...a[0]||(a[0]=[s("div",{class:"blurfield"},[s("div",{class:"ball1"}),s("div",{class:"ball2"})],-1)])])}const b=e(o,[["render",r],["__scopeId","data-v-bc4e0eb2"]]);export{b as default};

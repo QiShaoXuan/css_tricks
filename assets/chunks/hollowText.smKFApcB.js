@@ -1,0 +1,1 @@
+import{_ as o,o as t,c as e}from"./framework.b1umHdsy.js";const c={name:"hollowText",data(){return{}}},s={class:"hollow-text"};function a(n,r,_,l,d,p){return t(),e("div",s,"古人秉烛夜游，良有以也")}const i=o(c,[["render",a],["__scopeId","data-v-42990c46"]]);export{i as default};

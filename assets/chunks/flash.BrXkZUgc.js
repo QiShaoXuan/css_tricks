@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a,j as o}from"./framework.b1umHdsy.js";const r="/css_tricks/images/bg7.jpeg",c={name:"",data(){return{}}},n={class:"flash-container"};function _(i,s,p,d,l,f){return e(),a("div",n,[...s[0]||(s[0]=[o("img",{src:r,alt:""},null,-1)])])}const u=t(c,[["render",_],["__scopeId","data-v-623b37b5"]]);export{u as default};

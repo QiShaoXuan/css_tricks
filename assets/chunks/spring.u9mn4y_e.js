@@ -1,0 +1,1 @@
+import{_ as t,o,c as a,j as s,t as r}from"./framework.b1umHdsy.js";const c={name:"spring",data(){return{}}},i={class:"spring-container"};function l(n,e,p,_,d,f){return o(),a("div",i,[s("section",null,[s("h1",null,r(n.__("弹簧动画")),1)]),e[0]||(e[0]=s("section",null,[s("div",{class:"moveBox"})],-1))])}const m=t(c,[["render",l],["__scopeId","data-v-23603f7f"]]);export{m as default};

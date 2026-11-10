@@ -1,0 +1,1 @@
+import{_ as o,o as s,c as a,j as t}from"./framework.b1umHdsy.js";const c={name:"hoverEffect"},n={class:"btn-container"};function r(d,e,f,_,i,p){return s(),a("div",n,[...e[0]||(e[0]=[t("div",{class:"button"},[t("div",{class:"content"},"hover me to change")],-1)])])}const v=o(c,[["render",r],["__scopeId","data-v-ba9caf80"]]);export{v as default};

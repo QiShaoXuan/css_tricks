@@ -1,0 +1,1 @@
+import{_ as t,o as a,c,j as s}from"./framework.b1umHdsy.js";const e="/css_tricks/images/bg11.jpg",r={name:"color-shadow",data(){return{}}},n={class:"container"};function d(_,o,i,p,l,m){return a(),c("div",n,[...o[0]||(o[0]=[s("div",{class:"color-shadow"},[s("img",{src:e,alt:""})],-1)])])}const u=t(r,[["render",d],["__scopeId","data-v-c2decfbb"]]);export{u as default};

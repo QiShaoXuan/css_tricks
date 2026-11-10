@@ -1,0 +1,1 @@
+import{_ as r,o as s,c as t,j as e}from"./framework.b1umHdsy.js";const n={name:"flexOrder",data(){return{}}},o={class:"container"};function c(d,a,l,i,_,p){return s(),t("div",o,[...a[0]||(a[0]=[e("div",{class:"wrap"},[e("div",null,"1"),e("div",null,"2"),e("div",null,"3")],-1)])])}const u=r(n,[["render",c],["__scopeId","data-v-484f56ca"]]);export{u as default};

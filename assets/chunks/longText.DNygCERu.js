@@ -1,0 +1,1 @@
+import{_ as e,o,c as s,j as n}from"./framework.b1umHdsy.js";const a={name:"longText",data(){return{}}},r={class:"long-text-container"};function c(_,t,d,i,l,p){return o(),s("div",r,[...t[0]||(t[0]=[n("span",null,"https://qishaoxuan.github.io/css_tricks/longText",-1)])])}const x=e(a,[["render",c],["__scopeId","data-v-561f2d03"]]);export{x as default};

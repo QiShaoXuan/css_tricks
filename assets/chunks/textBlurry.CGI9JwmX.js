@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as r}from"./framework.b1umHdsy.js";const a={name:"textBlurry",data(){return{}}},c={class:"text-blurry"};function o(s,n,_,d,p,l){return e(),r("div",c,"而浮生若梦，为欢几何？")}const f=t(a,[["render",o],["__scopeId","data-v-c8f2659a"]]);export{f as default};

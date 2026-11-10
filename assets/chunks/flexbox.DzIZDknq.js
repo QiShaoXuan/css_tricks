@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as a,j as e}from"./framework.b1umHdsy.js";const n={name:"flexbox",data(){return{}}},r={class:"container"};function d(c,o,l,i,_,p){return t(),a("div",r,[...o[0]||(o[0]=[e("div",{class:"wrap"},[e("div",null,"1"),e("div",null,"2"),e("div",null,"3")],-1)])])}const u=s(n,[["render",d],["__scopeId","data-v-598dd118"]]);export{u as default};

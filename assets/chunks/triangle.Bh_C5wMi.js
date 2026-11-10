@@ -1,0 +1,1 @@
+import{_ as t,o as s,c as r,j as a}from"./framework.b1umHdsy.js";const n={name:"",data(){return{}}},o={class:"triangle-container"};function c(d,e,i,l,_,p){return s(),r("div",o,[...e[0]||(e[0]=[a("div",{class:"panel"},[a("div",{class:"border-triangle"})],-1)])])}const m=t(n,[["render",c],["__scopeId","data-v-ed781d84"]]);export{m as default};

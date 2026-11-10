@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a}from"./framework.b1umHdsy.js";const o={name:"textshadow",data(){return{}}},s={class:"text-shadow"};function c(n,r,_,d,p,f){return e(),a("div",s,"会桃花之芳园，序天伦之乐事")}const x=t(o,[["render",c],["__scopeId","data-v-2a8651c1"]]);export{x as default};

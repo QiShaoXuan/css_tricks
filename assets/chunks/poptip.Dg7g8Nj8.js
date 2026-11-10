@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a,j as s}from"./framework.b1umHdsy.js";const p={name:"poptip",data(){return{}}},c={class:"poptip-container"},r=["aria-controls"];function n(o,_,i,d,f,l){return e(),a("div",c,[s("div",{class:"poptip btn","aria-controls":o.__("弹出气泡")},"hover to popup",8,r)])}const m=t(p,[["render",n],["__scopeId","data-v-704d6dff"]]);export{m as default};

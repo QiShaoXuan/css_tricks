@@ -1,0 +1,1 @@
+import{_ as o,o as r,c as s,j as t}from"./framework.b1umHdsy.js";const n={name:"hoverBorder",data(){return{}}},a={class:"btn-container"};function c(d,e,_,i,p,f){return r(),s("div",a,[...e[0]||(e[0]=[t("div",{class:"button"},[t("div",{class:"button__content"},"hover me to change")],-1)])])}const u=o(n,[["render",c],["__scopeId","data-v-df09c1e5"]]);export{u as default};

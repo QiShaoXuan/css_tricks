@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as n}from"./chunks/framework.b1umHdsy.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{"languageLink":"/_en/notCSS/"},"headers":[],"relativePath":"notCSS/index.md","filePath":"notCSS/README.md"}'),a={name:"notCSS/index.md"};function o(r,s,c,i,d,_){return t(),n("div")}const S=e(a,[["render",o]]);export{m as __pageData,S as default};

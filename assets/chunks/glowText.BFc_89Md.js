@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as o}from"./framework.b1umHdsy.js";const a={name:"glowText",data(){return{}}},s={class:"glow-text"};function c(n,r,_,d,f,p){return e(),o("div",s,"况阳春召我以烟景，大块假我以文章")}const i=t(a,[["render",c],["__scopeId","data-v-f0affd3f"]]);export{i as default};

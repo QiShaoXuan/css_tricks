@@ -1,0 +1,1 @@
+import{_ as o,o as a,c as s,a as t,j as r}from"./framework.b1umHdsy.js";const c={name:"textColor",data(){return{}}},n={class:"text-clip"};function l(d,e,_,p,f,i){return a(),s("div",n,[...e[0]||(e[0]=[t(" 夫天地者万物之逆旅也",-1),r("br",null,null,-1),t("光阴者百代之过客也。 ",-1)])])}const x=o(c,[["render",l],["__scopeId","data-v-f1c5b06b"]]);export{x as default};
