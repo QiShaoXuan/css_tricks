@@ -73,7 +73,7 @@
 }
 ```
 
-## loading
+## loading {#loading-2}
 
 <loading-load1/>
 ```html
@@ -154,7 +154,7 @@
 
  > <a href="https://codepen.io/dicson/pen/vOxZjM" target="_blank">https://codepen.io/dicson/pen/vOxZjM</a>
 
-## loading
+## loading {#loading-3}
 
 <loading-load2/>
 
@@ -210,7 +210,7 @@
 
 > <a href="https://codepen.io/pedox/pen/PwQezw" target="_blank">https://codepen.io/pedox/pen/PwQezw</a>
 
-## loading
+## loading {#loading-4}
 
 <loading-load3/>
 ```html
@@ -267,7 +267,7 @@
 
 
 
-## loading
+## loading {#loading-5}
 
 <loading-load4/>
 ```html
@@ -336,7 +336,7 @@
 ```
 
 
-## loading
+## loading {#loading-6}
 
 <loading-load5/>
 ```html
@@ -373,7 +373,7 @@
 }
 ```
 
-## loading
+## loading {#loading-7}
 
 <loading-load6/>
 ```html
@@ -427,7 +427,7 @@
 }
 ```
 
-## loading
+## loading {#loading-8}
 
 <loading-load7/>
 ```html

@@ -1,0 +1,43 @@
+:root {
+  --vp-c-brand-1: #007e84;
+  --vp-c-brand-2: #00888f;
+  --vp-c-brand-3: #007e84;
+  --vp-code-block-bg: #282c34;
+  --vp-code-block-color: #ddd;
+  --el-color-primary: #007e84;
+}
+
+.vp-doc .extra-class pre[class*="language-"] {
+  background: transparent;
+  margin: 0;
+}
+
+.language-link {
+  align-content: center;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.language-link:hover {
+  color: var(--vp-c-brand-1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .route-loading::before {
+    content: "";
+    position: fixed;
+    inset: 0 0 auto;
+    height: 2px;
+    z-index: 1000;
+    background: var(--vp-c-brand-1);
+    pointer-events: none;
+    transform-origin: left;
+    animation: route-progress 1.5s 100ms ease-out both;
+  }
+}
+
+@keyframes route-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(0.9); }
+}

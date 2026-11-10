@@ -1,7 +1,7 @@
 <paper/>
 
 :::tip
-Background image is here <a href="https://github.com/QiShaoXuan/css_tricks/blob/master/docs/.vuepress/public/images/paper.png" target="blank">paper.png</a>
+Background image is here <a href="https://github.com/QiShaoXuan/css_tricks/blob/master/docs/public/images/paper.png" target="blank">paper.png</a>
 :::
 
 ```scss

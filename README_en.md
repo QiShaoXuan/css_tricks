@@ -15,9 +15,10 @@ As little nonsense as possible, the code is simple to use, easy to copy.
 ## Quick start
 
 - Clone the `https://github.com/QiShaoXuan/css_tricks.git`
-- Install package `npm install`
+- Use Node.js 22 LTS (22.12 or newer) or 24+ and install dependencies with `npm ci`.
 - Development run `npm run docs:dev`
-- Open `http://localhost:8080` in your browser.
+- Open `http://localhost:5173/css_tricks/` in your browser.
+- Run `npm run build` and `npm run docs:preview` to preview the production build locally.
 
 ## Inclued 
 
@@ -43,8 +44,8 @@ As little nonsense as possible, the code is simple to use, easy to copy.
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/spring/">Spring</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/stickyBall/">Sticky ball</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/parabola/">Parabola</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/_en/notCSS/ripple">Ripple</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/_en/notCSS/wave">Wave</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/_en/notCSS/ripple.html">Ripple</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/_en/notCSS/wave.html">Wave</a>
 
 ### Static
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/reset/">Reset style</a>
@@ -71,9 +72,9 @@ As little nonsense as possible, the code is simple to use, easy to copy.
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/longText/">Berak line in long text</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/textShadow/">Text shadow</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/tab/">Tab animate</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/_en/tab/circle-border.md">Tab bottom circle convergence</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/_en/tab/circle-border.html">Tab bottom circle convergence</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/hollowOut/">Circle hollowout</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/_en/hollowOut/trangle.md">Trangle hollowout</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/_en/hollowOut/trangle.html">Trangle hollowout</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/_en/polygonLayout/">Polygon layout</a>
 
 

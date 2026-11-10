@@ -15,9 +15,10 @@
 ## 快速开始
 
 - Clone the `https://github.com/QiShaoXuan/css_tricks.git`
-- Install package `npm install`
+- 使用 Node.js 22 LTS（22.12 起）或 24+，运行 `npm ci` 安装依赖。
 - Development run `npm run docs:dev`
-- Open `http://localhost:8080` in your browser.
+- Open `http://localhost:5173/css_tricks/` in your browser.
+- 运行 `npm run build` 构建，使用 `npm run docs:preview` 本地预览构建产物。
 
 ## 内容 
 
@@ -45,8 +46,8 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/spring/">弹簧动画</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/stickyBall/">粘性球</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/parabola/">抛物线</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/notCSS/ripple">涟漪</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/notCSS/wave">波浪</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/notCSS/ripple.html">涟漪</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/notCSS/wave.html">波浪</a>
 
 ### 静
 - <a href="https://qishaoxuan.github.io/css_tricks/reset/">清除默认样式</a>
@@ -73,9 +74,9 @@
 - <a href="https://qishaoxuan.github.io/css_tricks/longText/">长文本折行</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/textShadow/">文字特效</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/tab/">tab 栏底部动画</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/tab/circle-border.md">tab 底部圆形边框衔接</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/tab/circle-border.html">tab 底部圆形边框衔接</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/hollowOut/">圆形镂空</a>
-- <a href="https://qishaoxuan.github.io/css_tricks/hollowOut/trangle.md">三角形镂空</a>
+- <a href="https://qishaoxuan.github.io/css_tricks/hollowOut/trangle.html">三角形镂空</a>
 - <a href="https://qishaoxuan.github.io/css_tricks/polygonLayout/">多边形布局</a>
 
 

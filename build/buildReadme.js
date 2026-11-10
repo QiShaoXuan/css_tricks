@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-const CONFIG = require("../docs/.vuepress/config");
+const sidebars = require("../docs/.vitepress/sidebar.cjs");
 const linkHead = "https://qishaoxuan.github.io/css_tricks";
 //
 buildZh();
 buildEn();
 function buildZh() {
-  const sidebar = CONFIG["themeConfig"]["locales"]["/"]["sidebar"];
+  const sidebar = sidebars["/"];
   const entryPath = path.resolve(__dirname, "../docs/README.md");
   const outputPath = path.resolve(__dirname, "../README.md");
   fs.readFile(entryPath, "utf-8", (err, data) => {
@@ -17,8 +17,8 @@ function buildZh() {
     str += sidebar
       .map(
         block =>
-          `\n### ${block.title}\n${block.children
-            .map(v => `- <a href="${linkHead}${v[0]}">${v[1]}</a>`)
+          `\n### ${block.text}\n${block.items
+            .map(v => `- <a href="${linkHead}${v.link}">${v.text}</a>`)
             .join(`\n`)}\n`
       )
       .join("");
@@ -38,7 +38,7 @@ function buildZh() {
 }
 
 function buildEn() {
-  const sidebar = CONFIG["themeConfig"]["locales"]["/_en/"]["sidebar"];
+  const sidebar = sidebars["/_en/"];
   const entryPath = path.resolve(__dirname, "../docs/_en/README.md");
   const outputPath = path.resolve(__dirname, "../README_en.md");
   fs.readFile(entryPath, "utf-8", (err, data) => {
@@ -49,8 +49,8 @@ function buildEn() {
     str += sidebar
       .map(
         block =>
-          `\n### ${block.title}\n${block.children
-            .map(v => `- <a href="${linkHead}${v[0]}">${v[1]}</a>`)
+          `\n### ${block.text}\n${block.items
+            .map(v => `- <a href="${linkHead}${v.link}">${v.text}</a>`)
             .join(`\n`)}\n`
       )
       .join("");

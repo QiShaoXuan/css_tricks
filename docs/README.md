@@ -15,9 +15,10 @@
 ## 快速开始
 
 - Clone the `https://github.com/QiShaoXuan/css_tricks.git`
-- Install package `npm install`
+- 使用 Node.js 22 LTS（22.12 起）或 24+，运行 `npm ci` 安装依赖。
 - Development run `npm run docs:dev`
-- Open `http://localhost:8080` in your browser.
+- Open `http://localhost:5173/css_tricks/` in your browser.
+- 运行 `npm run build` 构建，使用 `npm run docs:preview` 本地预览构建产物。
 
 <div style="display:none" id="list-zh"></div>
 

@@ -15,9 +15,10 @@ As little nonsense as possible, the code is simple to use, easy to copy.
 ## Quick start
 
 - Clone the `https://github.com/QiShaoXuan/css_tricks.git`
-- Install package `npm install`
+- Use Node.js 22 LTS (22.12 or newer) or 24+ and install dependencies with `npm ci`.
 - Development run `npm run docs:dev`
-- Open `http://localhost:8080` in your browser.
+- Open `http://localhost:5173/css_tricks/` in your browser.
+- Run `npm run build` and `npm run docs:preview` to preview the production build locally.
 
 <div style="display:none" id="list-en"></div>
 

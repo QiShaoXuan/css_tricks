@@ -8,3 +8,6 @@ TODOs.md
 .vscode
 dist
 /private-config.js
+
+# VitePress generated files
+/docs/.vitepress/cache/

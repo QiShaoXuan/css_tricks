@@ -7,10 +7,11 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs:dev": "npx vuepress dev docs",
-    "dev": "npm run docs:dev",
-    "build": "npm run build:readme && vuepress build docs",
-    "deploy": "gh-pages -d dist",
+    "docs:dev": "vitepress dev docs",
+    "dev": "npm run docs:dev --",
+    "build": "npm run build:readme && vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "deploy": "gh-pages -d dist --nojekyll",
     "deploy:build": "npm run build && npm run deploy",
     "build:readme": "node ./build/buildReadme.js"
   },
@@ -25,25 +26,23 @@
   },
   "homepage": "https://github.com/QiShaoXuan/css_tricks#readme",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
-    "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
-    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
-    "chalk": "^3.0.0",
-    "element-ui": "^2.9.1",
-    "gh-pages": "^2.0.1",
-    "gitalk": "^1.5.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "vuepress": "^1.0.1",
-    "vuepress-plugin-google-adsense": "0.0.3"
+    "gh-pages": "6.3.0",
+    "sass": "1.108.1",
+    "vitepress": "1.6.4"
   },
   "dependencies": {
-    "clipboard": "^2.0.4",
-    "prettier": "^2.8.8",
-    "vue-i18n": "^8.14.0",
-    "vuepress-plugin-cat": "^1.0.2"
+    "@element-plus/icons-vue": "2.3.2",
+    "element-plus": "2.14.7",
+    "prismjs": "1.30.0",
+    "vue": "3.5.45"
   },
   "engines": {
-    "node": "8.x"
+    "node": "^22.12.0 || >=24.0.0"
+  },
+  "overrides": {
+    "vitepress": {
+      "vite": "6.4.6"
+    },
+    "lodash": "4.18.1"
   }
 }

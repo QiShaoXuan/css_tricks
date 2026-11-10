@@ -1,18 +1,18 @@
 ## SVG
 
-<sector-svg/>
+<ClientOnly><sector-svg/></ClientOnly>
 
 ## Triangulation
 
-<sector-trangle/>
+<ClientOnly><sector-trangle/></ClientOnly>
 
 :::tip
-You can write a static sector using sass, using the reference <a href="https://github.com/QiShaoXuan/css_tricks/blob/master/docs/.vuepress/components/sector/trangle.vue">here</a>.
+You can write a static sector using sass, using the reference <a href="https://github.com/QiShaoXuan/css_tricks/blob/master/docs/.vitepress/theme/components/sector/trangle.vue">here</a>.
 :::
 
 ## conic-gradient
 
-<sector-gradient/>
+<ClientOnly><sector-gradient/></ClientOnly>
 
 :::danger
 `conic-gradient` is support poorly, use with caution.

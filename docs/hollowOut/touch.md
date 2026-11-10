@@ -7,11 +7,11 @@
 
 一共需要三步：
 
-1. 打开<a href="https://qishaoxuan.github.io/css_tricks/hollowOut/">这个网址</a>（浏览器输入 https://qishaoxuan.github.io/css_tricks/hollowOut/）
+1. 打开<a href="https://qishaoxuan.github.io/css_tricks/hollowOut/">这个网址</a>（浏览器输入 `https://qishaoxuan.github.io/css_tricks/hollowOut/`）
 2. 找到需要的样式
 3. 复制粘贴
 
-## 交给测试后，我们来分析下 CSS 卡券。
+## 交给测试后，我们来分析下 CSS 卡券。 {#交给测试后，我们来分析下-css-卡券。}
 
 我们来准备一下基础知识
 

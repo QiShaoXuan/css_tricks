@@ -6,7 +6,7 @@
 
 `list-style` 是由 `list-style-type`, `list-style-image` 和 `list-style-position` 三个属性组合的简写属性。每个属性都可单独设置，也可以直接设置在 `list-style` 上。下面分别介绍这三个属性。
 
-## [在线查看，效果更佳](https://qishaoxuan.github.io/css_tricks/list/#list-style)
+## [在线查看，效果更佳](https://qishaoxuan.github.io/css_tricks/list/#list-style) {#在线查看，效果更佳}
 
 ## list-style-type
 
