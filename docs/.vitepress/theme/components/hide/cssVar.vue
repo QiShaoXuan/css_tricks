@@ -5,17 +5,14 @@
 //   height: 100px;
 // }
 </style>
-<style>
-
-:root {
-  --color: blue;
-  --color:yellow;
-  --width:400;
-}
+<style scoped>
 .box {
-  height:100px;
+  --color: blue;
+  --color: yellow;
+  --width: 400;
+  height: 100px;
   background-color: var(--color);
-  width:calc(var(--width) * 1px);
+  width: calc(var(--width) * 1px);
 }
 </style>
 
