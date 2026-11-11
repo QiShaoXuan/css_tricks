@@ -1,0 +1,1 @@
+import{_ as e,o as s,c as t}from"./framework.b1umHdsy.js";const a={name:"",data(){return{}}},o={class:"box"};function c(r,n,_,d,p,f){return s(),t("div",o)}const l=e(a,[["render",c],["__scopeId","data-v-3b1a2b24"]]);export{l as default};

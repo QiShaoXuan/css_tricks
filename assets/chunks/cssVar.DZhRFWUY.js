@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as t}from"./framework.b1umHdsy.js";const o={name:"",data(){return{}}},c={class:"box"};function a(r,n,_,p,d,f){return s(),t("div",c)}const l=e(o,[["render",a]]);export{l as default};
